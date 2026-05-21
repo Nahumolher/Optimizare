@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Optimizare – Gestión Energética para Empresas</title>
+  <meta name="description" content="Optimizare es tu partner energético de confianza. Ahorra hasta un 20% en tu factura eléctrica con soluciones de gestión energética, fotovoltaica, CAE y mantenimiento." />
+  <meta name="keywords" content="gestión energética, ahorro energético, autoconsumo fotovoltaico, CAE, huella de carbono, mantenimiento, climatización eficiente" />
+  <meta property="og:title" content="Optimizare – Gestión Energética para Empresas" />
+  <meta property="og:description" content="Más de 300 clientes y 6.000 puntos de suministro. Empieza a ahorrar desde el primer día." />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════
+       COOKIE BANNER
+  ══════════════════════════════════════════════ -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+      <h3>Valoramos tu privacidad</h3>
+      <p>Usamos cookies para mejorar tu experiencia de navegación, mostrarte contenidos personalizados y analizar nuestro tráfico. Al hacer clic en "Aceptar todo" consientes el uso de cookies.</p>
+      <div class="cookie-actions">
+        <button class="btn-cookie outline" onclick="closeCookies()">Rechazar todo</button>
+        <button class="btn-cookie outline" onclick="closeCookies()">Personalizar</button>
+        <button class="btn-cookie primary" onclick="closeCookies()">Aceptar todo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       HEADER / NAVBAR (2 filas estilo NESS)
+  ══════════════════════════════════════════════ -->
+  <header class="header" id="header">
+
+    <!-- Fila superior: logo + redes + contactos -->
+    <div class="header-top">
+      <div class="container header-top-inner">
+
+        <div class="header-top-left">
+          <a href="#" class="logo">
+            <img src="img/1.png" alt="Optimizare"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+            <span class="logo-text" style="display:none">Optimizare</span>
+          </a>
+          <div class="header-social">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="header-top-contacts">
+          <a href="tel:+34917992688" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-phone-alt"></i></span>
+            <span class="hcontact-text">
+              <strong>Llámanos</strong>
+              <span>+34 917 992 688</span>
+            </span>
+          </a>
+          <a href="mailto:comercial@optimizare.es" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-envelope-open-text"></i></span>
+            <span class="hcontact-text">
+              <strong>Atención comercial</strong>
+              <span>comercial@optimizare.es</span>
+            </span>
+          </a>
+          <a href="mailto:clientes@optimizare.es" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-user-circle"></i></span>
+            <span class="hcontact-text">
+              <strong>Atención al cliente</strong>
+              <span>clientes@optimizare.es</span>
+            </span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Fila inferior: nav + CTA buttons + search -->
+    <div class="header-nav-bar">
+      <div class="container header-nav-inner">
+
+        <nav class="nav" id="mainNav">
+          <ul class="nav-list">
+            <li class="nav-item has-dropdown">
+              <a href="#">Gestión de la energía <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Gestión energética</a>
+                <a href="#">Compra de energía</a>
+                <a href="#">Asesoramiento tarifario</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Soluciones energéticas <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Autoconsumo fotovoltaico</a>
+                <a href="#">IRVE – Recarga eléctrica</a>
+                <a href="#">CAE</a>
+                <a href="#">Huella de carbono</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Mantenimiento y servicios <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Mantenimiento preventivo</a>
+                <a href="#">Climatización eficiente</a>
+                <a href="#">Outsourcing energético</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Sostenibilidad <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Economía circular</a>
+                <a href="#">Descarbonización</a>
+                <a href="#">Flexibilidad de la demanda</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Optimizare <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Sobre Optimizare</a>
+                <a href="#">Casos de éxito</a>
+                <a href="#">Trabaja con nosotros</a>
+                <a href="#">Blog</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="#" class="btn-nav-cae">CAE</a>
+          <a href="#contacto" class="btn-nav-contact">Contacto</a>
+          <button class="btn-search" id="searchToggle"><i class="fas fa-search"></i></button>
+          <button class="btn-hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Search bar -->
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <input type="text" placeholder="¿Qué estás buscando?" />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- ══════════════════════════════════════════════
+       HERO SECTION
+  ══════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="img/instalacion.jpg"
+           alt="hero background" class="hero-img" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container hero-content">
+      <p class="hero-eyebrow">Gestión energética empresarial</p>
+      <h1 class="hero-title">Tu partner energético<br><em>de confianza</em></h1>
+      <p class="hero-subtitle">
+        Empieza a ahorrar desde el primer día con nuestras soluciones energéticas,
+        optimizando de forma sistemática y continua el consumo de tus instalaciones.
+      </p>
+      <div class="hero-ctas">
+        <a href="#contacto" class="btn-primary btn-lg">Contáctanos <i class="fas fa-arrow-right"></i></a>
+        <a href="#" class="btn-outline-white">Ver servicios</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-target="50">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">profesionales y expertos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-prefix">+</span><span class="stat-number" data-target="95">0</span><span class="stat-suffix"> M</span>
+          <span class="stat-label">de euros en energía negociada</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="20">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">ahorro medio de nuestros clientes</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-prefix">+</span><span class="stat-number" data-target="73">0</span><span class="stat-suffix">k</span>
+          <span class="stat-label">toneladas de CO₂ prevenidas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       CLIENT LOGOS TICKER
+  ══════════════════════════════════════════════ -->
+  <section class="clients-section">
+    <div class="container">
+      <p class="clients-label">Empresas que ya confían en nosotros</p>
+    </div>
+    <div class="clients-track-wrapper">
+      <div class="clients-track">
+        <div class="client-tile"><span>Vitaldent</span></div>
+        <div class="client-tile"><span>Iberdrola</span></div>
+        <div class="client-tile"><span>Mercadona</span></div>
+        <div class="client-tile"><span>Endesa</span></div>
+        <div class="client-tile"><span>Repsol</span></div>
+        <div class="client-tile"><span>Naturgy</span></div>
+        <div class="client-tile"><span>EDP</span></div>
+        <div class="client-tile"><span>Cepsa</span></div>
+        <!-- Duplicados para loop continuo -->
+        <div class="client-tile"><span>Vitaldent</span></div>
+        <div class="client-tile"><span>Iberdrola</span></div>
+        <div class="client-tile"><span>Mercadona</span></div>
+        <div class="client-tile"><span>Endesa</span></div>
+        <div class="client-tile"><span>Repsol</span></div>
+        <div class="client-tile"><span>Naturgy</span></div>
+        <div class="client-tile"><span>EDP</span></div>
+        <div class="client-tile"><span>Cepsa</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SOLUTIONS CARDS
+  ══════════════════════════════════════════════ -->
+  <section class="solutions-section">
+    <div class="container">
+      <h2 class="solutions-title">Te ayudamos a ahorrar con nuestras soluciones</h2>
+      <div class="solutions-grid">
+
+        <div class="solution-card">
+          <img src="img/tipos de consumo.jpg" alt="Gestión de la energía" />
+          <div class="solution-overlay"></div>
+          <div class="solution-body">
+            <span class="solution-label">Gestión de la energía</span>
+            <a href="#" class="solution-btn">Saber más</a>
+          </div>
+        </div>
+
+        <div class="solution-card">
+          <img src="img/placa 3.jpg" alt="Soluciones energéticas" />
+          <div class="solution-overlay"></div>
+          <div class="solution-body">
+            <span class="solution-label">Soluciones energéticas</span>
+            <a href="#" class="solution-btn">Saber más</a>
+          </div>
+        </div>
+
+        <div class="solution-card">
+          <img src="img/edificio placa.jpg" alt="Mantenimiento y servicios" />
+          <div class="solution-overlay"></div>
+          <div class="solution-body">
+            <span class="solution-label">Mantenimiento y servicios</span>
+            <a href="#" class="solution-btn">Saber más</a>
+          </div>
+        </div>
+
+        <div class="solution-card">
+          <img src="img/planos.jpg" alt="Sostenibilidad" />
+          <div class="solution-overlay"></div>
+          <div class="solution-body">
+            <span class="solution-label">Sostenibilidad</span>
+            <a href="#" class="solution-btn">Saber más</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SERVICES TABS
+  ══════════════════════════════════════════════ -->
+  <section class="services-section">
+    <div class="container">
+      <div class="tabs-wrapper">
+        <div class="tabs-nav" id="tabsNav">
+          <button class="tab-btn active" data-tab="compra">Compra de energía</button>
+          <button class="tab-btn" data-tab="comercializadoras">Comercializadoras</button>
+          <button class="tab-btn" data-tab="cae">CAE</button>
+          <button class="tab-btn" data-tab="autoconsumo">Autoconsumo</button>
+          <button class="tab-btn" data-tab="climatizacion">Calefacción y climatización</button>
+          <button class="tab-btn" data-tab="huella">Huella de carbono</button>
+          <button class="tab-btn" data-tab="gestion">Gestión energética</button>
+          <button class="tab-btn" data-tab="mantenimiento">Mantenimiento</button>
+        </div>
+
+        <div class="tabs-content">
+          <!-- Compra de energía -->
+          <div class="tab-panel active" id="tab-compra">
+            <div class="tab-panel-inner">
+              <div class="tab-text">
+                <span class="tab-tag">SOLUCIÓN</span>
+                <h2>La decisión más inteligente en la compra de tu energía</h2>
+                <p>Optimiza tus costes energéticos gracias al asesoramiento de nuestro equipo experto. Aumenta tus ahorros optimizando todos los parámetros de tu factura.</p>
+                <a href="#" class="btn-primary">Más información</a>
+              </div>
+              <div class="tab-image">
+                <img src="img/tipos%20de%20consumo.jpg" alt="Compra de energía" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Comercializadoras -->
+          <div class="tab-panel" id="tab-comercializadoras">
+            <div class="tab-panel-inner">
+              <div class="tab-text">
+                <span class="tab-tag">SOLUCIÓN</span>
+                <h2>Servicios especializados para comercializadoras</h2>
+                <p>Ofrecemos servicios de outsourcing energético para comercializadoras, cubriendo todas las necesidades operativas y comerciales con nuestro equipo experto.</p>
+                <a href="#" class="btn-primary">Más información</a>
+              </div>
+              <div class="tab-image">
+                <img src="img/placa%201.jpg" alt="Comercializadoras" />
+              </div>
+            </div>
+          </div>
+
+          <!-- CAE -->
+          <div class="tab-panel" id="tab-cae">
+            <div class="tab-panel-inner">
+              <div class="tab-text">
+                <span class="tab-tag">CERTIFICACIÓN</span>
+                <h2>Certificados de Ahorro Energético (CAE)</h2>
+                <p>Convierte tus mejoras energéticas en ingresos reales. Gestionamos todo el proceso de certificación para que obtengas el máximo beneficio económico.</p>
+                <a href="#" class="btn-primary">Más información</a>
+              </div>
+              <div class="tab-image">
+                <img src="img/placa%202.jpg" alt="CAE" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Autoconsumo -->
+          <div class="tab-panel" id="tab-autoconsumo">
+            <div class="tab-panel-inner">
+              <div class="tab-text">
+                <span class="tab-tag">FOTOVOLTAICA</span>
+                <h2>Autoconsumo fotovoltaico para tu empresa</h2>
+                <p>Genera tu propia energía limpia y reduce tu dependencia de la red. Diseñamos e instalamos soluciones fotovoltaicas adaptadas a tu consumo real.</p>
+                <a href="#" class="btn-primary">Más información</a>
+              </div>
+              <div class="tab-image">
+                <img src="img/placa%203.jpg" alt="Autoconsumo" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Climatización -->
+          <div class="tab-panel" id="tab-climatizacion">
+            <div class="tab-panel-inner">
+              <div class="tab-text">
+                <span class="tab-tag">EFICIENCIA</span>
+                <h2>Calefacción y climatización eficientes</h2>
+                <p>Sistemas de climatización de alta eficiencia que reducen tu consumo energético manteniendo el confort óptimo en tus instalaciones.</p>
+                <a href="#" class="btn-primary">Más información</a>
+              </div>
+              <div class="tab-image">
+                <img src="img/instalacion%202.jpg" alt="Climatización" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Huella de carbono -->
+          <div class="tab-panel" id="tab-huella">
+            <div class="tab-panel-inner">
+              <div class="tab-text">
+                <span class="tab-tag">SOSTENIBILIDAD</span>
+                <h2>Cálculo y compensación de huella de carbono</h2>
+                <p>Medimos, reducimos y compensamos las emisiones de CO₂ de tu organización. Cumple con la normativa ambiental y mejora tu imagen corporativa.</p>
+                <a href="#" class="btn-primary">Más información</a>
+              </div>
+              <div class="tab-image">
+                <img src="img/planos.jpg" alt="Huella de carbono" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Gestión energética -->
+          <div class="tab-panel" id="tab-gestion">
+            <div class="tab-panel-inner">
+              <div class="tab-text">
+                <span class="tab-tag">GESTIÓN</span>
+                <h2>Gestión energética integral online</h2>
+                <p>Control total de tus costes a través de nuestra plataforma digital. Monitorizamos y optimizamos tu consumo energético en tiempo real.</p>
+                <a href="#" class="btn-primary">Más información</a>
+              </div>
+              <div class="tab-image">
+                <img src="img/instalacion%203.jpg" alt="Gestión energética" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Mantenimiento -->
+          <div class="tab-panel" id="tab-mantenimiento">
+            <div class="tab-panel-inner">
+              <div class="tab-text">
+                <span class="tab-tag">MANTENIMIENTO</span>
+                <h2>Mantenimiento preventivo y correctivo</h2>
+                <p>Alargamos la vida útil de tus equipos e instalaciones con planes de mantenimiento personalizados que garantizan su máximo rendimiento.</p>
+                <a href="#" class="btn-primary">Más información</a>
+              </div>
+              <div class="tab-image">
+                <img src="img/edificio%20placa.jpg" alt="Mantenimiento" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       WHY OPTIMIZARE
+  ══════════════════════════════════════════════ -->
+  <section class="why-section">
+    <div class="container">
+      <h2 class="why-heading">¿Por qué elegir <em>Optimizare</em>?</h2>
+      <p class="why-subheading">Más de una década acompañando a empresas en su transición hacia una gestión energética eficiente, sostenible y rentable.</p>
+      <div class="why-grid">
+
+        <div class="why-card reveal delay-1">
+          <div class="why-card-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Soluciones innovadoras</h3>
+          <p>El control de tus costes es prioritario para nosotros, con gestión energética online en tiempo real.</p>
+        </div>
+
+        <div class="why-card reveal delay-2">
+          <div class="why-card-icon"><i class="fas fa-handshake"></i></div>
+          <h3>Servicio integral</h3>
+          <p>De principio a fin, incrementando tu competitividad y refuerzo del posicionamiento ante tus clientes.</p>
+        </div>
+
+        <div class="why-card reveal delay-3">
+          <div class="why-card-icon"><i class="fas fa-user-cog"></i></div>
+          <h3>Gestión personalizada</h3>
+          <p>Estudiamos tus necesidades para adaptarnos a tus características, garantizando un uso más racional de la energía.</p>
+        </div>
+
+        <div class="why-card reveal delay-4">
+          <div class="why-card-icon"><i class="fas fa-lightbulb"></i></div>
+          <h3>Conocimiento del mercado</h3>
+          <p>Equipo propio y experto en el área, lo que permite una reducción significativa de tu factura energética y mejora en la cuenta de resultados.</p>
+        </div>
+
+        <div class="why-card reveal delay-5">
+          <div class="why-card-icon"><i class="fas fa-globe-europe"></i></div>
+          <h3>Presencia nacional e internacional</h3>
+          <p>Más de 300 clientes y alrededor de 6.000 puntos de suministro a nivel nacional, con proyectos internacionales en Europa y América.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       JOIN BANNER
+  ══════════════════════════════════════════════ -->
+  <section class="join-banner">
+    <img src="img/placa industria.jpg" alt="" class="join-bg" />
+    <div class="join-bg-overlay"></div>
+
+    <div class="join-inner container">
+
+      <!-- Lado izquierdo: stats -->
+      <div class="join-left reveal-left">
+        <span class="join-eyebrow">Tu partner energético</span>
+        <h2 class="join-heading">Haz el cambio<br>a <em>Optimizare</em></h2>
+        <p class="join-lead">Consigue oportunidades reales de ahorro priorizando las nuevas tecnologías energéticas.</p>
+        <div class="join-stats">
+          <div class="join-stat-item">
+            <strong>+300</strong>
+            <span>clientes satisfechos</span>
+          </div>
+          <div class="join-stat-divider"></div>
+          <div class="join-stat-item">
+            <strong>6.000</strong>
+            <span>puntos de suministro</span>
+          </div>
+          <div class="join-stat-divider"></div>
+          <div class="join-stat-item">
+            <strong>20%</strong>
+            <span>ahorro medio en factura</span>
+          </div>
+        </div>
+        <a href="#contacto" class="btn-join">Contacta con nosotros <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Lado derecho: panel glass -->
+      <div class="join-glass reveal-right">
+        <div class="join-glass-icon">
+          <i class="fas fa-bolt"></i>
+        </div>
+        <h3>¿Listo para empezar a ahorrar?</h3>
+        <p>Un asesor energético te contactará en menos de 24 h con un análisis personalizado sin compromiso.</p>
+        <ul class="join-benefits">
+          <li><i class="fas fa-check"></i> Análisis de consumo 100% gratuito</li>
+          <li><i class="fas fa-check"></i> Propuesta de ahorro personalizada</li>
+          <li><i class="fas fa-check"></i> Gestor energético dedicado</li>
+          <li><i class="fas fa-check"></i> Informes mensuales de seguimiento</li>
+          <li><i class="fas fa-check"></i> Sin permanencia — flexibilidad total</li>
+        </ul>
+        <div class="join-glass-divider"></div>
+        <div class="join-trust">
+          <div class="join-trust-item"><i class="fas fa-shield-alt"></i><span>+10 años de experiencia en el sector</span></div>
+          <div class="join-trust-item"><i class="fas fa-users"></i><span>Más de 300 empresas confían en nosotros</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       CÓMO TRABAJAMOS
+  ══════════════════════════════════════════════ -->
+  <section class="process-section">
+    <div class="container">
+      <h2 class="solutions-title">Comenzar a trabajar con Optimizare es sencillo</h2>
+      <div class="solutions-grid">
+
+        <div class="solution-card reveal delay-1">
+          <img src="img/planos.jpg" alt="Análisis preliminar" />
+          <div class="solution-overlay"></div>
+          <div class="solution-body">
+            <span class="solution-label">Análisis preliminar</span>
+          </div>
+        </div>
+
+        <div class="solution-card reveal delay-2">
+          <img src="img/tipos de consumo.jpg" alt="Propuesta energética" />
+          <div class="solution-overlay"></div>
+          <div class="solution-body">
+            <span class="solution-label">Propuesta energética</span>
+          </div>
+        </div>
+
+        <div class="solution-card reveal delay-3">
+          <img src="img/instalacion 2.jpg" alt="Inicio del servicio" />
+          <div class="solution-overlay"></div>
+          <div class="solution-body">
+            <span class="solution-label">Inicio del servicio</span>
+          </div>
+        </div>
+
+        <div class="solution-card reveal delay-4">
+          <img src="img/instalacion 3.jpg" alt="Evaluación mensual" />
+          <div class="solution-overlay"></div>
+          <div class="solution-body">
+            <span class="solution-label">Evaluación mensual</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       TESTIMONIOS
+  ══════════════════════════════════════════════ -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="process-header">
+        <span class="section-tag">LO QUE DICEN NUESTROS CLIENTES</span>
+        <h2>Casos de éxito</h2>
+        <p>Resultados reales de empresas que ya han transformado su gestión energética con nosotros.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal delay-1">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <div class="testimonial-quote">“</div>
+          <p>Redujimos un 23% nuestra factura eléctrica en el primer año. El equipo de Optimizare nos guió en todo el proceso, desde el diagnóstico hasta la implementación.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fas fa-user"></i></div>
+            <div>
+              <strong>Director de Operaciones</strong>
+              <span>Cadena de clínicas dental – Madrid</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal delay-2">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <div class="testimonial-quote">“</div>
+          <p>Instalaron nuestra planta fotovoltaica en tiempo récord. Ahora generamos el 60% de nuestra energía y los ahorros superaron todas las previsiones.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fas fa-user"></i></div>
+            <div>
+              <strong>Responsable de Mantenimiento</strong>
+              <span>Empresa industrial – Barcelona</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal delay-3">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <div class="testimonial-quote">“</div>
+          <p>La gestión energética online nos permite ver en tiempo real qué edificios consumen más y tomar decisiones inmediatas. Un cambio total en nuestra operativa.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fas fa-user"></i></div>
+            <div>
+              <strong>Gerente de Facilities</strong>
+              <span>Comunidad de propietarios – Valencia</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       BLOG
+  ══════════════════════════════════════════════ -->
+  <section class="blog-section">
+    <div class="container">
+      <h2 class="section-title">Últimas publicaciones</h2>
+
+      <div class="blog-grid">
+        <!-- Card 1 -->
+        <article class="blog-card reveal delay-1">
+          <div class="blog-card-img">
+            <a href="#">
+              <img src="img/placa%20industria.jpg" alt="Mantenimiento equipos" />
+            </a>
+            <span class="blog-tag">RECOMENDACIONES</span>
+          </div>
+          <div class="blog-card-body">
+            <a href="#" class="blog-card-title">
+              La importancia de la optimización del ciclo de vida de los equipos en el mantenimiento
+            </a>
+            <p class="blog-excerpt">En muchas ocasiones, empresas o comunidades de propietarios cometen errores al descuidar el ciclo de vida de sus equipos...</p>
+            <div class="blog-footer">
+              <span class="blog-date"><i class="fas fa-calendar"></i> 11 de mayo de 2026</span>
+              <a href="#" class="blog-read-more">Más información <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="blog-card reveal delay-2">
+          <div class="blog-card-img">
+            <a href="#">
+              <img src="img/placa%204.jpg" alt="Flexibilidad de la demanda" />
+            </a>
+            <span class="blog-tag">INFORMACIÓN</span>
+          </div>
+          <div class="blog-card-body">
+            <a href="#" class="blog-card-title">
+              Flexibilidad de la demanda: cómo convertir tu consumo energético en una ventaja competitiva
+            </a>
+            <p class="blog-excerpt">El sistema eléctrico está cambiando. La creciente penetración de energías renovables exige nuevas formas de gestionar la demanda...</p>
+            <div class="blog-footer">
+              <span class="blog-date"><i class="fas fa-calendar"></i> 4 de mayo de 2026</span>
+              <a href="#" class="blog-read-more">Más información <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="blog-card reveal delay-3">
+          <div class="blog-card-img">
+            <a href="#">
+              <img src="img/casa1.png" alt="Economía circular" />
+            </a>
+            <span class="blog-tag">INFORMACIÓN</span>
+          </div>
+          <div class="blog-card-body">
+            <a href="#" class="blog-card-title">
+              Todo sobre la gestión de residuos y la economía circular
+            </a>
+            <p class="blog-excerpt">En España, cada año se generan millones de toneladas de residuos. La economía circular propone un modelo donde los recursos se aprovechan al máximo...</p>
+            <div class="blog-footer">
+              <span class="blog-date"><i class="fas fa-calendar"></i> 29 de abril de 2026</span>
+              <a href="#" class="blog-read-more">Más información <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="blog-card reveal delay-4">
+          <div class="blog-card-img">
+            <a href="#">
+              <img src="img/407366886b2e9ebddc52322700839365.jpg" alt="Mantenimiento vs Reparación" />
+            </a>
+            <span class="blog-tag">RECOMENDACIONES</span>
+          </div>
+          <div class="blog-card-body">
+            <a href="#" class="blog-card-title">
+              Mantenimiento vs. Reparación, ¿qué es mejor?
+            </a>
+            <p class="blog-excerpt">Existen diversas estrategias para gestionar el estado de los equipos. El mantenimiento preventivo frente a la reparación correctiva marca la diferencia en rentabilidad...</p>
+            <div class="blog-footer">
+              <span class="blog-date"><i class="fas fa-calendar"></i> 23 de abril de 2026</span>
+              <a href="#" class="blog-read-more">Más información <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       FORMULARIO DE CONTACTO
+  ══════════════════════════════════════════════ -->
+  <section class="contact-section" id="contacto">
+    <div class="container contact-inner">
+      <div class="contact-text">
+        <span class="section-tag">CONTACTO</span>
+        <h2>¿Hablamos sobre tu proyecto?</h2>
+        <p>Cuéntanos tu situación y nuestro equipo de expertos te preparará una propuesta personalizada sin ningún compromiso.</p>
+        <ul class="contact-info-list">
+          <li><i class="fas fa-phone"></i><div><strong>Llámanos</strong><span>+34 917 992 688</span></div></li>
+          <li><i class="fas fa-envelope"></i><div><strong>Atención comercial</strong><span>comercial@optimizare.es</span></div></li>
+          <li><i class="fas fa-envelope"></i><div><strong>Atención al cliente</strong><span>clientes@optimizare.es</span></div></li>
+          <li><i class="fas fa-map-marker-alt"></i><div><strong>Dirección</strong><span>Madrid, España</span></div></li>
+        </ul>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="empresa">Empresa *</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="tu@empresa.com" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="servicio">Servicio de interés</label>
+          <select id="servicio" name="servicio">
+            <option value="">Selecciona un servicio…</option>
+            <option>Gestión energética</option>
+            <option>Autoconsumo fotovoltaico</option>
+            <option>CAE – Certificados de Ahorro Energético</option>
+            <option>Huella de carbono</option>
+            <option>Calefacción y climatización</option>
+            <option>IRVE – Recarga eléctrica</option>
+            <option>Compra de energía</option>
+            <option>Mantenimiento</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos brevemente tu situación y necesidades…"></textarea>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" id="privacidad" name="privacidad" required />
+          <label for="privacidad">Acepto la <a href="#">política de privacidad</a> y el tratamiento de mis datos.</label>
+        </div>
+        <button type="submit" class="btn-primary btn-block">Enviar solicitud <i class="fas fa-arrow-right"></i></button>
+        <div class="form-success" id="formSuccess">¡Mensaje enviado! Nos pondremos en contacto contigo en menos de 24h.</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       PARTNERS CTA
+  ══════════════════════════════════════════════ -->
+  <section class="partners-section">
+    <div class="container partners-inner">
+      <div class="partners-text">
+        <span class="section-tag light">CANAL DE PARTNERS</span>
+        <h2>¿Eres instalador o consultor energético?</h2>
+        <p>Únete a nuestra red de partners y accede a herramientas, formación exclusiva y oportunidades de negocio reales. Juntos llegamos más lejos.</p>
+        <a href="#" class="btn-primary btn-lg">Conviértete en partner</a>
+      </div>
+      <div class="partners-features">
+        <div class="partner-feat">
+          <i class="fas fa-handshake"></i>
+          <span>Acuerdo de colaboración exclusivo</span>
+        </div>
+        <div class="partner-feat">
+          <i class="fas fa-graduation-cap"></i>
+          <span>Formación técnica y comercial continua</span>
+        </div>
+        <div class="partner-feat">
+          <i class="fas fa-percentage"></i>
+          <span>Comisiones atractivas por proyecto</span>
+        </div>
+        <div class="partner-feat">
+          <i class="fas fa-headset"></i>
+          <span>Soporte técnico dedicado</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       APP DOWNLOAD BANNER
+  ══════════════════════════════════════════════ -->
+  <section class="app-section">
+    <div class="container app-inner">
+      <div class="app-text">
+        <h2>DESCARGA NUESTRA APP</h2>
+        <p>Controla y gestiona tu energía desde cualquier lugar con la app de Optimizare. Disponible para iOS y Android.</p>
+      </div>
+      <div class="app-buttons">
+        <a href="#" class="app-btn apple">
+          <i class="fab fa-apple"></i>
+          <span><small>Disponible en</small><br />App Store</span>
+        </a>
+        <a href="#" class="app-btn google">
+          <i class="fab fa-google-play"></i>
+          <span><small>Disponible en</small><br />Google Play</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <img src="img/opti.png"
+             alt="Optimizare"
+             class="footer-logo"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+        <span class="footer-logo-text" style="display:none">Optimizare</span>
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> Madrid, España</p>
+          <p><i class="fas fa-envelope"></i> comercial@optimizare.es</p>
+          <p><i class="fas fa-envelope"></i> clientes@optimizare.es</p>
+          <p><i class="fas fa-phone"></i> 917 99 26 88</p>
+        </div>
+        <div class="footer-social">
+          <p class="social-title">Síguenos en:</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#">CAES</a></li>
+          <li><a href="#">Gestión energética</a></li>
+          <li><a href="#">Climatización eficiente</a></li>
+          <li><a href="#">IRVE</a></li>
+          <li><a href="#">Fotovoltaica</a></li>
+          <li><a href="#">Asesoramiento en compra de energía</a></li>
+          <li><a href="#">Servicios a comercializadoras</a></li>
+          <li><a href="#">Huella de carbono</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Sobre nosotros</h4>
+        <ul>
+          <li><a href="#">Sobre Optimizare</a></li>
+          <li><a href="#">Casos de éxito</a></li>
+          <li><a href="#">Trabaja con nosotros</a></li>
+          <li><a href="#">Canal de partners</a></li>
+          <li><a href="#">Normas ISO</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Información legal</h4>
+        <ul>
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Política de cookies</a></li>
+          <li><a href="#">Política de calidad, MA y SST</a></li>
+          <li><a href="#">Política energética</a></li>
+          <li><a href="#">Política SGSI</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>Copyright © 2026 Optimizare</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════
+       FLOATING CHAT BUTTON
+  ══════════════════════════════════════════════ -->
+  <div class="chat-float">
+    <button class="chat-btn" title="¿En qué podemos ayudarte?">
+      <i class="fas fa-comment-dots"></i>
+      <span>¿En qué podemos ayudarte?</span>
+    </button>
+  </div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
