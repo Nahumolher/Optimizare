@@ -112,7 +112,7 @@ if (heroSection) heroObserver.observe(heroSection);
 // ═══════════════════════════════════════════════════
 //  SCROLL REVEAL
 // ═══════════════════════════════════════════════════
-const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
