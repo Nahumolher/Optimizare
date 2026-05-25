@@ -112,16 +112,25 @@ if (heroSection) heroObserver.observe(heroSection);
 // ═══════════════════════════════════════════════════
 //  SCROLL REVEAL
 // ═══════════════════════════════════════════════════
-const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+const revealEls = document.querySelectorAll(
+  '.reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-down, .reveal-zoom, .reveal-flip, .reveal-blur'
+);
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
+    entry.target.classList.toggle('visible', entry.isIntersecting);
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.10 });
 revealEls.forEach(el => revealObserver.observe(el));
+
+// ═══════════════════════════════════════════════════
+//  PARALLAX HERO
+// ═══════════════════════════════════════════════════
+const heroImg = document.querySelector('.hero-img');
+window.addEventListener('scroll', () => {
+  if (heroImg) {
+    heroImg.style.transform = `scale(1.06) translateY(${window.scrollY * 0.18}px)`;
+  }
+}, { passive: true });
 
 // ═══════════════════════════════════════════════════
 //  CONTACT FORM
