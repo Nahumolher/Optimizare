@@ -2717,6 +2717,425 @@ img { max-width: 100%; display: block; }
 
 .ip-chart-note strong { color: var(--green-mid); }
 
+/* ══════════════════════════════════════════════
+   CAE — Certificado de Ahorro Energético
+══════════════════════════════════════════════ */
+
+/* ── ¿Qué es un CAE? explainer ── */
+.cae-explainer {
+  padding: 100px 0;
+  background: var(--white);
+}
+.cae-explainer-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+.cae-explainer-text h2 {
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -.025em;
+  margin: 12px 0 20px;
+  line-height: 1.22;
+}
+.cae-explainer-text p {
+  font-size: .97rem;
+  color: var(--gray-text);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+.cae-explainer-text p strong { color: var(--dark); }
+.cae-explainer-text .btn-primary { margin-top: 12px; }
+
+.cae-callout-card {
+  background: var(--green-dark);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+.cae-callout-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 20%, rgba(18,184,114,.18) 0%, transparent 60%);
+  pointer-events: none;
+}
+.cae-callout-icon {
+  width: 52px; height: 52px;
+  background: rgba(18,184,114,.15);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+  color: var(--green-bright);
+  margin: 0 auto 24px;
+}
+.cae-callout-eq {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.cae-callout-num {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -.02em;
+}
+.cae-callout-sep {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--green-bright);
+}
+.cae-callout-kwh {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--green-bright);
+  letter-spacing: -.02em;
+}
+.cae-callout-desc {
+  font-size: .9rem;
+  color: rgba(255,255,255,.65);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+.cae-callout-example {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(18,184,114,.25);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  text-align: left;
+}
+.cae-callout-example i {
+  color: var(--green-bright);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+.cae-callout-example span {
+  font-size: .85rem;
+  color: rgba(255,255,255,.7);
+  line-height: 1.6;
+}
+.cae-callout-example strong { color: var(--white); }
+
+@media (max-width: 960px) {
+  .cae-explainer-layout { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* ── Modalidades ── */
+.cae-modals-section {
+  padding: 96px 0;
+  background: var(--gray-light);
+}
+.cae-modals-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.cae-modals-header h2 {
+  font-size: clamp(1.4rem, 2.3vw, 2rem);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -.025em;
+}
+.cae-modals-header p {
+  font-size: .97rem;
+  color: var(--gray-text);
+  line-height: 1.7;
+}
+.cae-modals-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.cae-modal-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--gray-mid);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.cae-modal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.cae-modal-card.cae-modal-dark {
+  background: var(--green-dark);
+  border-color: transparent;
+}
+/* imagen superior de la tarjeta */
+.cae-modal-img {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+.cae-modal-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .45s ease;
+}
+.cae-modal-card:hover .cae-modal-img img { transform: scale(1.04); }
+.cae-modal-img-badge {
+  position: absolute;
+  bottom: 14px;
+  left: 16px;
+  background: rgba(8,51,37,.88);
+  backdrop-filter: blur(4px);
+  color: var(--white);
+  padding: 7px 14px;
+  border-radius: var(--radius);
+  font-size: .78rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.cae-modal-img-badge i { color: var(--green-bright); }
+/* cuerpo de la tarjeta */
+.cae-modal-body {
+  padding: 28px 32px 32px;
+}
+.cae-modal-tag {
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  color: var(--green-light);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+.cae-modal-dark .cae-modal-tag { color: var(--green-bright); }
+.cae-modal-card h3 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 14px;
+  letter-spacing: -.02em;
+}
+.cae-modal-dark h3 { color: var(--white); }
+.cae-modal-card p {
+  font-size: .93rem;
+  color: var(--gray-text);
+  line-height: 1.72;
+  margin-bottom: 12px;
+}
+.cae-modal-dark p { color: rgba(255,255,255,.7); }
+.cae-modal-sectors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+.cae-modal-sectors span {
+  background: rgba(14,112,80,.08);
+  color: var(--green-main);
+  font-size: .78rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.cae-modal-dark .cae-modal-sectors span {
+  background: rgba(18,184,114,.15);
+  color: var(--green-bright);
+}
+@media (max-width: 760px) {
+  .cae-modals-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Sectores — image overlay cards ── */
+.cae-sectors-section {
+  padding: 96px 0;
+  background: var(--gray-light);
+}
+.cae-sectors-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.cae-sectors-header h2 {
+  font-size: clamp(1.4rem, 2.3vw, 2rem);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -.025em;
+}
+.cae-sectors-header p {
+  font-size: .97rem;
+  color: var(--gray-text);
+  line-height: 1.7;
+}
+.cae-sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+.cae-sector-item {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.cae-sector-item:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+.cae-sector-img {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+}
+.cae-sector-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .45s ease;
+}
+.cae-sector-item:hover .cae-sector-img img { transform: scale(1.06); }
+.cae-sector-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(8,51,37,.88) 0%, rgba(8,51,37,.2) 55%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 14px 16px;
+  gap: 3px;
+}
+.cae-sector-img-overlay i {
+  font-size: 1.1rem;
+  color: var(--green-bright);
+}
+.cae-sector-img-overlay h4 {
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+}
+.cae-sector-body {
+  padding: 14px 16px 18px;
+}
+.cae-sector-body p {
+  font-size: .82rem;
+  color: var(--gray-text);
+  line-height: 1.65;
+  margin: 0;
+}
+@media (max-width: 960px) {
+  .cae-sectors-grid { grid-template-columns: repeat(3, 1fr); }
+  .cae-sector-img { height: 140px; }
+}
+@media (max-width: 600px) {
+  .cae-sectors-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Beneficios CAE — filas imagen + texto ── */
+.cae-img-benefits {
+  padding: 96px 0;
+  background: var(--green-dark);
+  position: relative;
+}
+.cae-img-benefits-title {
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -.025em;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.cae-ibr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.cae-ibr:last-child { margin-bottom: 0; }
+.cae-ibr-reverse .cae-ibr-photo { order: 2; }
+.cae-ibr-reverse .cae-ibr-items { order: 1; }
+.cae-ibr-photo {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 300px;
+  box-shadow: var(--shadow-lg);
+}
+.cae-ibr-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.cae-ibr-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cae-ibr-item {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(18,184,114,.18);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  transition: background var(--transition), border-color var(--transition);
+}
+.cae-ibr-item:hover {
+  background: rgba(18,184,114,.1);
+  border-color: rgba(18,184,114,.35);
+}
+.cae-ibr-icon {
+  width: 42px; height: 42px;
+  border-radius: 10px;
+  background: rgba(18,184,114,.18);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .95rem;
+  color: var(--green-bright);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.cae-ibr-item h3 {
+  font-size: .97rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+.cae-ibr-item p {
+  font-size: .85rem;
+  color: rgba(255,255,255,.65);
+  line-height: 1.65;
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .cae-ibr { grid-template-columns: 1fr; gap: 28px; }
+  .cae-ibr-reverse .cae-ibr-photo { order: 0; }
+  .cae-ibr-reverse .cae-ibr-items { order: 0; }
+  .cae-ibr-photo { height: 220px; }
+}
+
 /* ── Tabs — Servicios a comercializadoras ── */
 .ip-tabs-section {
   padding: 96px 0;
@@ -3279,37 +3698,29 @@ img { max-width: 100%; display: block; }
 /* ── Timeline de proceso ── */
 .ip-timeline-section {
   padding: 96px 0;
-  background: var(--green-dark);
+  background: var(--white);
   position: relative;
-  overflow: hidden;
 }
-.ip-timeline-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 10% 50%, rgba(18,184,114,.12) 0%, transparent 50%),
-    radial-gradient(ellipse at 90% 20%, rgba(14,112,80,.1) 0%, transparent 50%);
-  pointer-events: none;
-}
-.ip-timeline-header {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto 64px;
+.ip-timeline-header,
+.ip-tl-header {
+  text-align: left;
+  max-width: 640px;
+  margin: 0 0 64px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
 }
-.ip-timeline-header .section-tag { color: var(--accent); border-color: rgba(18,184,114,.3); background: rgba(18,184,114,.1); }
-.ip-timeline-header h2 {
-  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+.ip-timeline-header h2,
+.ip-tl-header h2 {
+  font-size: clamp(1.6rem, 2.6vw, 2.3rem);
   font-weight: 800;
-  color: var(--white);
+  color: var(--dark);
   letter-spacing: -.025em;
   line-height: 1.2;
 }
-.ip-timeline-header p { font-size: .97rem; color: rgba(255,255,255,.65); line-height: 1.7; }
+.ip-timeline-header p,
+.ip-tl-header p { font-size: .97rem; color: var(--gray-text); line-height: 1.7; }
 
 .ip-timeline {
   display: grid;
@@ -3320,11 +3731,11 @@ img { max-width: 100%; display: block; }
 .ip-timeline::before {
   content: '';
   position: absolute;
-  top: 32px;
+  top: 46px;
   left: calc(12.5%);
   right: calc(12.5%);
   height: 2px;
-  background: linear-gradient(90deg, var(--green-bright), rgba(18,184,114,.3));
+  background: var(--gray-mid);
   z-index: 0;
 }
 .ip-tl-item {
@@ -3332,7 +3743,7 @@ img { max-width: 100%; display: block; }
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 0 20px;
+  padding: 0 24px;
   position: relative;
   z-index: 1;
 }
@@ -3340,37 +3751,39 @@ img { max-width: 100%; display: block; }
   font-size: .72rem;
   font-weight: 800;
   letter-spacing: .1em;
-  color: var(--accent);
-  margin-bottom: 6px;
+  color: var(--green-bright);
+  margin-bottom: 8px;
 }
 .ip-tl-icon {
-  width: 64px; height: 64px;
-  background: rgba(255,255,255,.06);
-  border: 2px solid rgba(18,184,114,.4);
+  width: 72px; height: 72px;
+  background: var(--white);
+  border: 2px solid var(--green-bright);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.3rem;
-  color: var(--accent);
-  margin-bottom: 20px;
-  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+  font-size: 1.35rem;
+  color: var(--green-bright);
+  margin-bottom: 22px;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition), box-shadow var(--transition);
   position: relative;
   z-index: 1;
 }
+.ip-tl-item:hover .ip-tl-icon,
 .ip-tl-item.visible .ip-tl-icon {
-  background: rgba(18,184,114,.15);
-  border-color: var(--green-bright);
-  transform: scale(1.08);
-  box-shadow: 0 0 0 8px rgba(18,184,114,.12);
+  background: rgba(18,184,114,.08);
+  border-color: var(--green-main);
+  color: var(--green-main);
+  transform: scale(1.06);
+  box-shadow: 0 0 0 8px rgba(18,184,114,.1);
 }
 .ip-tl-body h3 {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--dark);
   margin-bottom: 10px;
 }
 .ip-tl-body p {
   font-size: .85rem;
-  color: rgba(255,255,255,.6);
+  color: var(--gray-text);
   line-height: 1.7;
 }
 

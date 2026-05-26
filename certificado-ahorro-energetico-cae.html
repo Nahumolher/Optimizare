@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificados de Ahorro Energético (CAE) – Optimizare</title>
+  <meta name="description" content="Optimizare actúa como Sujeto Delegado y Oficina Técnica en la tramitación de Certificados de Ahorro Energético (CAE). Maximizamos el valor de tus medidas de eficiencia energética." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════
+       COOKIE BANNER
+  ══════════════════════════════════════════════ -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+      <h3>Valoramos tu privacidad</h3>
+      <p>Usamos cookies para mejorar tu experiencia de navegación, mostrarte contenidos personalizados y analizar nuestro tráfico. Al hacer clic en "Aceptar todo" consientes el uso de cookies.</p>
+      <div class="cookie-actions">
+        <button class="btn-cookie outline" onclick="closeCookies()">Rechazar todo</button>
+        <button class="btn-cookie outline" onclick="closeCookies()">Personalizar</button>
+        <button class="btn-cookie primary" onclick="closeCookies()">Aceptar todo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       HEADER / NAVBAR
+  ══════════════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="header-top">
+      <div class="container header-top-inner">
+        <div class="header-top-left">
+          <a href="index.html" class="logo">
+            <img src="img/1.png" alt="Optimizare"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+            <span class="logo-text" style="display:none">Optimizare</span>
+          </a>
+          <div class="header-social">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="header-top-contacts">
+          <a href="tel:+34917992688" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-phone-alt"></i></span>
+            <span class="hcontact-text"><strong>Llámanos</strong><span>+34 917 992 688</span></span>
+          </a>
+          <a href="mailto:comercial@optimizare.es" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-envelope-open-text"></i></span>
+            <span class="hcontact-text"><strong>Atención comercial</strong><span>comercial@optimizare.es</span></span>
+          </a>
+          <a href="mailto:clientes@optimizare.es" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-user-circle"></i></span>
+            <span class="hcontact-text"><strong>Atención al cliente</strong><span>clientes@optimizare.es</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-nav-bar">
+      <div class="container header-nav-inner">
+        <nav class="nav" id="mainNav">
+          <ul class="nav-list">
+            <li class="nav-item has-dropdown active-menu">
+              <a href="#">Gestión de la energía <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="compra-de-energia.html">Asesoramiento en compra de energía</a>
+                <a href="power-purchase-agreement-ppa.html">Power Purchase Agreement (PPA)</a>
+                <a href="servicios-a-comercializadoras.html">Servicios a comercializadoras</a>
+                <a href="certificado-ahorro-energetico-cae.html" class="active-link">Certificado de Ahorro Energético (CAE)</a>
+                <a href="#">Gestión energética</a>
+                <a href="#">Asesoramiento tarifario</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Soluciones energéticas <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Autoconsumo fotovoltaico</a>
+                <a href="#">IRVE – Recarga eléctrica</a>
+                <a href="#">CAE</a>
+                <a href="#">Huella de carbono</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Mantenimiento y servicios <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Mantenimiento preventivo</a>
+                <a href="#">Climatización eficiente</a>
+                <a href="#">Outsourcing energético</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Sostenibilidad <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Economía circular</a>
+                <a href="#">Descarbonización</a>
+                <a href="#">Flexibilidad de la demanda</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Optimizare <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Sobre Optimizare</a>
+                <a href="#">Casos de éxito</a>
+                <a href="#">Trabaja con nosotros</a>
+                <a href="#">Blog</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="certificado-ahorro-energetico-cae.html" class="btn-nav-cae">CAE</a>
+          <a href="#contacto-inner" class="btn-nav-contact">Contacto</a>
+          <button class="btn-search" id="searchToggle"><i class="fas fa-search"></i></button>
+          <button class="btn-hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <input type="text" placeholder="¿Qué estás buscando?" />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════
+       PAGE HERO
+  ══════════════════════════════════════════════ -->
+  <section class="ip-hero">
+    <div class="ip-hero-bg">
+      <img src="img/placa 4.jpg" alt="" class="ip-hero-img" />
+      <div class="ip-hero-overlay"></div>
+    </div>
+    <div class="container ip-hero-content">
+      <nav class="ip-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Gestión de la energía</span>
+        <i class="fas fa-chevron-right"></i>
+        <span class="current">Certificados de Ahorro Energético (CAE)</span>
+      </nav>
+      <h1 class="ip-hero-title">Certificados de<br><em>Ahorro Energético</em></h1>
+      <p class="ip-hero-sub">Actuamos como Sujeto Delegado y Oficina Técnica para maximizar el valor de tus ahorros</p>
+      <a href="#contacto-inner" class="btn-primary btn-lg">Solicitar valoración <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       STATS STRIP
+  ══════════════════════════════════════════════ -->
+  <section class="ip-stats-strip">
+    <div class="container">
+      <div class="ip-stats-grid">
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-certificate"></i></div>
+          <div class="ip-stat-val">
+            <span class="ip-stat-prefix">+</span><span class="ip-stat-num" data-target="110">0</span>
+          </div>
+          <div class="ip-stat-label">fichas estandarizadas disponibles</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-bolt"></i></div>
+          <div class="ip-stat-val">
+            <span class="ip-stat-num" data-target="5">0</span><span class="ip-stat-unit"> sectores</span>
+          </div>
+          <div class="ip-stat-label">Agrario, Industrial, Terciario, Residencial y Transporte</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-medal"></i></div>
+          <div class="ip-stat-val">
+            <span class="ip-stat-num" data-target="2">0</span><span class="ip-stat-unit"> roles</span>
+          </div>
+          <div class="ip-stat-label">Sujeto Delegado y Oficina Técnica</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-award"></i></div>
+          <div class="ip-stat-val">
+            <span class="ip-stat-prefix"></span><span class="ip-stat-num" data-target="100">0</span><span class="ip-stat-unit">%</span>
+          </div>
+          <div class="ip-stat-label">técnicos certificados CMVP (IPMVP / EVO)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       ¿QUÉ ES UN CAE? — layout con callout grande
+  ══════════════════════════════════════════════ -->
+  <section class="cae-explainer">
+    <div class="container">
+      <div class="cae-explainer-layout reveal">
+        <div class="cae-explainer-text">
+          <span class="section-tag">¿QUÉ ES UN CAE?</span>
+          <h2>Un documento que certifica el ahorro real de energía</h2>
+          <p>Un Certificado de Ahorro Energético (CAE) es un documento electrónico que garantiza que, tras llevar a cabo una actuación de eficiencia energética, se ha conseguido un nuevo ahorro de energía final equivalente a <strong>1 kWh</strong>.</p>
+          <p>Optimizare realiza la agrupación de medidas y diseña una <strong>estrategia de compraventa de los CAE</strong> alineada con los objetivos de los propietarios de los ahorros, tanto como Sujeto Delegado como de Oficina Técnica de sujetos obligados.</p>
+          <a href="#contacto-inner" class="btn-primary">Empieza a generar CAE <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="cae-explainer-callout reveal-zoom delay-2">
+          <div class="cae-callout-card">
+            <div class="cae-callout-icon"><i class="fas fa-bolt"></i></div>
+            <div class="cae-callout-eq">
+              <span class="cae-callout-num">1 CAE</span>
+              <span class="cae-callout-sep">=</span>
+              <span class="cae-callout-kwh">1 kWh</span>
+            </div>
+            <p class="cae-callout-desc">de nuevo ahorro de energía final al año</p>
+            <div class="cae-callout-example">
+              <i class="fas fa-lightbulb"></i>
+              <span>Ejemplo: una medida que ahorra <strong>1.000 kWh/año</strong> genera <strong>1.000 CAE</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       MODALIDADES — Estandarizadas vs Singulares
+  ══════════════════════════════════════════════ -->
+  <section class="cae-modals-section">
+    <div class="container">
+      <div class="cae-modals-header reveal-blur">
+        <span class="section-tag">MODALIDADES DE ACTUACIÓN</span>
+        <h2>Dos tipos de actuación según la Orden 818/2023</h2>
+        <p>La Orden 818/2023 define dos modalidades según la complejidad técnica. Optimizare gestiona la tramitación completa en ambas modalidades.</p>
+      </div>
+      <div class="cae-modals-grid">
+        <div class="cae-modal-card reveal-left">
+          <div class="cae-modal-img">
+            <img src="img/instalacion.jpg" alt="Actuaciones estandarizadas CAE" />
+            <span class="cae-modal-img-badge"><i class="fas fa-list-alt"></i> +110 fichas disponibles</span>
+          </div>
+          <div class="cae-modal-body">
+            <span class="cae-modal-tag">ACTUACIONES</span>
+            <h3>Estandarizadas</h3>
+            <p>Más de 110 fichas estandarizadas que obedecen a actuaciones muy repetidas en diferentes sectores y que han podido tipificarse y homogeneizarse.</p>
+            <p>Proceso simplificado con tiempos de tramitación reducidos gracias a la documentación técnica predefinida.</p>
+            <div class="cae-modal-sectors">
+              <span><i class="fas fa-tractor"></i> Agrario</span>
+              <span><i class="fas fa-industry"></i> Industrial</span>
+              <span><i class="fas fa-store"></i> Terciario</span>
+              <span><i class="fas fa-home"></i> Residencial</span>
+              <span><i class="fas fa-truck"></i> Transporte</span>
+            </div>
+          </div>
+        </div>
+        <div class="cae-modal-card cae-modal-dark reveal-right">
+          <div class="cae-modal-img">
+            <img src="img/planos.jpg" alt="Actuaciones singulares CAE" />
+            <span class="cae-modal-img-badge"><i class="fas fa-certificate"></i> Técnicos CMVP certificados</span>
+          </div>
+          <div class="cae-modal-body">
+            <span class="cae-modal-tag">ACTUACIONES</span>
+            <h3>Singulares</h3>
+            <p>Proyectos de mayor complejidad técnica que no pueden tipificarse y requieren documentación y justificación individualizada para cada actuación.</p>
+            <p>Nuestros técnicos certificados CMVP (IPMVP/EVO) realizan la medida y verificación de ahorros con los más altos estándares internacionales.</p>
+            <div class="cae-modal-sectors">
+              <span><i class="fas fa-industry"></i> Industrial</span>
+              <span><i class="fas fa-building"></i> Gran terciario</span>
+              <span><i class="fas fa-city"></i> Infraestructuras</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SPLIT — Sujeto Delegado / Oficina Técnica
+  ══════════════════════════════════════════════ -->
+  <section class="ip-split-benefits">
+    <div class="ip-split-panel ip-split-dark reveal-left">
+      <div class="ip-split-inner">
+        <div class="ip-split-bigicon"><i class="fas fa-user-shield"></i></div>
+        <span class="section-tag" style="color:var(--green-bright);border-color:rgba(18,184,114,.3)">ROL 1</span>
+        <h3>Sujeto Delegado</h3>
+        <p style="color:rgba(255,255,255,.7);font-size:.95rem;line-height:1.7">Actuamos como Sujeto Delegado representando a los propietarios de los ahorros ante la administración, gestionando toda la tramitación y maximizando la rentabilidad obtenida con los CAE generados.</p>
+        <ul class="ip-split-list">
+          <li><i class="fas fa-check"></i> Representación ante la Oficina de Cambios de Suministrador</li>
+          <li><i class="fas fa-check"></i> Gestión de la documentación técnica y administrativa</li>
+          <li><i class="fas fa-check"></i> Estrategia de compraventa de los CAE en el mercado</li>
+          <li><i class="fas fa-check"></i> Máxima rentabilidad para el propietario de los ahorros</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ip-split-panel ip-split-light reveal-right">
+      <div class="ip-split-inner">
+        <div class="ip-split-bigicon" style="color:var(--green-main)"><i class="fas fa-microscope"></i></div>
+        <span class="section-tag">ROL 2</span>
+        <h3>Oficina Técnica</h3>
+        <ul class="ip-split-list" style="color:var(--gray-text)">
+          <li style="color:var(--dark)"><i class="fas fa-check" style="color:var(--green-main)"></i> Verificación independiente de los ahorros conseguidos</li>
+          <li style="color:var(--dark)"><i class="fas fa-check" style="color:var(--green-main)"></i> Elaboración de la documentación técnica exigida</li>
+          <li style="color:var(--dark)"><i class="fas fa-check" style="color:var(--green-main)"></i> Técnicos certificados CMVP según IPMVP/EVO</li>
+          <li style="color:var(--dark)"><i class="fas fa-check" style="color:var(--green-main)"></i> Apoyo a sujetos obligados en la liquidación de sus obligaciones de ahorro</li>
+          <li style="color:var(--dark)"><i class="fas fa-check" style="color:var(--green-main)"></i> Informes de medida y verificación conforme a estándares internacionales</li>
+        </ul>
+        <a href="#contacto-inner" class="btn-primary" style="margin-top:24px">Solicitar información <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       POR QUÉ OPTIMIZARE — filas imagen + texto
+  ══════════════════════════════════════════════ -->
+  <section class="cae-img-benefits">
+    <div class="container">
+      <h2 class="cae-img-benefits-title reveal-blur">¿Por qué gestionar tus CAE con Optimizare?</h2>
+
+      <!-- Fila 1 -->
+      <div class="cae-ibr reveal">
+        <div class="cae-ibr-photo">
+          <img src="img/placa industria.jpg" alt="Proyectos CAE llave en mano" />
+        </div>
+        <div class="cae-ibr-items">
+          <div class="cae-ibr-item">
+            <div class="cae-ibr-icon"><i class="fas fa-key"></i></div>
+            <div>
+              <h3>Proyectos llave en mano</h3>
+              <p>Gestionamos el proyecto completo de Medidas de Ahorro Energético (MAE), desde el diagnóstico hasta la obtención y venta de los CAE.</p>
+            </div>
+          </div>
+          <div class="cae-ibr-item">
+            <div class="cae-ibr-icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <h3>Técnicos certificados CMVP</h3>
+              <p>Profesionales con la certificación internacional CMVP según el protocolo IPMVP de EVO, expertos en medida y verificación de ahorros.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fila 2 (inversa) -->
+      <div class="cae-ibr cae-ibr-reverse reveal">
+        <div class="cae-ibr-photo">
+          <img src="img/instalacion 2.jpg" alt="Estrategia de compraventa CAE" />
+        </div>
+        <div class="cae-ibr-items">
+          <div class="cae-ibr-item">
+            <div class="cae-ibr-icon"><i class="fas fa-chart-line"></i></div>
+            <div>
+              <h3>Estrategia de compraventa</h3>
+              <p>Diseñamos la estrategia óptima de venta de los CAE en el mercado, maximizando el precio obtenido y alineada con los objetivos del cliente.</p>
+            </div>
+          </div>
+          <div class="cae-ibr-item">
+            <div class="cae-ibr-icon"><i class="fas fa-home"></i></div>
+            <div>
+              <h3>Líderes en residencial</h3>
+              <p>Empresa líder en gestión energética residencial con amplia trayectoria en proyectos de eficiencia en comunidades de vecinos y edificios.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fila 3 -->
+      <div class="cae-ibr reveal">
+        <div class="cae-ibr-photo">
+          <img src="img/placa 2.jpg" alt="Equipo propio y sostenibilidad" />
+        </div>
+        <div class="cae-ibr-items">
+          <div class="cae-ibr-item">
+            <div class="cae-ibr-icon"><i class="fas fa-tools"></i></div>
+            <div>
+              <h3>Equipo propio de ejecución</h3>
+              <p>Equipos propios de mantenimiento y ejecución de instalaciones para controlar la calidad en cada fase del proyecto sin depender de terceros.</p>
+            </div>
+          </div>
+          <div class="cae-ibr-item">
+            <div class="cae-ibr-icon"><i class="fas fa-leaf"></i></div>
+            <div>
+              <h3>Compromiso con la sostenibilidad</h3>
+              <p>Combinamos rentabilidad económica con impacto ambiental positivo, ayudando a las empresas a reducir su huella de carbono de forma verificada.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SECTORES — icon grid sobre gris
+  ══════════════════════════════════════════════ -->
+  <section class="cae-sectors-section">
+    <div class="container">
+      <div class="cae-sectors-header reveal-blur">
+        <span class="section-tag">SECTORES DE APLICACIÓN</span>
+        <h2>Operamos en todos los sectores reconocidos</h2>
+        <p>El sistema CAE cubre actuaciones de eficiencia en los cinco grandes sectores energéticos, con más de 110 fichas estandarizadas disponibles.</p>
+      </div>
+      <div class="cae-sectors-grid">
+        <div class="cae-sector-item reveal-zoom delay-1">
+          <div class="cae-sector-img">
+            <img src="img/placa 1.jpg" alt="Sector agrario" />
+            <div class="cae-sector-img-overlay">
+              <i class="fas fa-tractor"></i>
+              <h4>Agrario</h4>
+            </div>
+          </div>
+          <div class="cae-sector-body">
+            <p>Sistemas de riego, maquinaria, instalaciones de climatización y almacenamiento de productos agrícolas.</p>
+          </div>
+        </div>
+        <div class="cae-sector-item reveal-zoom delay-2">
+          <div class="cae-sector-img">
+            <img src="img/placa industria.jpg" alt="Sector industrial" />
+            <div class="cae-sector-img-overlay">
+              <i class="fas fa-industry"></i>
+              <h4>Industrial</h4>
+            </div>
+          </div>
+          <div class="cae-sector-body">
+            <p>Motores eléctricos, compresores, iluminación industrial, hornos, calderas y optimización de procesos.</p>
+          </div>
+        </div>
+        <div class="cae-sector-item reveal-zoom delay-3">
+          <div class="cae-sector-img">
+            <img src="img/edificio placa.jpg" alt="Sector terciario" />
+            <div class="cae-sector-img-overlay">
+              <i class="fas fa-store"></i>
+              <h4>Terciario</h4>
+            </div>
+          </div>
+          <div class="cae-sector-body">
+            <p>Climatización de oficinas y comercios, iluminación, envolvente del edificio y equipos ofimáticos.</p>
+          </div>
+        </div>
+        <div class="cae-sector-item reveal-zoom delay-4">
+          <div class="cae-sector-img">
+            <img src="img/casa1.png" alt="Sector residencial" />
+            <div class="cae-sector-img-overlay">
+              <i class="fas fa-home"></i>
+              <h4>Residencial</h4>
+            </div>
+          </div>
+          <div class="cae-sector-body">
+            <p>Calderas, calefacción, electrodomésticos, iluminación y rehabilitación energética de edificios.</p>
+          </div>
+        </div>
+        <div class="cae-sector-item reveal-zoom delay-5">
+          <div class="cae-sector-img">
+            <img src="img/instalacion 3.jpg" alt="Sector transporte" />
+            <div class="cae-sector-img-overlay">
+              <i class="fas fa-truck"></i>
+              <h4>Transporte</h4>
+            </div>
+          </div>
+          <div class="cae-sector-body">
+            <p>Vehículos de bajo consumo, conducción eficiente, renovación de flotas y electrificación del transporte.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       TIMELINE — Proceso de tramitación
+  ══════════════════════════════════════════════ -->
+  <section class="ip-timeline-section">
+    <div class="container">
+      <div class="ip-timeline-header reveal-blur">
+        <span class="section-tag">NUESTRO PROCESO</span>
+        <h2>¿Cómo tramitamos tus CAE?</h2>
+        <p>Un proceso claro y eficiente para convertir tus medidas de ahorro en ingresos certificados.</p>
+      </div>
+      <div class="ip-timeline">
+        <div class="ip-tl-item reveal-zoom delay-1">
+          <div class="ip-tl-num">01</div>
+          <div class="ip-tl-icon"><i class="fas fa-search"></i></div>
+          <div class="ip-tl-body">
+            <h3>Diagnóstico y viabilidad</h3>
+            <p>Analizamos las actuaciones de eficiencia realizadas o previstas y determinamos qué medidas son elegibles para la obtención de CAE.</p>
+          </div>
+        </div>
+        <div class="ip-tl-item reveal-zoom delay-2">
+          <div class="ip-tl-num">02</div>
+          <div class="ip-tl-icon"><i class="fas fa-file-alt"></i></div>
+          <div class="ip-tl-body">
+            <h3>Documentación técnica</h3>
+            <p>Preparamos toda la documentación técnica exigida por la normativa: fichas de actuación, cálculo de ahorros y verificación según IPMVP.</p>
+          </div>
+        </div>
+        <div class="ip-tl-item reveal-zoom delay-3">
+          <div class="ip-tl-num">03</div>
+          <div class="ip-tl-icon"><i class="fas fa-stamp"></i></div>
+          <div class="ip-tl-body">
+            <h3>Tramitación y obtención</h3>
+            <p>Gestionamos la tramitación completa ante los organismos competentes y obtenemos los CAE a nombre del cliente o del sujeto delegado.</p>
+          </div>
+        </div>
+        <div class="ip-tl-item reveal-zoom delay-4">
+          <div class="ip-tl-num">04</div>
+          <div class="ip-tl-icon"><i class="fas fa-hand-holding-usd"></i></div>
+          <div class="ip-tl-body">
+            <h3>Venta y liquidación</h3>
+            <p>Ejecutamos la estrategia de compraventa en el mercado, maximizando el precio obtenido y transfiriendo el valor al propietario de los ahorros.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       CTA BANNER
+  ══════════════════════════════════════════════ -->
+  <section class="ip-cta-banner">
+    <img src="img/placa 3.jpg" alt="" class="ip-cta-bg" />
+    <div class="ip-cta-overlay"></div>
+    <div class="container ip-cta-inner">
+      <div class="ip-cta-text reveal-left">
+        <span class="ip-cta-eyebrow">ÚNETE</span>
+        <h2>Y consigue oportunidades reales de ahorro priorizando las nuevas tecnologías</h2>
+      </div>
+      <a href="#contacto-inner" class="btn-primary btn-lg reveal-right delay-2">Contacta con nosotros <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       FORMULARIO DE CONTACTO
+  ══════════════════════════════════════════════ -->
+  <section class="contact-section" id="contacto-inner">
+    <div class="container contact-inner">
+      <div class="contact-text reveal-left">
+        <span class="section-tag">CONTACTO</span>
+        <h2>¿Tienes medidas de eficiencia que podrían generar CAE?</h2>
+        <p>Cuéntanos tu situación y nuestro equipo técnico analizará sin compromiso qué CAE puedes obtener y cuál es su valor en el mercado.</p>
+        <ul class="contact-info-list">
+          <li><i class="fas fa-phone"></i><div><strong>Llámanos</strong><span>+34 917 992 688</span></div></li>
+          <li><i class="fas fa-envelope"></i><div><strong>Atención comercial</strong><span>comercial@optimizare.es</span></div></li>
+          <li><i class="fas fa-envelope"></i><div><strong>Atención al cliente</strong><span>clientes@optimizare.es</span></div></li>
+          <li><i class="fas fa-map-marker-alt"></i><div><strong>Dirección</strong><span>Madrid, España</span></div></li>
+        </ul>
+      </div>
+      <form class="contact-form reveal-right" id="contactFormCAE">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="empresa">Empresa *</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="tu@empresa.com" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="sector">Sector de actividad</label>
+          <select id="sector" name="sector">
+            <option value="">Selecciona tu sector…</option>
+            <option>Agrario</option>
+            <option>Industrial</option>
+            <option>Terciario / Servicios</option>
+            <option>Residencial / Comunidades</option>
+            <option>Transporte</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Descripción de la actuación</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe brevemente las medidas de eficiencia energética realizadas o previstas…"></textarea>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" id="privacidad" name="privacidad" required />
+          <label for="privacidad">Acepto la <a href="#">política de privacidad</a> y el tratamiento de mis datos.</label>
+        </div>
+        <button type="submit" class="btn-primary btn-block">Enviar solicitud <i class="fas fa-arrow-right"></i></button>
+        <div class="form-success" id="formSuccessCAE">¡Mensaje enviado! Nuestro equipo técnico analizará tu caso en menos de 24h.</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="img/opti.png" alt="Optimizare" class="footer-logo"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+        <span class="footer-logo-text" style="display:none">Optimizare</span>
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> Madrid, España</p>
+          <p><i class="fas fa-envelope"></i> comercial@optimizare.es</p>
+          <p><i class="fas fa-envelope"></i> clientes@optimizare.es</p>
+          <p><i class="fas fa-phone"></i> 917 99 26 88</p>
+        </div>
+        <div class="footer-social">
+          <p class="social-title">Síguenos en:</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="certificado-ahorro-energetico-cae.html">CAE – Certificados de Ahorro Energético</a></li>
+          <li><a href="#">Gestión energética</a></li>
+          <li><a href="#">Climatización eficiente</a></li>
+          <li><a href="#">IRVE</a></li>
+          <li><a href="#">Fotovoltaica</a></li>
+          <li><a href="compra-de-energia.html">Asesoramiento en compra de energía</a></li>
+          <li><a href="power-purchase-agreement-ppa.html">Power Purchase Agreement (PPA)</a></li>
+          <li><a href="servicios-a-comercializadoras.html">Servicios a comercializadoras</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sobre nosotros</h4>
+        <ul>
+          <li><a href="#">Sobre Optimizare</a></li>
+          <li><a href="#">Casos de éxito</a></li>
+          <li><a href="#">Trabaja con nosotros</a></li>
+          <li><a href="#">Canal de partners</a></li>
+          <li><a href="#">Normas ISO</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Información legal</h4>
+        <ul>
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Política de cookies</a></li>
+          <li><a href="#">Política de calidad, MA y SST</a></li>
+          <li><a href="#">Política energética</a></li>
+          <li><a href="#">Política SGSI</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>Copyright © 2026 Optimizare</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+  <script>
+    // ── Contadores stats strip ──
+    const ipStatNums = document.querySelectorAll('.ip-stat-num');
+    let ipCountersStarted = false;
+    const ipStatsObs = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !ipCountersStarted) {
+        ipCountersStarted = true;
+        ipStatNums.forEach(el => {
+          const target = parseInt(el.dataset.target, 10);
+          const step = target / (1800 / 16);
+          let current = 0;
+          const t = setInterval(() => {
+            current += step;
+            if (current >= target) { current = target; clearInterval(t); }
+            el.textContent = Math.floor(current).toLocaleString('es-ES');
+          }, 16);
+        });
+      }
+    }, { threshold: 0.3 });
+    const ipStrip = document.querySelector('.ip-stats-strip');
+    if (ipStrip) ipStatsObs.observe(ipStrip);
+
+    // ── Formulario ──
+    const form = document.getElementById('contactFormCAE');
+    if (form) {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        document.getElementById('formSuccessCAE').style.display = 'block';
+        form.reset();
+      });
+    }
+  </script>
+
+</body>
+</html>
