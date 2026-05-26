@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asesoramiento en la Compra de Energía – Optimizare</title>
+  <meta name="description" content="Optimizare te asesora en la compra de energía para tu empresa. Estrategia de compra, seguimiento de consumos, gestión administrativa y más." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════
+       COOKIE BANNER
+  ══════════════════════════════════════════════ -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+      <h3>Valoramos tu privacidad</h3>
+      <p>Usamos cookies para mejorar tu experiencia de navegación, mostrarte contenidos personalizados y analizar nuestro tráfico. Al hacer clic en "Aceptar todo" consientes el uso de cookies.</p>
+      <div class="cookie-actions">
+        <button class="btn-cookie outline" onclick="closeCookies()">Rechazar todo</button>
+        <button class="btn-cookie outline" onclick="closeCookies()">Personalizar</button>
+        <button class="btn-cookie primary" onclick="closeCookies()">Aceptar todo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       HEADER / NAVBAR
+  ══════════════════════════════════════════════ -->
+  <header class="header" id="header">
+
+    <div class="header-top">
+      <div class="container header-top-inner">
+        <div class="header-top-left">
+          <a href="index.html" class="logo">
+            <img src="img/1.png" alt="Optimizare"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+            <span class="logo-text" style="display:none">Optimizare</span>
+          </a>
+          <div class="header-social">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="header-top-contacts">
+          <a href="tel:+34917992688" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-phone-alt"></i></span>
+            <span class="hcontact-text">
+              <strong>Llámanos</strong>
+              <span>+34 917 992 688</span>
+            </span>
+          </a>
+          <a href="mailto:comercial@optimizare.es" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-envelope-open-text"></i></span>
+            <span class="hcontact-text">
+              <strong>Atención comercial</strong>
+              <span>comercial@optimizare.es</span>
+            </span>
+          </a>
+          <a href="mailto:clientes@optimizare.es" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-user-circle"></i></span>
+            <span class="hcontact-text">
+              <strong>Atención al cliente</strong>
+              <span>clientes@optimizare.es</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-nav-bar">
+      <div class="container header-nav-inner">
+        <nav class="nav" id="mainNav">
+          <ul class="nav-list">
+            <li class="nav-item has-dropdown active-menu">
+              <a href="#">Gestión de la energía <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="compra-de-energia.html" class="active-link">Asesoramiento en compra de energía</a>
+                <a href="power-purchase-agreement-ppa.html">Power Purchase Agreement (PPA)</a>
+                <a href="servicios-a-comercializadoras.html">Servicios a comercializadoras</a>
+                <a href="#">Gestión energética</a>
+                <a href="#">Asesoramiento tarifario</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Soluciones energéticas <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Autoconsumo fotovoltaico</a>
+                <a href="#">IRVE – Recarga eléctrica</a>
+                <a href="#">CAE</a>
+                <a href="#">Huella de carbono</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Mantenimiento y servicios <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Mantenimiento preventivo</a>
+                <a href="#">Climatización eficiente</a>
+                <a href="#">Outsourcing energético</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Sostenibilidad <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Economía circular</a>
+                <a href="#">Descarbonización</a>
+                <a href="#">Flexibilidad de la demanda</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Optimizare <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Sobre Optimizare</a>
+                <a href="#">Casos de éxito</a>
+                <a href="#">Trabaja con nosotros</a>
+                <a href="#">Blog</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="#" class="btn-nav-cae">CAE</a>
+          <a href="#contacto-inner" class="btn-nav-contact">Contacto</a>
+          <button class="btn-search" id="searchToggle"><i class="fas fa-search"></i></button>
+          <button class="btn-hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <input type="text" placeholder="¿Qué estás buscando?" />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- ══════════════════════════════════════════════
+       PAGE HERO
+  ══════════════════════════════════════════════ -->
+  <section class="ip-hero">
+    <div class="ip-hero-bg">
+      <img src="img/tipos de consumo.jpg" alt="" class="ip-hero-img" />
+      <div class="ip-hero-overlay"></div>
+    </div>
+    <div class="container ip-hero-content">
+      <nav class="ip-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Gestión de la energía</span>
+        <i class="fas fa-chevron-right"></i>
+        <span class="current">Asesoramiento en compra de energía</span>
+      </nav>
+      <h1 class="ip-hero-title">Asesoramiento en la<br><em>compra de energía</em></h1>
+      <p class="ip-hero-sub">Compra de la mano de expertos</p>
+      <a href="#contacto-inner" class="btn-primary btn-lg">Solicitar asesoramiento <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       STATS STRIP
+  ══════════════════════════════════════════════ -->
+  <section class="ip-stats-strip">
+    <div class="ip-stats-deco"></div>
+    <div class="container ip-stats-grid">
+      <div class="ip-stat reveal-zoom delay-1">
+        <div class="ip-stat-icon"><i class="fas fa-users"></i></div>
+        <div class="ip-stat-val">
+          <span class="ip-stat-num" data-target="300">0</span><span class="ip-stat-unit">+</span>
+        </div>
+        <span class="ip-stat-label">clientes satisfechos</span>
+      </div>
+      <div class="ip-stat reveal-zoom delay-2">
+        <div class="ip-stat-icon"><i class="fas fa-euro-sign"></i></div>
+        <div class="ip-stat-val">
+          <span class="ip-stat-prefix">+</span><span class="ip-stat-num" data-target="95">0</span><span class="ip-stat-unit"> M€</span>
+        </div>
+        <span class="ip-stat-label">en energía negociada</span>
+      </div>
+      <div class="ip-stat reveal-zoom delay-3">
+        <div class="ip-stat-icon"><i class="fas fa-chart-line"></i></div>
+        <div class="ip-stat-val">
+          <span class="ip-stat-num" data-target="20">0</span><span class="ip-stat-unit">%</span>
+        </div>
+        <span class="ip-stat-label">ahorro medio en factura</span>
+      </div>
+      <div class="ip-stat reveal-zoom delay-4">
+        <div class="ip-stat-icon"><i class="fas fa-bolt"></i></div>
+        <div class="ip-stat-val">
+          <span class="ip-stat-prefix">+</span><span class="ip-stat-num" data-target="6000">0</span>
+        </div>
+        <span class="ip-stat-label">puntos de suministro</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       INTRO — ESTRATEGIA DE COMPRA
+  ══════════════════════════════════════════════ -->
+  <section class="ip-section">
+    <div class="container ip-section-inner">
+      <div class="ip-section-text reveal-left">
+        <span class="section-tag">ESTRATEGIA DE COMPRA</span>
+        <h2>Optimiza tu compra de energía con nuestros expertos</h2>
+        <p>En Optimizare optimizamos tu compra de energía y aumentamos tus ahorros energéticos y económicos. Gracias a nuestros asesores, te asegurarás de adquirir la energía siempre al mejor precio.</p>
+        <p>Abordamos todas las posibilidades de compra gracias a nuestro equipo experto en cada modalidad, consiguiendo el mejor contrato de energía y obteniendo los precios más competitivos.</p>
+        <ul class="ip-list">
+          <li><i class="fas fa-check-circle"></i> Asesoramiento en mercados de gas natural, eléctrico y CO₂</li>
+          <li><i class="fas fa-check-circle"></i> Todas las modalidades: fijo, indexado, coberturas, PPA y más</li>
+          <li><i class="fas fa-check-circle"></i> Elaboración del pliego de licitación y solicitud de ofertas</li>
+          <li><i class="fas fa-check-circle"></i> Análisis técnico-económico de las diferentes ofertas y modalidades</li>
+          <li><i class="fas fa-check-circle"></i> Acompañamiento en la firma del contrato con tu proveedor</li>
+          <li><i class="fas fa-check-circle"></i> Revisión, negociación del clausulado y verificación de tramitación</li>
+        </ul>
+        <a href="#contacto-inner" class="btn-primary">Más información <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="ip-section-image reveal-right">
+        <img src="img/tipos de consumo.jpg" alt="Estrategia de compra de energía" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       MODALIDADES DE COMPRA
+  ══════════════════════════════════════════════ -->
+  <section class="ip-modals-section">
+    <div class="container">
+      <div class="ip-modals-header">
+        <span class="section-tag reveal">MODALIDADES DE COMPRA</span>
+        <h2 class="reveal-blur">Elige la estrategia que más ahorro genera para tu empresa</h2>
+        <p class="reveal delay-1">Cada empresa tiene un perfil de riesgo y consumo diferente. Analizamos cuál es la modalidad óptima para maximizar tu ahorro.</p>
+      </div>
+      <div class="ip-modals-grid">
+
+        <div class="ip-modal-card reveal-scale delay-1">
+          <div class="ip-modal-icon"><i class="fas fa-lock"></i></div>
+          <h3>Precio Fijo</h3>
+          <p>Precio cerrado durante todo el contrato. Máxima seguridad presupuestaria sin sorpresas en la factura.</p>
+          <div class="ip-bar-wrap">
+            <div class="ip-bar-label"><span>Ahorro típico</span><span class="ip-bar-pct">7%</span></div>
+            <div class="ip-bar"><div class="ip-bar-fill" data-width="35"></div></div>
+          </div>
+          <div class="ip-modal-tag"><i class="fas fa-building"></i> Ideal para empresas con bajo apetito de riesgo</div>
+        </div>
+
+        <div class="ip-modal-card reveal-scale delay-2">
+          <div class="ip-modal-icon"><i class="fas fa-sync-alt"></i></div>
+          <h3>Precio Indexado</h3>
+          <p>El precio varía con el mercado diario (OMIE). Aprovecha los momentos de precio bajo para maximizar el ahorro.</p>
+          <div class="ip-bar-wrap">
+            <div class="ip-bar-label"><span>Ahorro típico</span><span class="ip-bar-pct">12%</span></div>
+            <div class="ip-bar"><div class="ip-bar-fill" data-width="55"></div></div>
+          </div>
+          <div class="ip-modal-tag"><i class="fas fa-industry"></i> Ideal para empresas con consumo flexible</div>
+        </div>
+
+        <div class="ip-modal-card reveal-scale delay-3">
+          <div class="ip-modal-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Coberturas</h3>
+          <p>Combinación de precio fijo y variable. Gestión activa del riesgo comprando en los mejores momentos del mercado.</p>
+          <div class="ip-bar-wrap">
+            <div class="ip-bar-label"><span>Ahorro típico</span><span class="ip-bar-pct">18%</span></div>
+            <div class="ip-bar"><div class="ip-bar-fill" data-width="72"></div></div>
+          </div>
+          <div class="ip-modal-tag"><i class="fas fa-chart-bar"></i> Ideal para consumidores con visión de mercado</div>
+        </div>
+
+        <div class="ip-modal-card reveal-scale delay-4">
+          <div class="ip-modal-icon"><i class="fas fa-solar-panel"></i></div>
+          <h3>PPA</h3>
+          <p>Contrato directo con productor renovable a largo plazo. Estabilidad de precio, sostenibilidad y descarbonización.</p>
+          <div class="ip-bar-wrap">
+            <div class="ip-bar-label"><span>Ahorro típico</span><span class="ip-bar-pct">22%</span></div>
+            <div class="ip-bar"><div class="ip-bar-fill" data-width="88"></div></div>
+          </div>
+          <div class="ip-modal-tag"><i class="fas fa-leaf"></i> Ideal para grandes consumidores con objetivos ESG</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SEGUIMIENTO DE CONSUMOS
+  ══════════════════════════════════════════════ -->
+  <section class="ip-section ip-section--alt">
+    <div class="container ip-section-inner ip-section-inner--reverse">
+      <div class="ip-section-image reveal-left">
+        <img src="img/planos.jpg" alt="Seguimiento de consumos" />
+        <div class="ip-image-badge reveal-zoom delay-2">
+          <strong>5–20%</strong>
+          <span>ahorro sin inversión</span>
+        </div>
+      </div>
+      <div class="ip-section-text reveal-right">
+        <span class="section-tag">SEGUIMIENTO Y OPTIMIZACIÓN</span>
+        <h2>Control total de tus consumos y facturación</h2>
+        <p>Realizamos un seguimiento continuo de tus consumos, excesos de potencia y reactivas. Te recomendamos sobre baterías de condensadores, potencias óptimas a contratar y la tarifa y el caudal diario óptimo para tu empresa.</p>
+        <p>Realizamos un completo seguimiento de la legislación y normativa vigente, a la cual tendrás acceso y estarás informado en todo momento. Cualquier modificación se trasladará de la forma más óptima a tus costes energéticos.</p>
+        <div class="ip-highlight-box">
+          <i class="fas fa-chart-line"></i>
+          <p>Obtén ahorros económicos asociados sin inversión de entre un <strong>5%–20%</strong> sobre tu factura actual.</p>
+        </div>
+        <a href="#contacto-inner" class="btn-primary">Solicitar análisis gratuito <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       GESTIÓN ADMINISTRATIVA
+  ══════════════════════════════════════════════ -->
+  <section class="ip-section">
+    <div class="container ip-section-inner">
+      <div class="ip-section-text reveal-left">
+        <span class="section-tag">GESTIÓN ADMINISTRATIVA</span>
+        <h2>Máximo ahorro, máximo confort</h2>
+        <p>Asumimos todas las gestiones administrativas para que tú te centres en tu negocio. Nos encargamos de cada trámite con distribuidoras y comercializadoras.</p>
+        <ul class="ip-list">
+          <li><i class="fas fa-check-circle"></i> Tramitación y control de altas y bajas de puntos de suministro</li>
+          <li><i class="fas fa-check-circle"></i> Cambios de titular de contratos de suministro eléctrico</li>
+          <li><i class="fas fa-check-circle"></i> Ejecución de modificaciones contractuales</li>
+          <li><i class="fas fa-check-circle"></i> Tramitación de Boletines de Instalaciones Eléctricas (BIE) y ATR</li>
+          <li><i class="fas fa-check-circle"></i> Gestión de indemnizaciones por cortes y averías</li>
+          <li><i class="fas fa-check-circle"></i> Validación de cada concepto facturado con reclamación de desvíos</li>
+        </ul>
+        <a href="#contacto-inner" class="btn-primary">Más información <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="ip-section-image reveal-right">
+        <img src="img/instalacion.jpg" alt="Gestión administrativa energética" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       GRÁFICO DE PRECIOS
+  ══════════════════════════════════════════════ -->
+  <section class="ip-chart-section">
+    <div class="container">
+      <div class="ip-chart-layout">
+        <div class="ip-chart-text reveal-left">
+          <h2>Aumenta tus ahorros optimizando todos los parámetros de tu factura</h2>
+          <p>Realizamos un <strong>seguimiento continuo</strong> de tus consumos, excesos de potencia y reactivas.</p>
+          <p>Te recomendamos sobre baterías de condensadores, potencias óptimas a contratar y la tarifa y el caudal diario a contratar óptimo para ti.</p>
+          <p>Realizamos un completo seguimiento de la <strong>legislación y normativa vigente</strong>, a la cuál tendrás acceso y estarás informado en todo momento. Cualquier modificación se trasladará de la forma más óptima a tus costes energéticos.</p>
+        </div>
+        <div class="ip-chart-side reveal-right">
+          <div class="ip-chart-wrap">
+            <p class="ip-chart-title">Precio promedio mensual del mercado eléctrico y gasista en España<br><span>(€/MWh)</span></p>
+            <div class="ip-chart-legend">
+              <span class="ip-legend-item"><span class="ip-legend-dot" style="background:#0b5236"></span> Electricidad</span>
+              <span class="ip-legend-item"><span class="ip-legend-dot" style="background:#12b872"></span> Gas</span>
+            </div>
+            <div class="ip-chart-canvas-wrap">
+              <canvas id="energyChart"></canvas>
+            </div>
+            <p class="ip-chart-note">Gráfico: Optimizare&nbsp;|&nbsp;<strong>Fuente Electricidad: OMIE</strong>&nbsp;|&nbsp;<strong>Fuente Gas: MIBGAS</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       INTELIGENCIA DE MERCADO
+  ══════════════════════════════════════════════ -->
+  <section class="ip-section ip-section--alt">
+    <div class="container ip-section-inner ip-section-inner--reverse">
+      <div class="ip-section-image reveal-left">
+        <img src="img/placa industria.jpg" alt="Inteligencia de mercado energético" />
+      </div>
+      <div class="ip-section-text reveal-right">
+        <span class="section-tag">INTELIGENCIA DE MERCADO</span>
+        <h2>Aportamos el conocimiento del mercado a tus decisiones</h2>
+        <p>Realizamos un seguimiento continuo del mercado: mercados spot, mercados de futuro, mayoristas europeos de electricidad, mercados de gas, tipos de cambio y noticias con repercusión sobre los mismos.</p>
+        <p>El presupuesto energético es clave para que las empresas puedan planificar de manera efectiva su coste de energía anual. Con una metodología propia, nuestro equipo calcula con precisión los costes anuales energéticos, evitando imprevistos y desviaciones.</p>
+        <ul class="ip-list">
+          <li><i class="fas fa-check-circle"></i> Informe mensual con resumen de ahorro por suministro y centro</li>
+          <li><i class="fas fa-check-circle"></i> Seguimiento del gasto y consumo mensual con precio medio obtenido</li>
+          <li><i class="fas fa-check-circle"></i> Informe anual resumen de gasto, ahorro y reclamaciones realizadas</li>
+          <li><i class="fas fa-check-circle"></i> Presupuesto energético anual con metodología propia</li>
+        </ul>
+        <a href="#contacto-inner" class="btn-primary">Contactar ahora <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       BENEFICIOS
+  ══════════════════════════════════════════════ -->
+  <section class="ip-benefits-section">
+    <div class="container">
+      <h2 class="ip-benefits-title reveal-blur">¿Por qué confiar en Optimizare para tu compra de energía?</h2>
+      <div class="ip-benefits-grid">
+        <div class="ip-benefit-item reveal-flip delay-1">
+          <div class="ip-benefit-icon"><i class="fas fa-piggy-bank"></i></div>
+          <h3>Reducción de costes</h3>
+          <p>Te ayudamos a reducir tus costes energéticos con soluciones reales y medibles desde el primer día.</p>
+        </div>
+        <div class="ip-benefit-item reveal-flip delay-2">
+          <div class="ip-benefit-icon"><i class="fas fa-brain"></i></div>
+          <h3>Decisiones informadas</h3>
+          <p>Toma decisiones con el respaldo de un equipo especializado en energía y con visión de mercado.</p>
+        </div>
+        <div class="ip-benefit-item reveal-flip delay-3">
+          <div class="ip-benefit-icon"><i class="fas fa-sliders-h"></i></div>
+          <h3>Soluciones a medida</h3>
+          <p>Adaptamos cada producto y servicio a las necesidades específicas de tu empresa o instalación.</p>
+        </div>
+        <div class="ip-benefit-item reveal-flip delay-4">
+          <div class="ip-benefit-icon"><i class="fas fa-user-tie"></i></div>
+          <h3>Gestor dedicado</h3>
+          <p>Un experto energético dedicado te acompaña en todo momento para garantizar el mejor resultado.</p>
+        </div>
+        <div class="ip-benefit-item reveal-flip delay-5">
+          <div class="ip-benefit-icon"><i class="fas fa-desktop"></i></div>
+          <h3>Control online</h3>
+          <p>Control total de tus consumos y contratos desde un único lugar, en tiempo real y desde cualquier dispositivo.</p>
+        </div>
+        <div class="ip-benefit-item reveal-flip delay-6">
+          <div class="ip-benefit-icon"><i class="fas fa-leaf"></i></div>
+          <h3>Sostenibilidad</h3>
+          <p>Te ayudamos a avanzar hacia una gestión energética más sostenible, eficiente y responsable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       PROCESO — CÓMO TRABAJAMOS
+  ══════════════════════════════════════════════ -->
+  <section class="ip-timeline-section">
+    <div class="container">
+      <div class="ip-timeline-header">
+        <span class="section-tag reveal">CÓMO TRABAJAMOS</span>
+        <h2 class="reveal-blur">Tu estrategia energética en 4 pasos</h2>
+        <p class="reveal delay-1">Un proceso claro, transparente y orientado al ahorro desde el primer día.</p>
+      </div>
+      <div class="ip-timeline">
+
+        <div class="ip-tl-item reveal delay-1">
+          <div class="ip-tl-num">01</div>
+          <div class="ip-tl-body">
+            <div class="ip-tl-icon"><i class="fas fa-search"></i></div>
+            <h3>Análisis de consumo</h3>
+            <p>Estudiamos tus facturas, curvas de carga y contratos actuales para detectar ineficiencias y oportunidades reales de ahorro.</p>
+          </div>
+        </div>
+
+        <div class="ip-tl-item reveal delay-2">
+          <div class="ip-tl-num">02</div>
+          <div class="ip-tl-body">
+            <div class="ip-tl-icon"><i class="fas fa-chess"></i></div>
+            <h3>Estrategia personalizada</h3>
+            <p>Diseñamos la estrategia de compra óptima para tu perfil de riesgo, volumen de consumo y objetivos de sostenibilidad.</p>
+          </div>
+        </div>
+
+        <div class="ip-tl-item reveal delay-3">
+          <div class="ip-tl-num">03</div>
+          <div class="ip-tl-body">
+            <div class="ip-tl-icon"><i class="fas fa-handshake"></i></div>
+            <h3>Licitación y negociación</h3>
+            <p>Lanzamos el pliego de condiciones a comercializadoras y negociamos las mejores condiciones contractuales en tu nombre.</p>
+          </div>
+        </div>
+
+        <div class="ip-tl-item reveal delay-4">
+          <div class="ip-tl-num">04</div>
+          <div class="ip-tl-body">
+            <div class="ip-tl-icon"><i class="fas fa-chart-bar"></i></div>
+            <h3>Seguimiento continuo</h3>
+            <p>Monitorizamos tu consumo, validamos facturas y ajustamos la estrategia de forma continua para maximizar el ahorro cada mes.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       CTA BANNER
+  ══════════════════════════════════════════════ -->
+  <section class="ip-cta-banner">
+    <img src="img/placa 3.jpg" alt="" class="ip-cta-bg" />
+    <div class="ip-cta-overlay"></div>
+    <div class="container ip-cta-inner">
+      <div class="ip-cta-text reveal-left">
+        <span class="ip-cta-eyebrow">ÚNETE</span>
+        <h2>Y consigue oportunidades reales de ahorro, priorizando la implementación de las nuevas tecnologías</h2>
+      </div>
+      <a href="#contacto-inner" class="btn-primary btn-lg reveal-right delay-2">Contacta con nosotros <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       FORMULARIO DE CONTACTO
+  ══════════════════════════════════════════════ -->
+  <section class="contact-section" id="contacto-inner">
+    <div class="container contact-inner">
+      <div class="contact-text reveal-left">
+        <span class="section-tag">CONTACTO</span>
+        <h2>¿Hablamos sobre tu compra de energía?</h2>
+        <p>Cuéntanos tu situación y nuestro equipo de expertos te preparará una estrategia de compra personalizada sin ningún compromiso.</p>
+        <ul class="contact-info-list">
+          <li><i class="fas fa-phone"></i><div><strong>Llámanos</strong><span>+34 917 992 688</span></div></li>
+          <li><i class="fas fa-envelope"></i><div><strong>Atención comercial</strong><span>comercial@optimizare.es</span></div></li>
+          <li><i class="fas fa-envelope"></i><div><strong>Atención al cliente</strong><span>clientes@optimizare.es</span></div></li>
+          <li><i class="fas fa-map-marker-alt"></i><div><strong>Dirección</strong><span>Madrid, España</span></div></li>
+        </ul>
+      </div>
+      <form class="contact-form reveal-right" id="contactFormInner">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="empresa">Empresa *</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="tu@empresa.com" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="consumo">Consumo anual aproximado</label>
+          <select id="consumo" name="consumo">
+            <option value="">Selecciona un rango…</option>
+            <option>Menos de 100.000 kWh/año</option>
+            <option>100.000 – 500.000 kWh/año</option>
+            <option>500.000 – 2.000.000 kWh/año</option>
+            <option>Más de 2.000.000 kWh/año</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos tu situación y qué tipo de contrato tienes actualmente…"></textarea>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" id="privacidad" name="privacidad" required />
+          <label for="privacidad">Acepto la <a href="#">política de privacidad</a> y el tratamiento de mis datos.</label>
+        </div>
+        <button type="submit" class="btn-primary btn-block">Enviar solicitud <i class="fas fa-arrow-right"></i></button>
+        <div class="form-success" id="formSuccessInner">¡Mensaje enviado! Nos pondremos en contacto contigo en menos de 24h.</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <img src="img/opti.png" alt="Optimizare" class="footer-logo"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+        <span class="footer-logo-text" style="display:none">Optimizare</span>
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> Madrid, España</p>
+          <p><i class="fas fa-envelope"></i> comercial@optimizare.es</p>
+          <p><i class="fas fa-envelope"></i> clientes@optimizare.es</p>
+          <p><i class="fas fa-phone"></i> 917 99 26 88</p>
+        </div>
+        <div class="footer-social">
+          <p class="social-title">Síguenos en:</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#">CAES</a></li>
+          <li><a href="#">Gestión energética</a></li>
+          <li><a href="#">Climatización eficiente</a></li>
+          <li><a href="#">IRVE</a></li>
+          <li><a href="#">Fotovoltaica</a></li>
+          <li><a href="compra-de-energia.html">Asesoramiento en compra de energía</a></li>
+          <li><a href="#">Servicios a comercializadoras</a></li>
+          <li><a href="#">Huella de carbono</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Sobre nosotros</h4>
+        <ul>
+          <li><a href="#">Sobre Optimizare</a></li>
+          <li><a href="#">Casos de éxito</a></li>
+          <li><a href="#">Trabaja con nosotros</a></li>
+          <li><a href="#">Canal de partners</a></li>
+          <li><a href="#">Normas ISO</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Información legal</h4>
+        <ul>
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Política de cookies</a></li>
+          <li><a href="#">Política de calidad, MA y SST</a></li>
+          <li><a href="#">Política energética</a></li>
+          <li><a href="#">Política SGSI</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>Copyright © 2026 Optimizare</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+  <script>
+    // ── Chart.js: Evolución de precios ──
+    const ctx = document.getElementById('energyChart');
+    if (ctx) {
+      const labels = [
+        'Abril 2025','Mayo 2025','Junio 2025','Julio 2025','Agosto 2025',
+        'Septiembre 2025','Octubre 2025','Noviembre 2025','Diciembre 2025',
+        'Enero 2026','Febrero 2026','Marzo 2026','Abril 2026'
+      ];
+      const elecData = [25, 20, 74, 70, 68, 63, 60, 80, 70, 67, 18, 42, 42];
+      const gasData  = [30, 33, 38, 30, 30, 30, 32, 33, 35, 35, 50, 45, 43];
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels,
+          datasets: [
+            {
+              label: 'Electricidad',
+              data: elecData,
+              borderColor: '#0b5236',
+              backgroundColor: 'transparent',
+              tension: 0.3, fill: false,
+              pointRadius: 4, pointHoverRadius: 7,
+              pointBackgroundColor: '#0b5236', borderWidth: 2
+            },
+            {
+              label: 'Gas',
+              data: gasData,
+              borderColor: '#12b872',
+              backgroundColor: 'transparent',
+              tension: 0.3, fill: false,
+              pointRadius: 4, pointHoverRadius: 7,
+              pointBackgroundColor: '#12b872', borderWidth: 2
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: 'rgba(13,23,18,.94)',
+              titleColor: '#fff',
+              bodyColor: 'rgba(255,255,255,.8)',
+              borderColor: 'rgba(0,0,0,.1)',
+              borderWidth: 1, padding: 12, cornerRadius: 6,
+              callbacks: { label: c => `  ${c.dataset.label}: ${c.parsed.y} €/MWh` }
+            }
+          },
+          scales: {
+            x: {
+              grid: { color: 'rgba(0,0,0,.05)' },
+              ticks: { font: { family: 'Inter', size: 10 }, color: '#627068', maxRotation: 45, minRotation: 45 }
+            },
+            y: {
+              min: 0,
+              grid: { color: 'rgba(0,0,0,.05)' },
+              ticks: { font: { family: 'Inter', size: 11 }, color: '#627068', stepSize: 20, callback: v => v }
+            }
+          }
+        }
+      });
+    }
+
+    // ── Contadores stats strip ──
+    const ipStatNums = document.querySelectorAll('.ip-stat-num');
+    let ipCountersStarted = false;
+    const ipStatsObs = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !ipCountersStarted) {
+        ipCountersStarted = true;
+        ipStatNums.forEach(el => {
+          const target = parseInt(el.dataset.target, 10);
+          const step = target / (1800 / 16);
+          let current = 0;
+          const t = setInterval(() => {
+            current += step;
+            if (current >= target) { current = target; clearInterval(t); }
+            el.textContent = Math.floor(current).toLocaleString('es-ES');
+          }, 16);
+        });
+      }
+    }, { threshold: 0.3 });
+    const ipStrip = document.querySelector('.ip-stats-strip');
+    if (ipStrip) ipStatsObs.observe(ipStrip);
+
+    // ── Barras de progreso animadas ──
+    const barObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.ip-bar-fill').forEach(b => { b.style.width = b.dataset.width + '%'; });
+          barObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.ip-modal-card').forEach(c => barObs.observe(c));
+
+    // Formulario de la página interna
+    const contactFormInner = document.getElementById('contactFormInner');
+    if (contactFormInner) {
+      contactFormInner.addEventListener('submit', e => {
+        e.preventDefault();
+        const btn = contactFormInner.querySelector('button[type="submit"]');
+        const success = document.getElementById('formSuccessInner');
+        if (btn) { btn.disabled = true; btn.textContent = 'Enviando…'; }
+        setTimeout(() => {
+          if (btn) btn.style.display = 'none';
+          if (success) success.classList.add('show');
+          contactFormInner.reset();
+        }, 1200);
+      });
+    }
+  </script>
+</body>
+</html>

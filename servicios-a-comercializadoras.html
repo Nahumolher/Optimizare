@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios a Comercializadoras – Optimizare</title>
+  <meta name="description" content="Optimizare ofrece soluciones integrales para comercializadoras de gas y electricidad: constitución, operativa diaria, compra de energía, previsión de demanda y reporting." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════
+       COOKIE BANNER
+  ══════════════════════════════════════════════ -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+      <h3>Valoramos tu privacidad</h3>
+      <p>Usamos cookies para mejorar tu experiencia de navegación, mostrarte contenidos personalizados y analizar nuestro tráfico. Al hacer clic en "Aceptar todo" consientes el uso de cookies.</p>
+      <div class="cookie-actions">
+        <button class="btn-cookie outline" onclick="closeCookies()">Rechazar todo</button>
+        <button class="btn-cookie outline" onclick="closeCookies()">Personalizar</button>
+        <button class="btn-cookie primary" onclick="closeCookies()">Aceptar todo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       HEADER / NAVBAR
+  ══════════════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="header-top">
+      <div class="container header-top-inner">
+        <div class="header-top-left">
+          <a href="index.html" class="logo">
+            <img src="img/1.png" alt="Optimizare"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+            <span class="logo-text" style="display:none">Optimizare</span>
+          </a>
+          <div class="header-social">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="header-top-contacts">
+          <a href="tel:+34917992688" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-phone-alt"></i></span>
+            <span class="hcontact-text"><strong>Llámanos</strong><span>+34 917 992 688</span></span>
+          </a>
+          <a href="mailto:comercial@optimizare.es" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-envelope-open-text"></i></span>
+            <span class="hcontact-text"><strong>Atención comercial</strong><span>comercial@optimizare.es</span></span>
+          </a>
+          <a href="mailto:clientes@optimizare.es" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-user-circle"></i></span>
+            <span class="hcontact-text"><strong>Atención al cliente</strong><span>clientes@optimizare.es</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-nav-bar">
+      <div class="container header-nav-inner">
+        <nav class="nav" id="mainNav">
+          <ul class="nav-list">
+            <li class="nav-item has-dropdown active-menu">
+              <a href="#">Gestión de la energía <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="compra-de-energia.html">Asesoramiento en compra de energía</a>
+                <a href="power-purchase-agreement-ppa.html">Power Purchase Agreement (PPA)</a>
+                <a href="servicios-a-comercializadoras.html" class="active-link">Servicios a comercializadoras</a>
+                <a href="#">Gestión energética</a>
+                <a href="#">Asesoramiento tarifario</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Soluciones energéticas <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Autoconsumo fotovoltaico</a>
+                <a href="#">IRVE – Recarga eléctrica</a>
+                <a href="#">CAE</a>
+                <a href="#">Huella de carbono</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Mantenimiento y servicios <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Mantenimiento preventivo</a>
+                <a href="#">Climatización eficiente</a>
+                <a href="#">Outsourcing energético</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Sostenibilidad <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Economía circular</a>
+                <a href="#">Descarbonización</a>
+                <a href="#">Flexibilidad de la demanda</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Optimizare <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Sobre Optimizare</a>
+                <a href="#">Casos de éxito</a>
+                <a href="#">Trabaja con nosotros</a>
+                <a href="#">Blog</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="#" class="btn-nav-cae">CAE</a>
+          <a href="#contacto-inner" class="btn-nav-contact">Contacto</a>
+          <button class="btn-search" id="searchToggle"><i class="fas fa-search"></i></button>
+          <button class="btn-hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <input type="text" placeholder="¿Qué estás buscando?" />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════
+       PAGE HERO
+  ══════════════════════════════════════════════ -->
+  <section class="ip-hero">
+    <div class="ip-hero-bg">
+      <img src="img/edificio placa.jpg" alt="" class="ip-hero-img" />
+      <div class="ip-hero-overlay"></div>
+    </div>
+    <div class="container ip-hero-content">
+      <nav class="ip-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Gestión de la energía</span>
+        <i class="fas fa-chevron-right"></i>
+        <span class="current">Servicios a comercializadoras</span>
+      </nav>
+      <h1 class="ip-hero-title">Servicios a<br><em>Comercializadoras</em></h1>
+      <p class="ip-hero-sub">Soluciones completas para comercializadoras de gas y electricidad</p>
+      <a href="#contacto-inner" class="btn-primary btn-lg">Solicitar información <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       STATS STRIP
+  ══════════════════════════════════════════════ -->
+  <section class="ip-stats-strip">
+    <div class="container">
+      <div class="ip-stats-grid">
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-building"></i></div>
+          <div class="ip-stat-val">
+            <span class="ip-stat-prefix">+</span><span class="ip-stat-num" data-target="50">0</span>
+          </div>
+          <div class="ip-stat-label">comercializadoras asesoradas</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-exchange-alt"></i></div>
+          <div class="ip-stat-val">
+            <span class="ip-stat-prefix">+</span><span class="ip-stat-num" data-target="5000">0</span>
+          </div>
+          <div class="ip-stat-label">switchings gestionados/año</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-chart-pie"></i></div>
+          <div class="ip-stat-val">
+            <span class="ip-stat-num" data-target="3">0</span>
+          </div>
+          <div class="ip-stat-label">mercados cubiertos (elec, gas, directo)</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-file-alt"></i></div>
+          <div class="ip-stat-val">
+            <span class="ip-stat-prefix">+</span><span class="ip-stat-num" data-target="15">0</span><span class="ip-stat-unit"> años</span>
+          </div>
+          <div class="ip-stat-label">de experiencia en el sector</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       INTRO — texto centrado + 4 áreas de servicio
+  ══════════════════════════════════════════════ -->
+  <section class="ip-intro-section">
+    <div class="container">
+      <div class="ip-intro-head reveal">
+        <span class="section-tag">SERVICIO INTEGRAL</span>
+        <h2>Te acompañamos en todo el camino, desde el análisis hasta la operación</h2>
+        <p>Un servicio integral en el que gestionamos la operativa diaria en nombre del cliente: contratación, atención al cliente, compra de energía, previsión de demanda y reporting. Tú te centras en el negocio; nosotros gestionamos la complejidad del mercado.</p>
+        <a href="#servicios-tabs" class="btn-primary">Ver todos los servicios <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="ip-intro-types">
+        <div class="ip-type-card reveal-zoom delay-1">
+          <div class="ip-type-icon"><i class="fas fa-rocket"></i></div>
+          <h3>Constitución y alta</h3>
+          <p>Estudio de viabilidad, plan de negocio y tramitación del alta ante todos los organismos reguladores (CNMC, OMIE, ENAGAS, REE…).</p>
+          <span class="ip-type-tag">Puesta en marcha</span>
+        </div>
+        <div class="ip-type-card reveal-zoom delay-2">
+          <div class="ip-type-icon"><i class="fas fa-cogs"></i></div>
+          <h3>Operativa diaria</h3>
+          <p>Previsión de demanda, compra en mercados, gestión de garantías, facturación y switching. Todo bajo control, todos los días.</p>
+          <span class="ip-type-tag">Gestión continua</span>
+        </div>
+        <div class="ip-type-card reveal-zoom delay-3">
+          <div class="ip-type-icon"><i class="fas fa-headset"></i></div>
+          <h3>Backoffice & ATR</h3>
+          <p>Atención al cliente, gestión de reclamaciones, modificaciones contractuales y envío de informes a las entidades reguladoras.</p>
+          <span class="ip-type-tag">Soporte completo</span>
+        </div>
+        <div class="ip-type-card reveal-zoom delay-4">
+          <div class="ip-type-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Mercado e informes</h3>
+          <p>Seguimiento continuo de mercados eléctrico y gasista, asesoramiento en pricing y cuadro de mando mensual con todos los indicadores.</p>
+          <span class="ip-type-tag">Inteligencia de mercado</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       TABS — 3 fases de servicio detalladas
+  ══════════════════════════════════════════════ -->
+  <section class="ip-tabs-section" id="servicios-tabs">
+    <div class="container">
+      <div class="ip-tabs-header reveal-blur">
+        <span class="section-tag">DETALLE DE SERVICIOS</span>
+        <h2>¿Qué incluye cada fase?</h2>
+        <p>Selecciona la fase que te interesa para conocer en detalle los servicios que Optimizare presta en nombre de la comercializadora.</p>
+      </div>
+      <div class="ip-tabs-nav">
+        <button class="ip-tab-btn active" data-tab="tab1">
+          <i class="fas fa-rocket"></i> Constitución y alta
+        </button>
+        <button class="ip-tab-btn" data-tab="tab2">
+          <i class="fas fa-cogs"></i> Operativa diaria
+        </button>
+        <button class="ip-tab-btn" data-tab="tab3">
+          <i class="fas fa-chart-bar"></i> Mercado e informes
+        </button>
+      </div>
+
+      <div class="ip-tab-panels">
+
+        <div class="ip-tab-panel active" id="tab1">
+          <div class="ip-tab-content">
+            <div class="ip-tab-text">
+              <h3>Constitución y puesta en marcha de la comercializadora</h3>
+              <p>Antes de comenzar a operar, es imprescindible completar correctamente todos los pasos legales y regulatorios. Optimizare te acompaña desde el primer análisis hasta el inicio de la actividad.</p>
+              <ul class="ip-tab-list">
+                <li>
+                  <div class="ip-tab-list-icon"><i class="fas fa-calculator"></i></div>
+                  <div>
+                    <strong>Estudio de rentabilidad y viabilidad económica</strong>
+                    <p>Elaboración del plan de negocio con previsiones de caja operativa y necesidades financieras en avales frente a operadores del sistema y del mercado.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="ip-tab-list-icon"><i class="fas fa-clock"></i></div>
+                  <div>
+                    <strong>Timing de constitución y requerimientos</strong>
+                    <p>Planificación detallada de los plazos y pasos necesarios para cumplir con todos los requisitos administrativos y regulatorios.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="ip-tab-list-icon"><i class="fas fa-clipboard-check"></i></div>
+                  <div>
+                    <strong>Proceso de alta ante organismos reguladores</strong>
+                    <p>Inscripción en el Registro, obtención de Código EIC y SIFCO, alta en MIBGAS, ENAGAS, Distribuidoras, REMIT, CNMC y ESFINGE.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="ip-tab-image">
+              <img src="img/planos.jpg" alt="Constitución comercializadora" />
+              <div class="ip-tab-img-badge"><i class="fas fa-shield-alt"></i> Todo el proceso regulatorio cubierto</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ip-tab-panel" id="tab2">
+          <div class="ip-tab-content">
+            <div class="ip-tab-text">
+              <h3>Gestión de la operativa diaria en tu nombre</h3>
+              <p>Una vez en marcha, gestionamos todos los aspectos del día a día de la comercializadora para que puedas centrarte en el crecimiento del negocio.</p>
+              <ul class="ip-tab-list">
+                <li>
+                  <div class="ip-tab-list-icon"><i class="fas fa-tachometer-alt"></i></div>
+                  <div>
+                    <strong>Previsión de la demanda diaria</strong>
+                    <p>Control preciso de los suministros para minimizar el desvío frente a la compra ejecutada y evitar penalizaciones reglamentarias.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="ip-tab-list-icon"><i class="fas fa-shopping-cart"></i></div>
+                  <div>
+                    <strong>Compra en los distintos mercados</strong>
+                    <p>Asesoramiento en mercado spot, futuros y bilateral, potenciando las posibilidades de negociación mediante acuerdos y plataformas multiproducto.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="ip-tab-list-icon"><i class="fas fa-lock"></i></div>
+                  <div>
+                    <strong>Cálculo y seguimiento de garantías</strong>
+                    <p>Supervisión de las garantías requeridas en los distintos mercados: previsión a corto plazo, estado actual, incrementos y excesos.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="ip-tab-list-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                  <div>
+                    <strong>Gestión de la facturación</strong>
+                    <p>Tramitación y comprobación de la facturación de Distribuidoras, REE, OMIE, MEFF, ENAGAS y MIBGAS.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="ip-tab-list-icon"><i class="fas fa-exchange-alt"></i></div>
+                  <div>
+                    <strong>Switching y ATR</strong>
+                    <p>Altas y bajas de puntos de suministro, cambios de titular, modificaciones contractuales y gestión de reclamaciones.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="ip-tab-image">
+              <img src="img/instalacion.jpg" alt="Operativa diaria comercializadora" />
+              <div class="ip-tab-img-badge"><i class="fas fa-cogs"></i> Operativa sin interrupciones</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ip-tab-panel" id="tab3">
+          <div class="ip-tab-content">
+            <div class="ip-tab-text">
+              <h3>Seguimiento de mercado y reporting periódico</h3>
+              <p>Nuestros expertos se mantienen en contacto directo con el sector y te proporcionan toda la información necesaria para tomar decisiones estratégicas con datos actualizados.</p>
+              <ul class="ip-tab-list">
+                <li>
+                  <div class="ip-tab-list-icon"><i class="fas fa-tags"></i></div>
+                  <div>
+                    <strong>Asesoramiento en pricing y estrategia comercial</strong>
+                    <p>El conocimiento profundo y diario de los mercados nos permite asesorar en la elaboración de precios, optimizar el pricing y reducir el riesgo.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="ip-tab-list-icon"><i class="fas fa-globe-europe"></i></div>
+                  <div>
+                    <strong>Seguimiento continuo de mercados</strong>
+                    <p>Mercados a futuros, mercados europeos, cotización de materias primas (TTF, API2, Mibgas, Brent, OMIE, OMIP) y noticias con repercusión sobre los mismos.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="ip-tab-list-icon"><i class="fas fa-table"></i></div>
+                  <div>
+                    <strong>Análisis y cuadro de mando mensual</strong>
+                    <p>Elaboración mensual del cuadro de mando con la evolución de márgenes, beneficios, consumo y precio medio obtenido por suministro.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="ip-tab-list-icon"><i class="fas fa-balance-scale"></i></div>
+                  <div>
+                    <strong>Seguimiento regulatorio e informes a entidades</strong>
+                    <p>Remisión de todos los informes necesarios para cumplir con la regulación ante las distintas organizaciones y seguimiento de cambios normativos.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="ip-tab-image">
+              <img src="img/tipos de consumo.jpg" alt="Informes de mercado energético" />
+              <div class="ip-tab-img-badge"><i class="fas fa-chart-line"></i> Datos actualizados cada mes</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SPLIT — Previsión de demanda
+  ══════════════════════════════════════════════ -->
+  <section class="ip-split-benefits">
+    <div class="ip-split-panel ip-split-dark reveal-left">
+      <div class="ip-split-inner">
+        <div class="ip-split-bigicon"><i class="fas fa-tachometer-alt"></i></div>
+        <span class="section-tag" style="color:var(--green-bright);border-color:rgba(18,184,114,.3)">GESTIÓN DE RIESGOS</span>
+        <h3>La previsión de demanda: un aspecto crítico</h3>
+        <p style="color:rgba(255,255,255,.7);font-size:.95rem;line-height:1.7">Un mayor conocimiento y control de la demanda prevista supone un menor riesgo económico: minimiza el desvío del consumo frente a la compra ejecutada y evita penalizaciones reglamentarias.</p>
+        <ul class="ip-split-list">
+          <li><i class="fas fa-check"></i> Previsión diaria de los suministros de tu cartera</li>
+          <li><i class="fas fa-check"></i> Minimización del desvío consumo vs compra</li>
+          <li><i class="fas fa-check"></i> Evitar penalizaciones reglamentarias por estimación incorrecta</li>
+          <li><i class="fas fa-check"></i> Alerta temprana ante variaciones significativas de demanda</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ip-split-panel ip-split-light reveal-right">
+      <div class="ip-split-inner">
+        <div class="ip-split-bigicon" style="color:var(--green-main)"><i class="fas fa-shopping-cart"></i></div>
+        <span class="section-tag">COMPRA EN MERCADOS</span>
+        <h3>Acceso a todos los mercados energéticos</h3>
+        <ul class="ip-split-list" style="color:var(--gray-text)">
+          <li style="color:var(--dark)"><i class="fas fa-check" style="color:var(--green-main)"></i> Mercado spot OMIE: compra diaria e intradiaria</li>
+          <li style="color:var(--dark)"><i class="fas fa-check" style="color:var(--green-main)"></i> Mercados de futuros OMIP y EEX</li>
+          <li style="color:var(--dark)"><i class="fas fa-check" style="color:var(--green-main)"></i> Mercado bilateral OTC y plataformas multiproducto</li>
+          <li style="color:var(--dark)"><i class="fas fa-check" style="color:var(--green-main)"></i> Mercados de gas: MIBGAS y mercados europeos (TTF)</li>
+          <li style="color:var(--dark)"><i class="fas fa-check" style="color:var(--green-main)"></i> Gestión de garantías ante OMIE, MEFF y ENAGAS</li>
+        </ul>
+        <a href="#contacto-inner" class="btn-primary" style="margin-top:24px">Solicitar información <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       BENEFICIOS CARDS (FONDO VERDE)
+  ══════════════════════════════════════════════ -->
+  <section class="ip-benefits-section">
+    <div class="container">
+      <h2 class="ip-benefits-title reveal-blur">¿Por qué externalizar con Optimizare?</h2>
+      <div class="ip-benefits-grid">
+        <div class="ip-benefit-item reveal-flip delay-1">
+          <div class="ip-benefit-icon"><i class="fas fa-search-dollar"></i></div>
+          <h3>Análisis de rentabilidad</h3>
+          <p>Antes de empezar, estudiamos la viabilidad económica del proyecto para que conozcas exactamente los retornos esperados.</p>
+        </div>
+        <div class="ip-benefit-item reveal-flip delay-2">
+          <div class="ip-benefit-icon"><i class="fas fa-tools"></i></div>
+          <h3>Gestión integral</h3>
+          <p>Desde la constitución hasta la operativa diaria. Un único equipo experto gestiona todos los aspectos de la comercializadora en tu nombre.</p>
+        </div>
+        <div class="ip-benefit-item reveal-flip delay-3">
+          <div class="ip-benefit-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Compra optimizada</h3>
+          <p>Aprovechamos las oportunidades de mercado para minimizar el coste de compra de la energía que suministras a tus clientes.</p>
+        </div>
+        <div class="ip-benefit-item reveal-flip delay-4">
+          <div class="ip-benefit-icon"><i class="fas fa-tachometer-alt"></i></div>
+          <h3>Previsión de demanda</h3>
+          <p>Control diario de la demanda de tu cartera de clientes para minimizar desvíos y evitar penalizaciones reglamentarias.</p>
+        </div>
+        <div class="ip-benefit-item reveal-flip delay-5">
+          <div class="ip-benefit-icon"><i class="fas fa-chart-bar"></i></div>
+          <h3>Reporting mensual</h3>
+          <p>Cuadro de mando mensual con todos los indicadores clave: márgenes, consumo, precio medio, evolución de mercado y regulación.</p>
+        </div>
+        <div class="ip-benefit-item reveal-flip delay-6">
+          <div class="ip-benefit-icon"><i class="fas fa-balance-scale"></i></div>
+          <h3>Seguimiento regulatorio</h3>
+          <p>Monitorizamos todos los cambios normativos y regulatorios del sector para que tu comercializadora siempre cumpla con la legalidad vigente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       TIMELINE — Proceso de puesta en marcha
+  ══════════════════════════════════════════════ -->
+  <section class="ip-timeline-section">
+    <div class="container">
+      <div class="ip-tl-header reveal-blur">
+        <span class="section-tag" style="color:var(--green-bright);border-color:rgba(18,184,114,.3)">PROCESO DE TRABAJO</span>
+        <h2>De cero a comercializadora operativa</h2>
+        <p>Cuatro fases para poner en marcha tu comercializadora de gas y/o electricidad con todos los procesos operando desde el primer día.</p>
+      </div>
+      <div class="ip-timeline">
+        <div class="ip-tl-item reveal-zoom delay-1">
+          <div class="ip-tl-num">01</div>
+          <div class="ip-tl-icon"><i class="fas fa-calculator"></i></div>
+          <div class="ip-tl-body">
+            <h3>Estudio de viabilidad</h3>
+            <p>Analizamos rentabilidad, plan de negocio, previsiones de caja y necesidades de aval frente a los operadores del sistema.</p>
+          </div>
+        </div>
+        <div class="ip-tl-item reveal-zoom delay-2">
+          <div class="ip-tl-num">02</div>
+          <div class="ip-tl-icon"><i class="fas fa-clipboard-list"></i></div>
+          <div class="ip-tl-body">
+            <h3>Constitución y alta</h3>
+            <p>Tramitamos el alta ante CNMC, OMIE, ENAGAS, REE y todas las distribuidoras. Obtenemos los códigos EIC, SIFCO y demás registros obligatorios.</p>
+          </div>
+        </div>
+        <div class="ip-tl-item reveal-zoom delay-3">
+          <div class="ip-tl-num">03</div>
+          <div class="ip-tl-icon"><i class="fas fa-rocket"></i></div>
+          <div class="ip-tl-body">
+            <h3>Puesta en marcha</h3>
+            <p>Iniciamos la operativa: primeras compras en mercado, activación del switching, configuración del backoffice y atención al cliente.</p>
+          </div>
+        </div>
+        <div class="ip-tl-item reveal-zoom delay-4">
+          <div class="ip-tl-num">04</div>
+          <div class="ip-tl-icon"><i class="fas fa-sync-alt"></i></div>
+          <div class="ip-tl-body">
+            <h3>Operación continua</h3>
+            <p>Gestión diaria de toda la operativa: previsión de demanda, compra, garantías, facturación, ATR y reporting mensual de cuadro de mando.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       CTA BANNER
+  ══════════════════════════════════════════════ -->
+  <section class="ip-cta-banner">
+    <img src="img/placa 3.jpg" alt="" class="ip-cta-bg" />
+    <div class="ip-cta-overlay"></div>
+    <div class="container ip-cta-inner">
+      <div class="ip-cta-text reveal-left">
+        <span class="ip-cta-eyebrow">ÚNETE</span>
+        <h2>Y lanza o potencia tu comercializadora con el respaldo de expertos en energía</h2>
+      </div>
+      <a href="#contacto-inner" class="btn-primary btn-lg reveal-right delay-2">Contacta con nosotros <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       FORMULARIO DE CONTACTO
+  ══════════════════════════════════════════════ -->
+  <section class="contact-section" id="contacto-inner">
+    <div class="container contact-inner">
+      <div class="contact-text reveal-left">
+        <span class="section-tag">CONTACTO</span>
+        <h2>¿Hablamos sobre tu comercializadora?</h2>
+        <p>Cuéntanos en qué fase estás (idea, constitución o ya operativa) y nuestro equipo te explicará cómo podemos ayudarte sin ningún compromiso.</p>
+        <ul class="contact-info-list">
+          <li><i class="fas fa-phone"></i><div><strong>Llámanos</strong><span>+34 917 992 688</span></div></li>
+          <li><i class="fas fa-envelope"></i><div><strong>Atención comercial</strong><span>comercial@optimizare.es</span></div></li>
+          <li><i class="fas fa-envelope"></i><div><strong>Atención al cliente</strong><span>clientes@optimizare.es</span></div></li>
+          <li><i class="fas fa-map-marker-alt"></i><div><strong>Dirección</strong><span>Madrid, España</span></div></li>
+        </ul>
+      </div>
+      <form class="contact-form reveal-right" id="contactFormInner">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="empresa">Empresa *</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="tu@empresa.com" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="fase">Fase actual</label>
+          <select id="fase" name="fase">
+            <option value="">Selecciona tu situación…</option>
+            <option>Estudio de viabilidad / idea inicial</option>
+            <option>En proceso de constitución</option>
+            <option>Comercializadora ya operativa</option>
+            <option>Consumidor directo de mercado</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos tu situación y qué tipo de servicio necesitas…"></textarea>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" id="privacidad" name="privacidad" required />
+          <label for="privacidad">Acepto la <a href="#">política de privacidad</a> y el tratamiento de mis datos.</label>
+        </div>
+        <button type="submit" class="btn-primary btn-block">Enviar solicitud <i class="fas fa-arrow-right"></i></button>
+        <div class="form-success" id="formSuccessInner">¡Mensaje enviado! Nos pondremos en contacto contigo en menos de 24h.</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="img/opti.png" alt="Optimizare" class="footer-logo"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+        <span class="footer-logo-text" style="display:none">Optimizare</span>
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> Madrid, España</p>
+          <p><i class="fas fa-envelope"></i> comercial@optimizare.es</p>
+          <p><i class="fas fa-envelope"></i> clientes@optimizare.es</p>
+          <p><i class="fas fa-phone"></i> 917 99 26 88</p>
+        </div>
+        <div class="footer-social">
+          <p class="social-title">Síguenos en:</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#">CAES</a></li>
+          <li><a href="#">Gestión energética</a></li>
+          <li><a href="#">Climatización eficiente</a></li>
+          <li><a href="#">IRVE</a></li>
+          <li><a href="#">Fotovoltaica</a></li>
+          <li><a href="compra-de-energia.html">Asesoramiento en compra de energía</a></li>
+          <li><a href="power-purchase-agreement-ppa.html">Power Purchase Agreement (PPA)</a></li>
+          <li><a href="servicios-a-comercializadoras.html">Servicios a comercializadoras</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sobre nosotros</h4>
+        <ul>
+          <li><a href="#">Sobre Optimizare</a></li>
+          <li><a href="#">Casos de éxito</a></li>
+          <li><a href="#">Trabaja con nosotros</a></li>
+          <li><a href="#">Canal de partners</a></li>
+          <li><a href="#">Normas ISO</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Información legal</h4>
+        <ul>
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Política de cookies</a></li>
+          <li><a href="#">Política de calidad, MA y SST</a></li>
+          <li><a href="#">Política energética</a></li>
+          <li><a href="#">Política SGSI</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>Copyright © 2026 Optimizare</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+  <script>
+    // ── Contadores stats strip ──
+    const ipStatNums = document.querySelectorAll('.ip-stat-num');
+    let ipCountersStarted = false;
+    const ipStatsObs = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !ipCountersStarted) {
+        ipCountersStarted = true;
+        ipStatNums.forEach(el => {
+          const target = parseInt(el.dataset.target, 10);
+          const step = target / (1800 / 16);
+          let current = 0;
+          const t = setInterval(() => {
+            current += step;
+            if (current >= target) { current = target; clearInterval(t); }
+            el.textContent = Math.floor(current).toLocaleString('es-ES');
+          }, 16);
+        });
+      }
+    }, { threshold: 0.3 });
+    const ipStrip = document.querySelector('.ip-stats-strip');
+    if (ipStrip) ipStatsObs.observe(ipStrip);
+
+    // ── Tabs ──
+    document.querySelectorAll('.ip-tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.tab;
+        document.querySelectorAll('.ip-tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.ip-tab-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(target).classList.add('active');
+      });
+    });
+
+    // ── Formulario de contacto ──
+    const form = document.getElementById('contactFormInner');
+    if (form) {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        document.getElementById('formSuccessInner').style.display = 'block';
+        form.reset();
+      });
+    }
+  </script>
+
+</body>
+</html>
