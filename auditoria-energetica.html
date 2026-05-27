@@ -1,0 +1,663 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AuditorÃ­a EnergÃ©tica â€“ Optimizare</title>
+  <meta name="description" content="AuditorÃ­as energÃ©ticas para empresas bajo la norma UNE EN 16247. Cumple el RD56/2016, detecta ineficiencias y reduce tu factura energÃ©tica con Optimizare." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- COOKIE BANNER -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+      <h3>Valoramos tu privacidad</h3>
+      <p>Usamos cookies para mejorar tu experiencia de navegaciÃ³n, mostrarte contenidos personalizados y analizar nuestro trÃ¡fico.</p>
+      <div class="cookie-actions">
+        <button class="btn-cookie outline" onclick="closeCookies()">Rechazar todo</button>
+        <button class="btn-cookie outline" onclick="closeCookies()">Personalizar</button>
+        <button class="btn-cookie primary" onclick="closeCookies()">Aceptar todo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header-top">
+      <div class="container header-top-inner">
+        <div class="header-top-left">
+          <a href="index.html" class="logo">
+            <img src="img/1.png" alt="Optimizare" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+            <span class="logo-text" style="display:none">Optimizare</span>
+          </a>
+          <div class="header-social">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="header-top-contacts">
+          <a href="tel:+34917992688" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-phone-alt"></i></span>
+            <span class="hcontact-text"><strong>LlÃ¡manos</strong><span>+34 917 992 688</span></span>
+          </a>
+          <a href="mailto:comercial@optimizare.es" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-envelope-open-text"></i></span>
+            <span class="hcontact-text"><strong>AtenciÃ³n comercial</strong><span>comercial@optimizare.es</span></span>
+          </a>
+          <a href="mailto:clientes@optimizare.es" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-user-circle"></i></span>
+            <span class="hcontact-text"><strong>AtenciÃ³n al cliente</strong><span>clientes@optimizare.es</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header-nav-bar">
+      <div class="container header-nav-inner">
+        <nav class="nav" id="mainNav">
+          <ul class="nav-list">
+            <li class="nav-item has-dropdown active-menu">
+                            <a href="#">Gestión de la energía <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="compra-de-energia.html">Asesoramiento en compra de energía</a>
+                <a href="power-purchase-agreement-ppa.html">Power Purchase Agreement (PPA)</a>
+                <a href="servicios-a-comercializadoras.html">Servicios a comercializadoras</a>
+                <a href="certificado-ahorro-energetico-cae.html">Certificado de Ahorro Energético (CAE)</a>
+                <a href="gestion-energetica-iso-50001.html">ISO 50001</a>
+                <a href="auditoria-energetica.html">Auditoría energética</a>
+                <a href="certificado-de-eficiencia-energetica-cee.html">Certificado de Eficiencia Energética (CEE)</a>
+                <a href="monitorizacion-energetica.html">Monitorización energética</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Soluciones energéticas <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="autoconsumo-fotovoltaico.html">Autoconsumo solar fotovoltaico</a>
+                <a href="irve-recarga-electrica.html">Infraestructura de recarga de vehículos eléctricos (IRVE)</a>
+                <a href="calefaccion-climatizacion-eficientes.html">Calefacción y climatización eficiente</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Mantenimiento y servicios <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Mantenimiento preventivo</a>
+                <a href="calefaccion-climatizacion-eficientes.html">ClimatizaciÃ³n eficiente</a>
+                <a href="#">Outsourcing energÃ©tico</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Sostenibilidad <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">EconomÃ­a circular</a>
+                <a href="#">DescarbonizaciÃ³n</a>
+                <a href="#">Flexibilidad de la demanda</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Optimizare <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Sobre Optimizare</a>
+                <a href="#">Casos de Ã©xito</a>
+                <a href="#">Trabaja con nosotros</a>
+                <a href="#">Blog</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="certificado-ahorro-energetico-cae.html" class="btn-nav-cae">CAE</a>
+          <a href="#contacto-inner" class="btn-nav-contact">Contacto</a>
+          <button class="btn-search" id="searchToggle"><i class="fas fa-search"></i></button>
+          <button class="btn-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </div>
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <input type="text" placeholder="Â¿QuÃ© estÃ¡s buscando?" />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="ip-hero">
+    <div class="ip-hero-bg">
+      <img src="img/planos.jpg" alt="" class="ip-hero-img" />
+      <div class="ip-hero-overlay"></div>
+    </div>
+    <div class="container ip-hero-content">
+      <nav class="ip-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>GestiÃ³n de la energÃ­a</span>
+        <i class="fas fa-chevron-right"></i>
+        <span class="current">AuditorÃ­a energÃ©tica</span>
+      </nav>
+      <h1 class="ip-hero-title">AuditorÃ­a EnergÃ©tica<br><em>para empresas</em></h1>
+      <p class="ip-hero-sub">Implementa medidas de eficiencia energÃ©tica personalizadas</p>
+      <a href="#contacto-inner" class="btn-primary btn-lg">Solicitar auditorÃ­a <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <section class="ip-stats-strip">
+    <div class="container">
+      <div class="ip-stats-grid">
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-calendar-check"></i></div>
+          <div class="ip-stat-val">
+            <span class="ip-stat-num" data-target="4">0</span><span class="ip-stat-unit"> aÃ±os</span>
+          </div>
+          <div class="ip-stat-label">plazo mÃ¡ximo entre auditorÃ­as segÃºn RD56/2016</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-industry"></i></div>
+          <div class="ip-stat-val">
+            <span class="ip-stat-num" data-target="4">0</span><span class="ip-stat-unit"> sectores</span>
+          </div>
+          <div class="ip-stat-label">cubiertos: edificios, industria, alumbrado y mÃ¡s</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-file-alt"></i></div>
+          <div class="ip-stat-val">
+            <span class="ip-stat-num" data-target="16247">0</span>
+          </div>
+          <div class="ip-stat-label">norma UNE EN de referencia en auditorÃ­as</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-clock"></i></div>
+          <div class="ip-stat-val">
+            <span>+</span><span class="ip-stat-num" data-target="10">0</span><span class="ip-stat-unit"> aÃ±os</span>
+          </div>
+          <div class="ip-stat-label">de experiencia en eficiencia energÃ©tica</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Â¿QUÃ‰ ES? â€” 2 columnas -->
+  <section class="sge-explainer">
+    <div class="container">
+      <div class="sge-explainer-layout">
+        <div class="sge-explainer-text reveal-left">
+          <span class="section-tag">Â¿QUÃ‰ ES?</span>
+          <h2>Estudio tÃ©cnico para reducir tu consumo y costes energÃ©ticos</h2>
+          <p>Una auditorÃ­a energÃ©tica es un <strong>estudio tÃ©cnico detallado</strong> que analiza el desempeÃ±o energÃ©tico de tu edificio, instalaciÃ³n industrial o proceso. El objetivo es identificar oportunidades de mejora para reducir el consumo energÃ©tico y los costes asociados.</p>
+          <p>En Optimizare ofrecemos auditorÃ­as energÃ©ticas para empresas que desean <strong>cumplir con la normativa vigente</strong>, mejorar su sistema de gestiÃ³n energÃ©tica y avanzar hacia el ahorro y la eficiencia.</p>
+          <p>Todos nuestros informes se elaboran bajo el estÃ¡ndar de calidad de la normativa <strong>UNE EN 16247</strong> sobre AuditorÃ­as EnergÃ©ticas.</p>
+          <a href="#contacto-inner" class="btn-primary" style="margin-top:8px">Solicitar diagnÃ³stico <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="sge-explainer-img reveal-right delay-2">
+          <img src="img/tipos de consumo.jpg" alt="AuditorÃ­a energÃ©tica" />
+          <div class="sge-explainer-badge">
+            <i class="fas fa-certificate"></i>
+            <div>
+              <strong>Norma UNE EN 16247</strong>
+              <span>EstÃ¡ndar europeo de calidad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OBLIGACIÃ“N LEGAL RD56/2016 -->
+  <section class="aud-legal-section">
+    <div class="container">
+      <div class="aud-legal-card reveal-blur">
+        <div class="aud-legal-icon"><i class="fas fa-gavel"></i></div>
+        <div class="aud-legal-content">
+          <span class="aud-legal-tag">OBLIGACIÃ“N LEGAL</span>
+          <h2>Â¿Tu empresa estÃ¡ obligada por el RD56/2016?</h2>
+          <p>Si tu empresa supera los <strong>50 millones de euros en volumen de negocio</strong> y balance de mÃ¡s de 43 millones de euros, o cuenta con <strong>mÃ¡s de 250 empleados</strong>, estÃ¡s legalmente obligado a realizar una auditorÃ­a energÃ©tica cada cuatro aÃ±os o disponer de la certificaciÃ³n ISO 50001.</p>
+          <div class="aud-legal-checks">
+            <div class="aud-legal-check"><i class="fas fa-check-circle"></i><span>+250 empleados o +50Mâ‚¬ de facturaciÃ³n</span></div>
+            <div class="aud-legal-check"><i class="fas fa-check-circle"></i><span>AuditorÃ­a obligatoria cada 4 aÃ±os</span></div>
+            <div class="aud-legal-check"><i class="fas fa-check-circle"></i><span>Alternativa: ISO 50001 en vigor</span></div>
+            <div class="aud-legal-check"><i class="fas fa-check-circle"></i><span>Multas por incumplimiento de hasta 60.000 â‚¬</span></div>
+          </div>
+        </div>
+        <a href="#contacto-inner" class="btn-primary aud-legal-cta">Verificar mi obligaciÃ³n <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTORES â€” 4 tarjetas horizontales con foto -->
+  <section class="aud-sectors-section">
+    <div class="container">
+      <div class="aud-sectors-header reveal-blur">
+        <span class="section-tag">SECTORES</span>
+        <h2>AuditorÃ­as adaptadas a tu tipo de instalaciÃ³n</h2>
+        <p>Adaptamos nuestros servicios de auditorÃ­a energÃ©tica a diferentes sectores y necesidades, con soluciones personalizadas alineadas con tus objetivos de ahorro y sostenibilidad.</p>
+      </div>
+      <div class="aud-sectors-grid">
+        <div class="aud-sector-card reveal-left delay-1">
+          <div class="aud-sector-img">
+            <img src="img/edificio placa.jpg" alt="Edificios comerciales" />
+          </div>
+          <div class="aud-sector-body">
+            <div class="aud-sector-num">01</div>
+            <div class="aud-sector-icon"><i class="fas fa-building"></i></div>
+            <h3>Edificios comerciales y administrativos</h3>
+            <p>AnÃ¡lisis del consumo energÃ©tico en climatizaciÃ³n, iluminaciÃ³n, sistemas BMS y envolvente del edificio. Identificamos las medidas de mayor retorno para hoteles, oficinas y centros comerciales.</p>
+            <ul>
+              <li>ClimatizaciÃ³n e iluminaciÃ³n</li>
+              <li>Envolvente y sistemas de control</li>
+              <li>Potencial de autoconsumo fotovoltaico</li>
+            </ul>
+          </div>
+        </div>
+        <div class="aud-sector-card reveal-right delay-2">
+          <div class="aud-sector-img">
+            <img src="img/placa industria.jpg" alt="Industrias" />
+          </div>
+          <div class="aud-sector-body">
+            <div class="aud-sector-num">02</div>
+            <div class="aud-sector-icon"><i class="fas fa-industry"></i></div>
+            <h3>Industrias con procesos productivos</h3>
+            <p>AuditorÃ­a integral de procesos industriales, maquinaria, motores, aire comprimido y sistemas de producciÃ³n. Evaluamos la eficiencia de cada lÃ­nea de proceso.</p>
+            <ul>
+              <li>Motores y accionamientos variables</li>
+              <li>Aire comprimido y vapor</li>
+              <li>OptimizaciÃ³n de procesos tÃ©rmicos</li>
+            </ul>
+          </div>
+        </div>
+        <div class="aud-sector-card reveal-left delay-3">
+          <div class="aud-sector-img">
+            <img src="img/placa 2.jpg" alt="Cumplimiento RD56" />
+          </div>
+          <div class="aud-sector-body">
+            <div class="aud-sector-num">03</div>
+            <div class="aud-sector-icon"><i class="fas fa-balance-scale"></i></div>
+            <h3>Cumplimiento del RD56/2016</h3>
+            <p>AuditorÃ­as reglamentarias para grandes empresas obligadas por el Real Decreto 56/2016, con toda la documentaciÃ³n necesaria para el registro ante el organismo competente.</p>
+            <ul>
+              <li>Informe reglamentario completo</li>
+              <li>Registro ante la administraciÃ³n</li>
+              <li>Asesoramiento en el proceso legal</li>
+            </ul>
+          </div>
+        </div>
+        <div class="aud-sector-card reveal-right delay-4">
+          <div class="aud-sector-img">
+            <img src="img/instalacion 2.jpg" alt="Alumbrado pÃºblico" />
+          </div>
+          <div class="aud-sector-body">
+            <div class="aud-sector-num">04</div>
+            <div class="aud-sector-icon"><i class="fas fa-street-view"></i></div>
+            <h3>Alumbrado pÃºblico y gestiÃ³n municipal</h3>
+            <p>DiagnÃ³stico energÃ©tico de redes de alumbrado pÃºblico, semÃ¡foros y dependencias municipales. Soluciones de eficiencia para ayuntamientos y entidades pÃºblicas.</p>
+            <ul>
+              <li>Inventario y mediciÃ³n luminotÃ©cnica</li>
+              <li>Propuestas de renovaciÃ³n LED</li>
+              <li>Sistemas de telegestiÃ³n y control</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OBJETIVOS â€” 2Ã—4 con iconos -->
+  <section class="aud-objectives-section">
+    <div class="container">
+      <div class="aud-objectives-layout">
+        <div class="aud-obj-text reveal-left">
+          <span class="section-tag">OBJETIVOS</span>
+          <h2>Â¿Para quÃ© sirve una auditorÃ­a energÃ©tica?</h2>
+          <p>Una auditorÃ­a bien realizada es el punto de partida para cualquier estrategia de eficiencia energÃ©tica. Estos son los resultados concretos que obtienes:</p>
+          <a href="#contacto-inner" class="btn-primary" style="margin-top:16px">Solicitar auditorÃ­a <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="aud-obj-grid reveal-right delay-2">
+          <div class="aud-obj-item">
+            <div class="aud-obj-icon"><i class="fas fa-search-plus"></i></div>
+            <div>
+              <h4>Conoce tu perfil energÃ©tico</h4>
+              <p>AnÃ¡lisis detallado de todos tus consumos por sistema, zona y horario.</p>
+            </div>
+          </div>
+          <div class="aud-obj-item">
+            <div class="aud-obj-icon"><i class="fas fa-exclamation-triangle"></i></div>
+            <div>
+              <h4>Detecta ineficiencias</h4>
+              <p>Identifica pÃ©rdidas y malos hÃ¡bitos de consumo que disparan tu factura.</p>
+            </div>
+          </div>
+          <div class="aud-obj-item">
+            <div class="aud-obj-icon"><i class="fas fa-piggy-bank"></i></div>
+            <div>
+              <h4>Reduce costes</h4>
+              <p>PriorizaciÃ³n de medidas con mayor retorno econÃ³mico e impacto rÃ¡pido.</p>
+            </div>
+          </div>
+          <div class="aud-obj-item">
+            <div class="aud-obj-icon"><i class="fas fa-file-contract"></i></div>
+            <div>
+              <h4>Cumple la normativa</h4>
+              <p>Satisface los requisitos legales del RD56/2016 y evita sanciones.</p>
+            </div>
+          </div>
+          <div class="aud-obj-item">
+            <div class="aud-obj-icon"><i class="fas fa-leaf"></i></div>
+            <div>
+              <h4>Mejora tu sostenibilidad</h4>
+              <p>Reduce tu huella de carbono y las emisiones de gases de efecto invernadero.</p>
+            </div>
+          </div>
+          <div class="aud-obj-item">
+            <div class="aud-obj-icon"><i class="fas fa-clipboard-check"></i></div>
+            <div>
+              <h4>DiagnÃ³stico validado</h4>
+              <p>Recomendaciones tÃ©cnicas respaldadas por la norma UNE EN 16247.</p>
+            </div>
+          </div>
+          <div class="aud-obj-item">
+            <div class="aud-obj-icon"><i class="fas fa-hand-holding-usd"></i></div>
+            <div>
+              <h4>Accede a subvenciones</h4>
+              <p>Identifica ayudas y programas de financiaciÃ³n para eficiencia energÃ©tica.</p>
+            </div>
+          </div>
+          <div class="aud-obj-item">
+            <div class="aud-obj-icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <h4>CAEs por tus medidas</h4>
+              <p>Como Sujeto Delegado, certificamos tus ahorros y los convertimos en ingresos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARANTÃAS OPTIMIZARE â€” checklist sobre fondo oscuro -->
+  <section class="aud-guarantees-section">
+    <div class="container">
+      <div class="aud-guarantees-header reveal-blur">
+        <span class="section-tag" style="color:var(--accent);border-color:rgba(18,184,114,.3)">POR QUÃ‰ OPTIMIZARE</span>
+        <h2>Nuestras garantÃ­as en cada auditorÃ­a</h2>
+        <p>Tu sistema de gestiÃ³n energÃ©tica empieza con una auditorÃ­a de calidad. Estas son las garantÃ­as que te ofrecemos:</p>
+      </div>
+      <div class="aud-guarantees-grid">
+        <div class="aud-guarantee-item reveal-zoom delay-1">
+          <div class="aud-g-icon"><i class="fas fa-file-alt"></i></div>
+          <div>
+            <h4>Informe tÃ©cnico riguroso</h4>
+            <p>Bajo el estÃ¡ndar de calidad de la norma UNE EN 16247 sobre AuditorÃ­as EnergÃ©ticas. Claro, detallado y orientado a la acciÃ³n.</p>
+          </div>
+        </div>
+        <div class="aud-guarantee-item reveal-zoom delay-2">
+          <div class="aud-g-icon"><i class="fas fa-euro-sign"></i></div>
+          <div>
+            <h4>Orientado al retorno econÃ³mico</h4>
+            <p>DiagnÃ³sticos que evalÃºan ademÃ¡s los CAEs que de las MAEs se puedan obtener para maximizar el valor econÃ³mico generado.</p>
+          </div>
+        </div>
+        <div class="aud-guarantee-item reveal-zoom delay-3">
+          <div class="aud-g-icon"><i class="fas fa-tools"></i></div>
+          <div>
+            <h4>Proyectos adaptados a tu sector</h4>
+            <p>Soluciones especÃ­ficas para edificio, flota de vehÃ­culos, industria o proceso productivo. Sin soluciones genÃ©ricas.</p>
+          </div>
+        </div>
+        <div class="aud-guarantee-item reveal-zoom delay-4">
+          <div class="aud-g-icon"><i class="fas fa-medal"></i></div>
+          <div>
+            <h4>Genera valor con tus ahorros</h4>
+            <p>Como Sujeto Delegado del sistema CAE, te ayudamos a certificar tus CAEs y transformar la eficiencia energÃ©tica en ingresos reales.</p>
+          </div>
+        </div>
+        <div class="aud-guarantee-item reveal-zoom delay-5">
+          <div class="aud-g-icon"><i class="fas fa-headset"></i></div>
+          <div>
+            <h4>Seguimiento y soporte post-auditorÃ­a</h4>
+            <p>AcompaÃ±amiento continuo tras la auditorÃ­a para asegurar la implementaciÃ³n efectiva de las medidas recomendadas.</p>
+          </div>
+        </div>
+        <div class="aud-guarantee-item reveal-zoom delay-6">
+          <div class="aud-g-icon"><i class="fas fa-charging-station"></i></div>
+          <div>
+            <h4>Asesoramiento integral en la visita</h4>
+            <p>Durante la visita tÃ©cnica tambiÃ©n asesoramos sobre puntos de recarga para VE, calidad del aire interior y otros requisitos normativos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO â€” Timeline 4 pasos -->
+  <section class="ip-timeline-section">
+    <div class="container">
+      <div class="ip-tl-header reveal-blur">
+        <span class="section-tag">PROCESO</span>
+        <h2>Â¿CÃ³mo realizamos la auditorÃ­a?</h2>
+        <p>Un proceso estructurado en cuatro fases para garantizar un diagnÃ³stico completo y accionable.</p>
+      </div>
+      <div class="ip-timeline">
+        <div class="ip-tl-item reveal-zoom delay-1">
+          <div class="ip-tl-num">01</div>
+          <div class="ip-tl-icon"><i class="fas fa-phone-alt"></i></div>
+          <div class="ip-tl-body">
+            <h3>Toma de datos inicial</h3>
+            <p>RecopilaciÃ³n de facturas energÃ©ticas, planos de instalaciones, datos de producciÃ³n y cualquier informaciÃ³n relevante sobre el consumo de tu empresa.</p>
+          </div>
+        </div>
+        <div class="ip-tl-item reveal-zoom delay-2">
+          <div class="ip-tl-num">02</div>
+          <div class="ip-tl-icon"><i class="fas fa-hard-hat"></i></div>
+          <div class="ip-tl-body">
+            <h3>Visita tÃ©cnica in situ</h3>
+            <p>InspecciÃ³n detallada de todas las instalaciones: equipos, sistemas de iluminaciÃ³n, climatizaciÃ³n, envolvente tÃ©rmica y procesos productivos.</p>
+          </div>
+        </div>
+        <div class="ip-tl-item reveal-zoom delay-3">
+          <div class="ip-tl-num">03</div>
+          <div class="ip-tl-icon"><i class="fas fa-calculator"></i></div>
+          <div class="ip-tl-body">
+            <h3>AnÃ¡lisis y modelado energÃ©tico</h3>
+            <p>SimulaciÃ³n del comportamiento energÃ©tico, cÃ¡lculo de ahorros potenciales y valoraciÃ³n econÃ³mica de cada medida de eficiencia identificada.</p>
+          </div>
+        </div>
+        <div class="ip-tl-item reveal-zoom delay-4">
+          <div class="ip-tl-num">04</div>
+          <div class="ip-tl-icon"><i class="fas fa-file-alt"></i></div>
+          <div class="ip-tl-body">
+            <h3>Informe y plan de acciÃ³n</h3>
+            <p>Entrega del informe tÃ©cnico completo con ranking de medidas por retorno de inversiÃ³n, y acompaÃ±amiento en la implementaciÃ³n de las mÃ¡s prioritarias.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="ip-cta-banner">
+    <img src="img/instalacion 3.jpg" alt="" class="ip-cta-bg" />
+    <div class="ip-cta-overlay"></div>
+    <div class="container ip-cta-inner">
+      <div class="ip-cta-text reveal-left">
+        <span class="ip-cta-eyebrow">ÃšNETE</span>
+        <h2>Y consigue oportunidades reales de ahorro priorizando la implementaciÃ³n de las nuevas tecnologÃ­as</h2>
+      </div>
+      <a href="#contacto-inner" class="btn-primary btn-lg reveal-right delay-2">Contacta con nosotros <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- FORMULARIO DE CONTACTO -->
+  <section class="contact-section" id="contacto-inner">
+    <div class="container contact-inner">
+      <div class="contact-text reveal-left">
+        <span class="section-tag">CONTACTO</span>
+        <h2>Â¿Hablamos sobre tu auditorÃ­a energÃ©tica?</h2>
+        <p>CuÃ©ntanos el tipo de instalaciÃ³n y nuestro equipo te prepararÃ¡ una propuesta personalizada sin ningÃºn compromiso.</p>
+        <ul class="contact-info-list">
+          <li><i class="fas fa-phone"></i><div><strong>LlÃ¡manos</strong><span>+34 917 992 688</span></div></li>
+          <li><i class="fas fa-envelope"></i><div><strong>AtenciÃ³n comercial</strong><span>comercial@optimizare.es</span></div></li>
+          <li><i class="fas fa-envelope"></i><div><strong>AtenciÃ³n al cliente</strong><span>clientes@optimizare.es</span></div></li>
+          <li><i class="fas fa-map-marker-alt"></i><div><strong>DirecciÃ³n</strong><span>Madrid, EspaÃ±a</span></div></li>
+        </ul>
+      </div>
+      <form class="contact-form reveal-right" id="contactFormAud">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="empresa">Empresa *</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="tu@empresa.com" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">TelÃ©fono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="sector">Tipo de instalaciÃ³n</label>
+          <select id="sector" name="sector">
+            <option value="">Selecciona el tipo de instalaciÃ³nâ€¦</option>
+            <option>Edificio comercial / administrativo</option>
+            <option>Industria / proceso productivo</option>
+            <option>Gran empresa (obligaciÃ³n RD56/2016)</option>
+            <option>Alumbrado pÃºblico / municipio</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="CuÃ©ntanos la superficie aproximada, el tipo de instalaciÃ³n y cualquier detalle relevante sobre tus consumos energÃ©ticosâ€¦"></textarea>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" id="privacidad" name="privacidad" required />
+          <label for="privacidad">Acepto la <a href="#">polÃ­tica de privacidad</a> y el tratamiento de mis datos.</label>
+        </div>
+        <button type="submit" class="btn-primary btn-block">Enviar solicitud <i class="fas fa-arrow-right"></i></button>
+        <div class="form-success" id="formSuccessAud">Â¡Mensaje enviado! Nuestro equipo se pondrÃ¡ en contacto contigo en menos de 24h.</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="img/opti.png" alt="Optimizare" class="footer-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <span class="footer-logo-text" style="display:none">Optimizare</span>
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> Madrid, EspaÃ±a</p>
+          <p><i class="fas fa-envelope"></i> comercial@optimizare.es</p>
+          <p><i class="fas fa-envelope"></i> clientes@optimizare.es</p>
+          <p><i class="fas fa-phone"></i> 917 99 26 88</p>
+        </div>
+        <div class="footer-social">
+          <p class="social-title">SÃ­guenos en:</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="certificado-ahorro-energetico-cae.html">CAE â€“ Certificados de Ahorro EnergÃ©tico</a></li>
+          <li><a href="gestion-energetica-iso-50001.html">ISO 50001</a></li>
+          <li><a href="auditoria-energetica.html">AuditorÃ­a energÃ©tica</a></li>
+          <li><a href="certificado-de-eficiencia-energetica-cee.html">Certificado de Eficiencia EnergÃ©tica (CEE)</a></li>
+          <li><a href="monitorizacion-energetica.html">MonitorizaciÃ³n energÃ©tica</a></li>
+          <li><a href="calefaccion-climatizacion-eficientes.html">ClimatizaciÃ³n eficiente</a></li>
+          <li><a href="irve-recarga-electrica.html">IRVE</a></li>
+          <li><a href="autoconsumo-fotovoltaico.html">Fotovoltaica</a></li>
+          <li><a href="compra-de-energia.html">Asesoramiento en compra de energÃ­a</a></li>
+          <li><a href="power-purchase-agreement-ppa.html">Power Purchase Agreement (PPA)</a></li>
+          <li><a href="servicios-a-comercializadoras.html">Servicios a comercializadoras</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sobre nosotros</h4>
+        <ul>
+          <li><a href="#">Sobre Optimizare</a></li>
+          <li><a href="#">Casos de Ã©xito</a></li>
+          <li><a href="#">Trabaja con nosotros</a></li>
+          <li><a href="#">Canal de partners</a></li>
+          <li><a href="#">Normas ISO</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>InformaciÃ³n legal</h4>
+        <ul>
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">PolÃ­tica de privacidad</a></li>
+          <li><a href="#">PolÃ­tica de cookies</a></li>
+          <li><a href="#">PolÃ­tica de calidad, MA y SST</a></li>
+          <li><a href="#">PolÃ­tica energÃ©tica</a></li>
+          <li><a href="#">PolÃ­tica SGSI</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container"><p>Copyright Â© 2026 Optimizare</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+  <script>
+    const audStatNums = document.querySelectorAll('.ip-stat-num');
+    let audStarted = false;
+    new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !audStarted) {
+        audStarted = true;
+        audStatNums.forEach(el => {
+          const target = parseInt(el.dataset.target, 10);
+          const step = target / (1800 / 16);
+          let current = 0;
+          const t = setInterval(() => {
+            current += step;
+            if (current >= target) { current = target; clearInterval(t); }
+            el.textContent = Math.floor(current).toLocaleString('es-ES');
+          }, 16);
+        });
+      }
+    }, { threshold: 0.3 }).observe(document.querySelector('.ip-stats-strip'));
+
+    const form = document.getElementById('contactFormAud');
+    if (form) {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        document.getElementById('formSuccessAud').style.display = 'block';
+        form.reset();
+      });
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+

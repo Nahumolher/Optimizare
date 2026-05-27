@@ -1,0 +1,593 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificado de Eficiencia EnergÃ©tica (CEE) â€“ Optimizare</title>
+  <meta name="description" content="Gestionamos el Certificado de Eficiencia EnergÃ©tica (CEE) para viviendas, oficinas y locales. Cumple RD 390/2021, mejora el valor de tu inmueble y reduce consumo." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+      <h3>Valoramos tu privacidad</h3>
+      <p>Usamos cookies para mejorar tu experiencia de navegaciÃ³n, mostrarte contenidos personalizados y analizar nuestro trÃ¡fico.</p>
+      <div class="cookie-actions">
+        <button class="btn-cookie outline" onclick="closeCookies()">Rechazar todo</button>
+        <button class="btn-cookie outline" onclick="closeCookies()">Personalizar</button>
+        <button class="btn-cookie primary" onclick="closeCookies()">Aceptar todo</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="header-top">
+      <div class="container header-top-inner">
+        <div class="header-top-left">
+          <a href="index.html" class="logo">
+            <img src="img/1.png" alt="Optimizare" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+            <span class="logo-text" style="display:none">Optimizare</span>
+          </a>
+          <div class="header-social">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="header-top-contacts">
+          <a href="tel:+34917992688" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-phone-alt"></i></span>
+            <span class="hcontact-text"><strong>LlÃ¡manos</strong><span>+34 917 992 688</span></span>
+          </a>
+          <a href="mailto:comercial@optimizare.es" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-envelope-open-text"></i></span>
+            <span class="hcontact-text"><strong>AtenciÃ³n comercial</strong><span>comercial@optimizare.es</span></span>
+          </a>
+          <a href="mailto:clientes@optimizare.es" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-user-circle"></i></span>
+            <span class="hcontact-text"><strong>AtenciÃ³n al cliente</strong><span>clientes@optimizare.es</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header-nav-bar">
+      <div class="container header-nav-inner">
+        <nav class="nav" id="mainNav">
+          <ul class="nav-list">
+            <li class="nav-item has-dropdown active-menu">
+                            <a href="#">Gestión de la energía <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="compra-de-energia.html">Asesoramiento en compra de energía</a>
+                <a href="power-purchase-agreement-ppa.html">Power Purchase Agreement (PPA)</a>
+                <a href="servicios-a-comercializadoras.html">Servicios a comercializadoras</a>
+                <a href="certificado-ahorro-energetico-cae.html">Certificado de Ahorro Energético (CAE)</a>
+                <a href="gestion-energetica-iso-50001.html">ISO 50001</a>
+                <a href="auditoria-energetica.html">Auditoría energética</a>
+                <a href="certificado-de-eficiencia-energetica-cee.html">Certificado de Eficiencia Energética (CEE)</a>
+                <a href="monitorizacion-energetica.html">Monitorización energética</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Soluciones energéticas <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="autoconsumo-fotovoltaico.html">Autoconsumo solar fotovoltaico</a>
+                <a href="irve-recarga-electrica.html">Infraestructura de recarga de vehículos eléctricos (IRVE)</a>
+                <a href="calefaccion-climatizacion-eficientes.html">Calefacción y climatización eficiente</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Mantenimiento y servicios <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Mantenimiento preventivo</a>
+                <a href="calefaccion-climatizacion-eficientes.html">ClimatizaciÃ³n eficiente</a>
+                <a href="#">Outsourcing energÃ©tico</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Sostenibilidad <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">EconomÃ­a circular</a>
+                <a href="#">DescarbonizaciÃ³n</a>
+                <a href="#">Flexibilidad de la demanda</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Optimizare <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Sobre Optimizare</a>
+                <a href="#">Casos de Ã©xito</a>
+                <a href="#">Trabaja con nosotros</a>
+                <a href="#">Blog</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="certificado-ahorro-energetico-cae.html" class="btn-nav-cae">CAE</a>
+          <a href="#contacto-inner" class="btn-nav-contact">Contacto</a>
+          <button class="btn-search" id="searchToggle"><i class="fas fa-search"></i></button>
+          <button class="btn-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </div>
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <input type="text" placeholder="Â¿QuÃ© estÃ¡s buscando?" />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="ip-hero">
+    <div class="ip-hero-bg">
+      <img src="img/edificio placa.jpg" alt="" class="ip-hero-img" />
+      <div class="ip-hero-overlay"></div>
+    </div>
+    <div class="container ip-hero-content">
+      <nav class="ip-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>GestiÃ³n de la energÃ­a</span>
+        <i class="fas fa-chevron-right"></i>
+        <span class="current">Certificado de Eficiencia EnergÃ©tica</span>
+      </nav>
+      <h1 class="ip-hero-title">Certificado de Eficiencia<br><em>EnergÃ©tica (CEE)</em></h1>
+      <p class="ip-hero-sub">Cumple con la normativa y mejora el valor energÃ©tico de tu inmueble</p>
+      <a href="#contacto-inner" class="btn-primary btn-lg">Solicitar CEE <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <section class="ip-stats-strip">
+    <div class="container">
+      <div class="ip-stats-grid">
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-scale-balanced"></i></div>
+          <div class="ip-stat-val"><span class="ip-stat-num" data-target="390">0</span><span class="ip-stat-unit">/2021</span></div>
+          <div class="ip-stat-label">Real Decreto que regula la certificaciÃ³n energÃ©tica</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-calendar"></i></div>
+          <div class="ip-stat-val"><span class="ip-stat-num" data-target="10">0</span><span class="ip-stat-unit"> aÃ±os</span></div>
+          <div class="ip-stat-label">validez general del certificado energÃ©tico</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-triangle-exclamation"></i></div>
+          <div class="ip-stat-val"><span class="ip-stat-num" data-target="5">0</span><span class="ip-stat-unit"> aÃ±os</span></div>
+          <div class="ip-stat-label">validez para inmuebles con calificaciÃ³n G</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-gears"></i></div>
+          <div class="ip-stat-val"><span class="ip-stat-num" data-target="5">0</span><span class="ip-stat-unit"> fases</span></div>
+          <div class="ip-stat-label">en nuestro proceso completo de certificaciÃ³n</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cee-overview-section">
+    <div class="container cee-overview-layout">
+      <div class="cee-overview-text reveal-left">
+        <span class="section-tag">Â¿QUÃ‰ ES EL CEE?</span>
+        <h2>EvaluaciÃ³n tÃ©cnica del rendimiento energÃ©tico de tu inmueble</h2>
+        <p>La certificaciÃ³n energÃ©tica de edificios es un proceso mediante el cual se evalÃºa la eficiencia energÃ©tica de un edificio o parte del mismo. El resultado es una calificaciÃ³n energÃ©tica expresada mediante indicadores de consumo anual de energÃ­a primaria y emisiones de CO2.</p>
+        <p>El objetivo es promover la eficiencia energÃ©tica, reducir emisiones y facilitar informaciÃ³n objetiva para venta o alquiler de inmuebles.</p>
+        <p>El <strong>RD 390/2021</strong> establece su obligatoriedad en funciÃ³n del uso, superficie y situaciones especÃ­ficas, como la compraventa o alquiler.</p>
+      </div>
+      <div class="cee-overview-card reveal-right delay-2">
+        <h3>Etiqueta energÃ©tica estimada</h3>
+        <div class="cee-label-stack">
+          <div class="cee-label-row cee-a"><span>A</span><small>Muy eficiente</small></div>
+          <div class="cee-label-row cee-b"><span>B</span><small>Alta eficiencia</small></div>
+          <div class="cee-label-row cee-c"><span>C</span><small>Buena eficiencia</small></div>
+          <div class="cee-label-row cee-d"><span>D</span><small>Nivel medio</small></div>
+          <div class="cee-label-row cee-e"><span>E</span><small>Baja eficiencia</small></div>
+          <div class="cee-label-row cee-f"><span>F</span><small>Muy baja</small></div>
+          <div class="cee-label-row cee-g"><span>G</span><small>Muy ineficiente</small></div>
+        </div>
+        <p>Te entregamos el certificado registrado y recomendaciones para mejorar la calificaciÃ³n.</p>
+        <a href="#contacto-inner" class="btn-primary">Quiero certificar <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cee-profiles-section">
+    <div class="container">
+      <div class="cee-profiles-header reveal-blur">
+        <span class="section-tag">VENTAJAS</span>
+        <h2>Beneficios para cada perfil</h2>
+        <p>El CEE aporta valor tanto al propietario como al comprador o inquilino, ademÃ¡s de beneficios generales de sostenibilidad y revalorizaciÃ³n.</p>
+      </div>
+      <div class="cee-profiles-grid">
+        <article class="cee-profile-card reveal-left delay-1">
+          <img src="img/casa1.png" alt="Propietario vendedor" />
+          <div class="cee-profile-body">
+            <h3>Para propietario o vendedor</h3>
+            <ul>
+              <li>Cumplimiento legal y prevenciÃ³n de sanciones</li>
+              <li>Mayor atractivo y valor del inmueble</li>
+              <li>InformaciÃ³n para planificar mejoras de eficiencia</li>
+            </ul>
+          </div>
+        </article>
+        <article class="cee-profile-card reveal-zoom delay-2">
+          <img src="img/edificio placa.jpg" alt="Comprador inquilino" />
+          <div class="cee-profile-body">
+            <h3>Para comprador o inquilino</h3>
+            <ul>
+              <li>InformaciÃ³n clara sobre consumo y costes energÃ©ticos</li>
+              <li>EvaluaciÃ³n del potencial real de ahorro</li>
+              <li>Mejor confort tÃ©rmico y calidad de vida</li>
+            </ul>
+          </div>
+        </article>
+        <article class="cee-profile-card reveal-right delay-3">
+          <img src="img/instalacion.jpg" alt="Beneficios generales" />
+          <div class="cee-profile-body">
+            <h3>Beneficios generales</h3>
+            <ul>
+              <li>ReducciÃ³n de emisiones y mejora de sostenibilidad</li>
+              <li>Potencial de revalorizaciÃ³n a largo plazo</li>
+              <li>Base tÃ©cnica para anÃ¡lisis de mejoras y CAEs</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cee-reasons-section" id="cee-reasons">
+    <div class="container">
+      <div class="cee-reasons-header reveal-blur">
+        <h2>Por quÃ© realizar tu CEE con Optimizare</h2>
+      </div>
+
+      <div class="cee-reasons-tabs" role="tablist" aria-label="Razones CEE">
+        <button class="cee-reason-tab active" data-cee-tab="tab-exp" role="tab" aria-selected="true">Experiencia y cualificaciÃ³n</button>
+        <button class="cee-reason-tab" data-cee-tab="tab-oficina" role="tab" aria-selected="false">Oficina de ingenierÃ­a tÃ©cnica propia</button>
+        <button class="cee-reason-tab" data-cee-tab="tab-instaladora" role="tab" aria-selected="false">Empresa instaladora</button>
+        <button class="cee-reason-tab" data-cee-tab="tab-caes" role="tab" aria-selected="false">TramitaciÃ³n de CAEs</button>
+        <button class="cee-reason-tab" data-cee-tab="tab-integral" role="tab" aria-selected="false">Servicio integral y personalizado</button>
+      </div>
+
+      <div class="cee-reasons-panels">
+        <article class="cee-reason-panel active" id="tab-exp" role="tabpanel">
+          <div class="cee-reason-layout">
+            <div class="cee-reason-photo reveal-left">
+              <img src="img/instalacion.jpg" alt="Experiencia y cualificaciÃ³n CEE" />
+            </div>
+            <div class="cee-reason-text reveal-right delay-2">
+              <h3>Experiencia y cualificaciÃ³n</h3>
+              <div class="cee-reason-bullet">
+                <i class="fas fa-check"></i>
+                <div>
+                  <h4>MÃ¡s de 10 aÃ±os de experiencia tÃ©cnica</h4>
+                  <p>Trabajamos con herramientas de software reconocidas por la administraciÃ³n competente desde su implantaciÃ³n, lo que nos permite realizar certificaciones energÃ©ticas con precisiÃ³n, seguridad normativa y tiempos de entrega Ã³ptimos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="cee-reason-panel" id="tab-oficina" role="tabpanel">
+          <div class="cee-reason-layout">
+            <div class="cee-reason-photo">
+              <img src="img/planos.jpg" alt="Oficina de ingenierÃ­a" />
+            </div>
+            <div class="cee-reason-text">
+              <h3>Oficina de ingenierÃ­a tÃ©cnica propia</h3>
+              <div class="cee-reason-bullet">
+                <i class="fas fa-check"></i>
+                <div>
+                  <h4>Control total del proceso tÃ©cnico</h4>
+                  <p>Contamos con equipo interno para toma de datos, modelado energÃ©tico y elaboraciÃ³n de informes. Esto nos permite ofrecer un servicio homogÃ©neo, trazable y adaptado a cada tipologÃ­a de inmueble.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="cee-reason-panel" id="tab-instaladora" role="tabpanel">
+          <div class="cee-reason-layout">
+            <div class="cee-reason-photo">
+              <img src="img/instalacion 2.jpg" alt="Empresa instaladora" />
+            </div>
+            <div class="cee-reason-text">
+              <h3>Empresa instaladora</h3>
+              <div class="cee-reason-bullet">
+                <i class="fas fa-check"></i>
+                <div>
+                  <h4>Del diagnÃ³stico a la ejecuciÃ³n</h4>
+                  <p>No solo certificamos: tambiÃ©n podemos ejecutar medidas de mejora recomendadas para elevar la calificaciÃ³n energÃ©tica, reducir consumos y maximizar el retorno de la inversiÃ³n.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="cee-reason-panel" id="tab-caes" role="tabpanel">
+          <div class="cee-reason-layout">
+            <div class="cee-reason-photo">
+              <img src="img/placa 1.jpg" alt="TramitaciÃ³n de CAEs" />
+            </div>
+            <div class="cee-reason-text">
+              <h3>TramitaciÃ³n de CAEs (Certificados de Ahorro EnergÃ©tico)</h3>
+              <div class="cee-reason-bullet">
+                <i class="fas fa-check"></i>
+                <div>
+                  <h4>Valor aÃ±adido Ãºnico</h4>
+                  <p>Te informamos del valor potencial de las MAEs en el mercado de los CAEs y, como Sujeto Delegado, gestionamos la obtenciÃ³n de certificados si se ejecutan las medidas de ahorro propuestas en la certificaciÃ³n.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="cee-reason-panel" id="tab-integral" role="tabpanel">
+          <div class="cee-reason-layout">
+            <div class="cee-reason-photo">
+              <img src="img/instalacion 3.jpg" alt="Servicio integral" />
+            </div>
+            <div class="cee-reason-text">
+              <h3>Servicio integral y personalizado</h3>
+              <div class="cee-reason-bullet">
+                <i class="fas fa-check"></i>
+                <div>
+                  <h4>AcompaÃ±amiento completo de principio a fin</h4>
+                  <p>Asesoramos sobre obligatoriedad, realizamos certificaciÃ³n y registro, y te ayudamos a planificar mejoras para renovar el certificado en mejores condiciones energÃ©ticas y econÃ³micas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ip-timeline-section">
+    <div class="container">
+      <div class="ip-timeline-header reveal-blur">
+        <span class="section-tag">PROCESO CEE</span>
+        <h2>CÃ³mo gestionamos tu certificaciÃ³n energÃ©tica</h2>
+        <p>Un flujo tÃ©cnico y administrativo completo para que tengas tu certificado registrado sin complicaciones.</p>
+      </div>
+      <div class="ip-timeline">
+        <div class="ip-tl-item reveal-zoom delay-1">
+          <div class="ip-tl-num">01</div>
+          <div class="ip-tl-icon"><i class="fas fa-clipboard-list"></i></div>
+          <div class="ip-tl-body">
+            <h3>Toma de datos del inmueble</h3>
+            <p>Recopilamos referencia catastral, caracterÃ­sticas constructivas, instalaciones tÃ©rmicas y documentaciÃ³n existente.</p>
+          </div>
+        </div>
+        <div class="ip-tl-item reveal-zoom delay-2">
+          <div class="ip-tl-num">02</div>
+          <div class="ip-tl-icon"><i class="fas fa-cube"></i></div>
+          <div class="ip-tl-body">
+            <h3>Modelado energÃ©tico y cÃ¡lculo</h3>
+            <p>Modelamos el edificio con software reconocido para obtener calificaciÃ³n, indicadores y escenarios de mejora.</p>
+          </div>
+        </div>
+        <div class="ip-tl-item reveal-zoom delay-3">
+          <div class="ip-tl-num">03</div>
+          <div class="ip-tl-icon"><i class="fas fa-file-lines"></i></div>
+          <div class="ip-tl-body">
+            <h3>Informe CEE y recomendaciones</h3>
+            <p>Emitimos el informe del certificado con propuestas de mejora para optimizar consumo y emisiones.</p>
+          </div>
+        </div>
+        <div class="ip-tl-item reveal-zoom delay-4">
+          <div class="ip-tl-num">04</div>
+          <div class="ip-tl-icon"><i class="fas fa-landmark"></i></div>
+          <div class="ip-tl-body">
+            <h3>Registro oficial del certificado</h3>
+            <p>Tramitamos la documentaciÃ³n en el Ã³rgano competente y te entregamos la etiqueta energÃ©tica registrada.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ip-cta-banner">
+    <img src="img/placa 1.jpg" alt="" class="ip-cta-bg" />
+    <div class="ip-cta-overlay"></div>
+    <div class="container ip-cta-inner">
+      <div class="ip-cta-text reveal-left">
+        <span class="ip-cta-eyebrow">ÃšNETE</span>
+        <h2>Y consigue oportunidades reales de ahorro priorizando la implementaciÃ³n de las nuevas tecnologÃ­as</h2>
+      </div>
+      <a href="#contacto-inner" class="btn-primary btn-lg reveal-right delay-2">Contacta con nosotros <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contacto-inner">
+    <div class="container contact-inner">
+      <div class="contact-text reveal-left">
+        <span class="section-tag">CONTACTO</span>
+        <h2>Solicita tu Certificado de Eficiencia EnergÃ©tica</h2>
+        <p>IndÃ­canos el tipo de inmueble y te daremos plazo, coste y requisitos para tramitar el CEE con total seguridad.</p>
+        <ul class="contact-info-list">
+          <li><i class="fas fa-phone"></i><div><strong>LlÃ¡manos</strong><span>+34 917 992 688</span></div></li>
+          <li><i class="fas fa-envelope"></i><div><strong>AtenciÃ³n comercial</strong><span>comercial@optimizare.es</span></div></li>
+          <li><i class="fas fa-envelope"></i><div><strong>AtenciÃ³n al cliente</strong><span>clientes@optimizare.es</span></div></li>
+          <li><i class="fas fa-map-marker-alt"></i><div><strong>DirecciÃ³n</strong><span>Madrid, EspaÃ±a</span></div></li>
+        </ul>
+      </div>
+      <form class="contact-form reveal-right" id="contactFormCEE">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="empresa">Empresa / Particular</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Nombre" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">TelÃ©fono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="tipo">Tipo de inmueble</label>
+          <select id="tipo" name="tipo">
+            <option value="">Selecciona tipo de inmuebleâ€¦</option>
+            <option>Vivienda</option>
+            <option>Local comercial</option>
+            <option>Oficina</option>
+            <option>Edificio completo</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="IndÃ­canos ubicaciÃ³n aproximada, superficie y si es para venta, alquiler o renovaciÃ³n del certificado."></textarea>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" id="privacidad" name="privacidad" required />
+          <label for="privacidad">Acepto la <a href="#">polÃ­tica de privacidad</a> y el tratamiento de mis datos.</label>
+        </div>
+        <button type="submit" class="btn-primary btn-block">Enviar solicitud <i class="fas fa-arrow-right"></i></button>
+        <div class="form-success" id="formSuccessCEE">Â¡Mensaje enviado! Nuestro equipo se pondrÃ¡ en contacto contigo en menos de 24h.</div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="img/opti.png" alt="Optimizare" class="footer-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <span class="footer-logo-text" style="display:none">Optimizare</span>
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> Madrid, EspaÃ±a</p>
+          <p><i class="fas fa-envelope"></i> comercial@optimizare.es</p>
+          <p><i class="fas fa-envelope"></i> clientes@optimizare.es</p>
+          <p><i class="fas fa-phone"></i> 917 99 26 88</p>
+        </div>
+        <div class="footer-social">
+          <p class="social-title">SÃ­guenos en:</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="certificado-ahorro-energetico-cae.html">CAE â€“ Certificados de Ahorro EnergÃ©tico</a></li>
+          <li><a href="gestion-energetica-iso-50001.html">ISO 50001</a></li>
+          <li><a href="auditoria-energetica.html">AuditorÃ­a energÃ©tica</a></li>
+          <li><a href="certificado-de-eficiencia-energetica-cee.html">Certificado de Eficiencia EnergÃ©tica (CEE)</a></li>
+          <li><a href="monitorizacion-energetica.html">MonitorizaciÃ³n energÃ©tica</a></li>
+          <li><a href="calefaccion-climatizacion-eficientes.html">ClimatizaciÃ³n eficiente</a></li>
+          <li><a href="irve-recarga-electrica.html">IRVE</a></li>
+          <li><a href="autoconsumo-fotovoltaico.html">Fotovoltaica</a></li>
+          <li><a href="compra-de-energia.html">Asesoramiento en compra de energÃ­a</a></li>
+          <li><a href="power-purchase-agreement-ppa.html">Power Purchase Agreement (PPA)</a></li>
+          <li><a href="servicios-a-comercializadoras.html">Servicios a comercializadoras</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sobre nosotros</h4>
+        <ul>
+          <li><a href="#">Sobre Optimizare</a></li>
+          <li><a href="#">Casos de Ã©xito</a></li>
+          <li><a href="#">Trabaja con nosotros</a></li>
+          <li><a href="#">Canal de partners</a></li>
+          <li><a href="#">Normas ISO</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>InformaciÃ³n legal</h4>
+        <ul>
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">PolÃ­tica de privacidad</a></li>
+          <li><a href="#">PolÃ­tica de cookies</a></li>
+          <li><a href="#">PolÃ­tica de calidad, MA y SST</a></li>
+          <li><a href="#">PolÃ­tica energÃ©tica</a></li>
+          <li><a href="#">PolÃ­tica SGSI</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container"><p>Copyright Â© 2026 Optimizare</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+  <script>
+    const ceeStatNums = document.querySelectorAll('.ip-stat-num');
+    let ceeStarted = false;
+    new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !ceeStarted) {
+        ceeStarted = true;
+        ceeStatNums.forEach(el => {
+          const target = parseInt(el.dataset.target, 10);
+          const step = target / (1800 / 16);
+          let current = 0;
+          const t = setInterval(() => {
+            current += step;
+            if (current >= target) { current = target; clearInterval(t); }
+            el.textContent = Math.floor(current).toLocaleString('es-ES');
+          }, 16);
+        });
+      }
+    }, { threshold: 0.3 }).observe(document.querySelector('.ip-stats-strip'));
+
+    const ceeForm = document.getElementById('contactFormCEE');
+    if (ceeForm) {
+      ceeForm.addEventListener('submit', e => {
+        e.preventDefault();
+        document.getElementById('formSuccessCEE').style.display = 'block';
+        ceeForm.reset();
+      });
+    }
+
+    const ceeReasonTabs = document.querySelectorAll('.cee-reason-tab');
+    const ceeReasonPanels = document.querySelectorAll('.cee-reason-panel');
+
+    ceeReasonTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.ceeTab;
+        ceeReasonTabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        ceeReasonPanels.forEach(panel => panel.classList.remove('active'));
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        const panel = document.getElementById(target);
+        if (panel) panel.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,518 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calefaccion y Climatizacion Eficiente | Optimizare</title>
+  <meta name="description" content="Transforma tu sala de calderas con soluciones de calefaccion y climatizacion eficiente: bomba de calor, ingenieria, legalizacion, subvenciones, CAEs y mantenimiento integral." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+      <h3>Valoramos tu privacidad</h3>
+      <p>Usamos cookies para mejorar tu experiencia de navegacion, mostrarte contenidos personalizados y analizar nuestro trafico.</p>
+      <div class="cookie-actions">
+        <button class="btn-cookie outline" onclick="closeCookies()">Rechazar todo</button>
+        <button class="btn-cookie outline" onclick="closeCookies()">Personalizar</button>
+        <button class="btn-cookie primary" onclick="closeCookies()">Aceptar todo</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="header-top">
+      <div class="container header-top-inner">
+        <div class="header-top-left">
+          <a href="index.html" class="logo">
+            <img src="img/1.png" alt="Optimizare" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+            <span class="logo-text" style="display:none">Optimizare</span>
+          </a>
+          <div class="header-social">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="header-top-contacts">
+          <a href="tel:+34917992688" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-phone-alt"></i></span>
+            <span class="hcontact-text"><strong>Llamanos</strong><span>+34 917 992 688</span></span>
+          </a>
+          <a href="mailto:comercial@optimizare.es" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-envelope-open-text"></i></span>
+            <span class="hcontact-text"><strong>Atencion comercial</strong><span>comercial@optimizare.es</span></span>
+          </a>
+          <a href="mailto:clientes@optimizare.es" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-user-circle"></i></span>
+            <span class="hcontact-text"><strong>Atencion al cliente</strong><span>clientes@optimizare.es</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header-nav-bar">
+      <div class="container header-nav-inner">
+        <nav class="nav" id="mainNav">
+          <ul class="nav-list">
+            <li class="nav-item has-dropdown">
+                            <a href="#">Gestión de la energía <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="compra-de-energia.html">Asesoramiento en compra de energía</a>
+                <a href="power-purchase-agreement-ppa.html">Power Purchase Agreement (PPA)</a>
+                <a href="servicios-a-comercializadoras.html">Servicios a comercializadoras</a>
+                <a href="certificado-ahorro-energetico-cae.html">Certificado de Ahorro Energético (CAE)</a>
+                <a href="gestion-energetica-iso-50001.html">ISO 50001</a>
+                <a href="auditoria-energetica.html">Auditoría energética</a>
+                <a href="certificado-de-eficiencia-energetica-cee.html">Certificado de Eficiencia Energética (CEE)</a>
+                <a href="monitorizacion-energetica.html">Monitorización energética</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Soluciones energéticas <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="autoconsumo-fotovoltaico.html">Autoconsumo solar fotovoltaico</a>
+                <a href="irve-recarga-electrica.html">Infraestructura de recarga de vehículos eléctricos (IRVE)</a>
+                <a href="calefaccion-climatizacion-eficientes.html">Calefacción y climatización eficiente</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown active-menu">
+              <a href="#">Mantenimiento y servicios <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Mantenimiento preventivo</a>
+                <a href="calefaccion-climatizacion-eficientes.html" class="active-link">Climatizacion eficiente</a>
+                <a href="#">Outsourcing energetico</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Sostenibilidad <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Economia circular</a>
+                <a href="#">Descarbonizacion</a>
+                <a href="#">Flexibilidad de la demanda</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Optimizare <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Sobre Optimizare</a>
+                <a href="#">Casos de exito</a>
+                <a href="#">Trabaja con nosotros</a>
+                <a href="#">Blog</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="certificado-ahorro-energetico-cae.html" class="btn-nav-cae">CAE</a>
+          <a href="#contacto-inner" class="btn-nav-contact">Contacto</a>
+          <button class="btn-search" id="searchToggle"><i class="fas fa-search"></i></button>
+          <button class="btn-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </div>
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <input type="text" placeholder="Que estas buscando?" />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="ip-hero">
+    <div class="ip-hero-bg">
+      <img src="img/edificio placa.jpg" alt="" class="ip-hero-img" />
+      <div class="ip-hero-overlay"></div>
+    </div>
+    <div class="container ip-hero-content">
+      <nav class="ip-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Mantenimiento y servicios</span>
+        <i class="fas fa-chevron-right"></i>
+        <span class="current">Calefaccion y climatizacion eficiente</span>
+      </nav>
+      <h1 class="ip-hero-title">Calefaccion y<br><em>Climatizacion Eficiente</em></h1>
+      <p class="ip-hero-sub">Invierte en eficiencia, sostenibilidad y confort</p>
+      <a href="#contacto-inner" class="btn-primary btn-lg">Solicitar presupuesto <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <section class="ip-stats-strip">
+    <div class="container">
+      <div class="ip-stats-grid">
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-fire-flame-curved"></i></div>
+          <div class="ip-stat-val"><span class="ip-stat-num" data-target="10">0</span><span class="ip-stat-unit">+ anos</span></div>
+          <div class="ip-stat-label">de experiencia en transformacion de salas de calderas</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-temperature-low"></i></div>
+          <div class="ip-stat-val"><span class="ip-stat-num" data-target="35">0</span><span class="ip-stat-unit">%</span></div>
+          <div class="ip-stat-label">de ahorro potencial en consumo termico</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-building"></i></div>
+          <div class="ip-stat-val"><span class="ip-stat-num" data-target="120">0</span><span class="ip-stat-unit">+</span></div>
+          <div class="ip-stat-label">instalaciones analizadas por nuestro equipo tecnico</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-leaf"></i></div>
+          <div class="ip-stat-val"><span class="ip-stat-num" data-target="100">0</span><span class="ip-stat-unit">% foco</span></div>
+          <div class="ip-stat-label">en descarbonizacion y confort operativo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="clients-section">
+    <div class="container">
+      <p class="clients-label reveal">Sectores en los que implementamos soluciones termicas eficientes</p>
+    </div>
+    <div class="clients-track-wrapper">
+      <div class="clients-track">
+        <div class="client-tile"><span>Residencial</span></div>
+        <div class="client-tile"><span>Hoteles</span></div>
+        <div class="client-tile"><span>Retail</span></div>
+        <div class="client-tile"><span>Hospitalario</span></div>
+        <div class="client-tile"><span>Industrial</span></div>
+        <div class="client-tile"><span>Publico</span></div>
+        <div class="client-tile"><span>Oficinas</span></div>
+        <div class="client-tile"><span>Comunidades</span></div>
+        <div class="client-tile"><span>Residencial</span></div>
+        <div class="client-tile"><span>Hoteles</span></div>
+        <div class="client-tile"><span>Retail</span></div>
+        <div class="client-tile"><span>Hospitalario</span></div>
+        <div class="client-tile"><span>Industrial</span></div>
+        <div class="client-tile"><span>Publico</span></div>
+        <div class="client-tile"><span>Oficinas</span></div>
+        <div class="client-tile"><span>Comunidades</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pv-overview-section">
+    <div class="container pv-overview-layout">
+      <div class="pv-overview-text reveal-left">
+        <span class="section-tag">TRANSFORMACION TERMICA</span>
+        <h2>Renueva tu sala de calderas con tecnologia eficiente y preparada para el futuro</h2>
+        <p>La modernizacion de instalaciones de ACS, calefaccion y climatizacion implica sustituir sistemas basados en combustibles fosiles por soluciones de alta eficiencia, principalmente bomba de calor (aerotermia y geotermia de baja entalpia) segun cada caso.</p>
+        <p>En Optimizare analizamos la instalacion existente, los perfiles de demanda y los requisitos de confort para disenar una solucion tecnica robusta, segura y compatible con la operativa diaria del activo.</p>
+        <p>Tambien estudiamos la integracion con otras tecnologias como autoconsumo fotovoltaico, control avanzado y monitorizacion para maximizar ahorro economico, eficiencia y descarbonizacion.</p>
+      </div>
+      <div class="pv-overview-media reveal-right delay-2">
+        <img src="img/instalacion.jpg" alt="Calefaccion y climatizacion eficiente" />
+        <div class="pv-overview-chip"><i class="fas fa-screwdriver-wrench"></i><span>Proyecto llave en mano</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pv-storage-section">
+    <div class="container pv-storage-layout">
+      <div class="pv-storage-img reveal-left">
+        <img src="img/tipos de consumo.jpg" alt="Beneficios de climatizacion eficiente" />
+      </div>
+      <div class="pv-storage-text reveal-right delay-2">
+        <span class="section-tag">BENEFICIOS CLAVE</span>
+        <h2>Por que transformar tus sistemas termicos ahora</h2>
+        <ul>
+          <li><strong>Conocer mejor tu perfil energetico:</strong> medimos consumos y patrones para tomar decisiones tecnicas con datos reales.</li>
+          <li><strong>Detectar ineficiencias:</strong> identificamos perdidas en equipos, controles y habitos de uso.</li>
+          <li><strong>Reducir costes operativos:</strong> disminuimos consumo energetico y exposicion a la volatilidad del mercado.</li>
+          <li><strong>Cumplimiento normativo:</strong> aseguramos adecuacion a requisitos tecnicos y regulatorios vigentes.</li>
+          <li><strong>Menor huella de carbono:</strong> reducimos emisiones y reforzamos objetivos ESG de tu organizacion.</li>
+          <li><strong>Acceso a incentivos:</strong> preparamos proyectos para ayudas, subvenciones y mecanismos CAE cuando aplica.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="ip-timeline-section">
+    <div class="container">
+      <div class="ip-timeline-header reveal-blur">
+        <span class="section-tag">PROCESO</span>
+        <h2>Etapas de una transformacion termica eficiente</h2>
+        <p>Gestionamos todas las fases para minimizar riesgos, evitar interrupciones y asegurar rendimiento desde la puesta en marcha.</p>
+      </div>
+      <div class="ip-timeline">
+        <div class="ip-tl-item reveal-zoom delay-1">
+          <div class="ip-tl-num">01</div>
+          <div class="ip-tl-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+          <div class="ip-tl-body">
+            <h3>Analisis inicial y auditoria tecnica</h3>
+            <p>Revision de sala de calderas, demanda termica, emisores, controles y estado de la instalacion para definir hoja de ruta.</p>
+          </div>
+        </div>
+        <div class="ip-tl-item reveal-zoom delay-2">
+          <div class="ip-tl-num">02</div>
+          <div class="ip-tl-icon"><i class="fas fa-compass-drafting"></i></div>
+          <div class="ip-tl-body">
+            <h3>Ingenieria y diseno de la nueva solucion</h3>
+            <p>Dimensionamos equipos de bomba de calor, acumulacion, hydraulica, regulacion y estrategia energetica integral.</p>
+          </div>
+        </div>
+        <div class="ip-tl-item reveal-zoom delay-3">
+          <div class="ip-tl-num">03</div>
+          <div class="ip-tl-icon"><i class="fas fa-file-signature"></i></div>
+          <div class="ip-tl-body">
+            <h3>Permitting, ayudas y legalizacion</h3>
+            <p>Tramitamos permisos, licencias, subvenciones y documentacion tecnica para ejecutar con seguridad juridica y tecnica.</p>
+          </div>
+        </div>
+        <div class="ip-tl-item reveal-zoom delay-4">
+          <div class="ip-tl-num">04</div>
+          <div class="ip-tl-icon"><i class="fas fa-temperature-high"></i></div>
+          <div class="ip-tl-body">
+            <h3>Instalacion, puesta en marcha y formacion</h3>
+            <p>Ejecutamos la transformacion, validamos rendimiento y formamos al equipo de operacion para garantizar continuidad y confort.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="clima-stages-section">
+    <div class="container">
+      <div class="clima-stages-head reveal-blur">
+        <h2>Este proceso integral incluye varias etapas clave</h2>
+      </div>
+      <div class="clima-stages-grid reveal-zoom">
+        <article class="clima-stage-card">
+          <img src="img/edificio placa.jpg" alt="Analisis y diagnostico" />
+          <div class="clima-stage-overlay"></div>
+          <div class="clima-stage-content">
+            <h3>ANALISIS Y DIAGNOSTICO</h3>
+            <p>Estudiamos la instalacion actual, la demanda termica y el estado de los equipos para definir el alcance del proyecto.</p>
+          </div>
+        </article>
+        <article class="clima-stage-card">
+          <img src="img/planos.jpg" alt="Diseno de la solucion optima" />
+          <div class="clima-stage-overlay"></div>
+          <div class="clima-stage-content">
+            <h3>DISENO DE LA SOLUCION OPTIMA</h3>
+            <p>Nuestro equipo de ingenieria dimensiona una solucion personalizada para garantizar eficiencia, confort y fiabilidad.</p>
+          </div>
+        </article>
+        <article class="clima-stage-card">
+          <img src="img/instalacion.jpg" alt="Desconexion y retirada de equipos antiguos" />
+          <div class="clima-stage-overlay"></div>
+          <div class="clima-stage-content">
+            <h3>DESCONEXION Y RETIRADA DE EQUIPOS ANTIGUOS</h3>
+            <p>Coordinamos el desmontaje de los sistemas existentes cumpliendo seguridad, normativa y gestion de residuos.</p>
+          </div>
+        </article>
+        <article class="clima-stage-card">
+          <img src="img/instalacion 2.jpg" alt="Adaptacion e instalacion de nuevos sistemas" />
+          <div class="clima-stage-overlay"></div>
+          <div class="clima-stage-content">
+            <h3>ADAPTACION E INSTALACION DE NUEVOS SISTEMAS</h3>
+            <p>Ejecutamos la implantacion de equipos de alta eficiencia y adecuamos la integracion con la red termica existente.</p>
+          </div>
+        </article>
+        <article class="clima-stage-card">
+          <img src="img/instalacion 3.jpg" alt="Puesta en marcha y ajustes" />
+          <div class="clima-stage-overlay"></div>
+          <div class="clima-stage-content">
+            <h3>PUESTA EN MARCHA Y AJUSTES</h3>
+            <p>Realizamos pruebas de rendimiento, equilibrado y regulacion para asegurar resultados desde el primer dia.</p>
+          </div>
+        </article>
+        <article class="clima-stage-card">
+          <img src="img/tipos de consumo.jpg" alt="Seguimiento y optimizacion" />
+          <div class="clima-stage-overlay"></div>
+          <div class="clima-stage-content">
+            <h3>SEGUIMIENTO Y OPTIMIZACION</h3>
+            <p>Supervisamos indicadores clave y aplicamos mejoras continuas para mantener el ahorro energetico y el confort.</p>
+          </div>
+        </article>
+      </div>
+      <div class="clima-stages-dots" aria-hidden="true">
+        <span class="active"></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="pv-pillars-section">
+    <div class="container">
+      <div class="pv-pillars-head reveal-blur">
+        <h2>Por que contar con Optimizare para climatizacion eficiente</h2>
+      </div>
+      <div class="pv-pillars-grid">
+        <div class="pv-pillar reveal-zoom delay-1"><i class="fas fa-check"></i><h4>Tecnicos especializados en bomba de calor</h4><p>Equipo en formacion continua para garantizar instalaciones impecables y rendimiento optimo.</p></div>
+        <div class="pv-pillar reveal-zoom delay-2"><i class="fas fa-check"></i><h4>Empresa instaladora autorizada</h4><p>Cumplimos normativa de seguridad y calidad en instalacion y mantenimiento de sistemas termicos.</p></div>
+        <div class="pv-pillar reveal-zoom delay-3"><i class="fas fa-check"></i><h4>Mas de 10 anos de experiencia</h4><p>Trayectoria contrastada en proyectos residenciales, terciarios e industriales.</p></div>
+        <div class="pv-pillar reveal-zoom delay-4"><i class="fas fa-check"></i><h4>Auditorias energeticas y CEE</h4><p>Ingenieria propia con experiencia en RD56/2016 y RD390/2021 para fases previas y posteriores del proyecto.</p></div>
+        <div class="pv-pillar reveal-zoom delay-5"><i class="fas fa-check"></i><h4>Asesoramiento tarifario y compra de energia</h4><p>Optimizamos tus costes a largo plazo con estrategia de suministro electrico y gasista adaptada.</p></div>
+        <div class="pv-pillar reveal-zoom delay-6"><i class="fas fa-check"></i><h4>Gestion de CAEs</h4><p>Como especialistas en eficiencia energetica, maximizamos el retorno economico mediante tramitacion CAE.</p></div>
+        <div class="pv-pillar reveal-zoom delay-7"><i class="fas fa-check"></i><h4>Permitting y subvenciones</h4><p>Nos encargamos de ayudas y tramites administrativos para reducir inversion inicial y acelerar plazos.</p></div>
+        <div class="pv-pillar reveal-zoom delay-8"><i class="fas fa-check"></i><h4>Servicio integral de principio a fin</h4><p>Analisis, diseno, ejecucion, puesta en marcha y formacion en un unico interlocutor tecnico.</p></div>
+        <div class="pv-pillar reveal-zoom delay-9"><i class="fas fa-check"></i><h4>Equipos de marcas lideres</h4><p>Seleccionamos tecnologia de alta eficiencia y durabilidad para operar con fiabilidad.</p></div>
+        <div class="pv-pillar pv-pillar-wide reveal-zoom delay-9"><i class="fas fa-check"></i><h4>Postventa y mantenimiento continuo</h4><p>Asistencia tecnica y planes de mantenimiento adaptados para asegurar disponibilidad y rendimiento a largo plazo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ip-cta-banner">
+    <img src="img/placa industria.jpg" alt="" class="ip-cta-bg" />
+    <div class="ip-cta-overlay"></div>
+    <div class="container ip-cta-inner">
+      <div class="ip-cta-text reveal-left">
+        <span class="ip-cta-eyebrow">UNETE</span>
+        <h2>Y consigue oportunidades reales de ahorro priorizando la implantacion de nuevas tecnologias energeticas</h2>
+      </div>
+      <a href="#contacto-inner" class="btn-primary btn-lg reveal-right delay-2">Contacta con nosotros <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contacto-inner">
+    <div class="container contact-inner">
+      <div class="contact-text reveal-left">
+        <span class="section-tag">CONTACTO</span>
+        <h2>Solicita tu estudio de calefaccion y climatizacion eficiente</h2>
+        <p>Cuentanos tu instalacion actual y prepararemos una propuesta tecnica y economica adaptada a tu activo.</p>
+        <ul class="contact-info-list">
+          <li><i class="fas fa-phone"></i><div><strong>Llamanos</strong><span>+34 917 992 688</span></div></li>
+          <li><i class="fas fa-envelope"></i><div><strong>Atencion comercial</strong><span>comercial@optimizare.es</span></div></li>
+          <li><i class="fas fa-envelope"></i><div><strong>Atencion al cliente</strong><span>clientes@optimizare.es</span></div></li>
+          <li><i class="fas fa-map-marker-alt"></i><div><strong>Direccion</strong><span>Madrid, Espana</span></div></li>
+        </ul>
+      </div>
+      <form class="contact-form reveal-right" id="contactFormClima">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="empresa">Empresa *</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="tu@empresa.com" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Telefono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Indicanos tipo de instalacion actual, uso del edificio, consumo aproximado y objetivos de ahorro o confort."></textarea>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" id="privacidad" name="privacidad" required />
+          <label for="privacidad">Acepto la <a href="#">politica de privacidad</a> y el tratamiento de mis datos.</label>
+        </div>
+        <button type="submit" class="btn-primary btn-block">Enviar solicitud <i class="fas fa-arrow-right"></i></button>
+        <div class="form-success" id="formSuccessClima">Mensaje enviado. Te contactaremos en menos de 24h.</div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="img/opti.png" alt="Optimizare" class="footer-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <span class="footer-logo-text" style="display:none">Optimizare</span>
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> Madrid, Espana</p>
+          <p><i class="fas fa-envelope"></i> comercial@optimizare.es</p>
+          <p><i class="fas fa-envelope"></i> clientes@optimizare.es</p>
+          <p><i class="fas fa-phone"></i> 917 99 26 88</p>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="certificado-ahorro-energetico-cae.html">CAE - Certificados de Ahorro Energetico</a></li>
+          <li><a href="gestion-energetica-iso-50001.html">ISO 50001</a></li>
+          <li><a href="auditoria-energetica.html">Auditoria energetica</a></li>
+          <li><a href="certificado-de-eficiencia-energetica-cee.html">Certificado de Eficiencia Energetica (CEE)</a></li>
+          <li><a href="monitorizacion-energetica.html">Monitorizacion energetica</a></li>
+          <li><a href="calefaccion-climatizacion-eficientes.html">Climatizacion eficiente</a></li>
+          <li><a href="irve-recarga-electrica.html">IRVE</a></li>
+          <li><a href="autoconsumo-fotovoltaico.html">Fotovoltaica</a></li>
+          <li><a href="compra-de-energia.html">Asesoramiento en compra de energia</a></li>
+          <li><a href="power-purchase-agreement-ppa.html">Power Purchase Agreement (PPA)</a></li>
+          <li><a href="servicios-a-comercializadoras.html">Servicios a comercializadoras</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sobre nosotros</h4>
+        <ul>
+          <li><a href="#">Sobre Optimizare</a></li>
+          <li><a href="#">Casos de exito</a></li>
+          <li><a href="#">Trabaja con nosotros</a></li>
+          <li><a href="#">Canal de partners</a></li>
+          <li><a href="#">Normas ISO</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Informacion legal</h4>
+        <ul>
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Politica de privacidad</a></li>
+          <li><a href="#">Politica de cookies</a></li>
+          <li><a href="#">Politica de calidad, MA y SST</a></li>
+          <li><a href="#">Politica energetica</a></li>
+          <li><a href="#">Politica SGSI</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container"><p>Copyright Â© 2026 Optimizare</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+  <script>
+    const climaNums = document.querySelectorAll('.ip-stat-num');
+    let climaStarted = false;
+    new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !climaStarted) {
+        climaStarted = true;
+        climaNums.forEach(el => {
+          const target = parseInt(el.dataset.target, 10);
+          const step = target / (1800 / 16);
+          let current = 0;
+          const t = setInterval(() => {
+            current += step;
+            if (current >= target) { current = target; clearInterval(t); }
+            el.textContent = Math.floor(current).toLocaleString('es-ES');
+          }, 16);
+        });
+      }
+    }, { threshold: 0.3 }).observe(document.querySelector('.ip-stats-strip'));
+
+    const climaForm = document.getElementById('contactFormClima');
+    if (climaForm) {
+      climaForm.addEventListener('submit', e => {
+        e.preventDefault();
+        document.getElementById('formSuccessClima').style.display = 'block';
+        climaForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+

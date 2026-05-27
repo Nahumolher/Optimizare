@@ -1,0 +1,544 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MonitorizaciÃ³n EnergÃ©tica â€“ Optimizare</title>
+  <meta name="description" content="MonitorizaciÃ³n energÃ©tica en tiempo real con sensores, submetering y plataforma cloud. Convierte tus datos en ahorros medibles y decisiones de alto impacto." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+      <h3>Valoramos tu privacidad</h3>
+      <p>Usamos cookies para mejorar tu experiencia de navegaciÃ³n, mostrarte contenidos personalizados y analizar nuestro trÃ¡fico.</p>
+      <div class="cookie-actions">
+        <button class="btn-cookie outline" onclick="closeCookies()">Rechazar todo</button>
+        <button class="btn-cookie outline" onclick="closeCookies()">Personalizar</button>
+        <button class="btn-cookie primary" onclick="closeCookies()">Aceptar todo</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="header-top">
+      <div class="container header-top-inner">
+        <div class="header-top-left">
+          <a href="index.html" class="logo">
+            <img src="img/1.png" alt="Optimizare" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+            <span class="logo-text" style="display:none">Optimizare</span>
+          </a>
+          <div class="header-social">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="header-top-contacts">
+          <a href="tel:+34917992688" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-phone-alt"></i></span>
+            <span class="hcontact-text"><strong>LlÃ¡manos</strong><span>+34 917 992 688</span></span>
+          </a>
+          <a href="mailto:comercial@optimizare.es" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-envelope-open-text"></i></span>
+            <span class="hcontact-text"><strong>AtenciÃ³n comercial</strong><span>comercial@optimizare.es</span></span>
+          </a>
+          <a href="mailto:clientes@optimizare.es" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-user-circle"></i></span>
+            <span class="hcontact-text"><strong>AtenciÃ³n al cliente</strong><span>clientes@optimizare.es</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header-nav-bar">
+      <div class="container header-nav-inner">
+        <nav class="nav" id="mainNav">
+          <ul class="nav-list">
+            <li class="nav-item has-dropdown active-menu">
+                            <a href="#">Gestión de la energía <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="compra-de-energia.html">Asesoramiento en compra de energía</a>
+                <a href="power-purchase-agreement-ppa.html">Power Purchase Agreement (PPA)</a>
+                <a href="servicios-a-comercializadoras.html">Servicios a comercializadoras</a>
+                <a href="certificado-ahorro-energetico-cae.html">Certificado de Ahorro Energético (CAE)</a>
+                <a href="gestion-energetica-iso-50001.html">ISO 50001</a>
+                <a href="auditoria-energetica.html">Auditoría energética</a>
+                <a href="certificado-de-eficiencia-energetica-cee.html">Certificado de Eficiencia Energética (CEE)</a>
+                <a href="monitorizacion-energetica.html">Monitorización energética</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Soluciones energéticas <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="autoconsumo-fotovoltaico.html">Autoconsumo solar fotovoltaico</a>
+                <a href="irve-recarga-electrica.html">Infraestructura de recarga de vehículos eléctricos (IRVE)</a>
+                <a href="calefaccion-climatizacion-eficientes.html">Calefacción y climatización eficiente</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Mantenimiento y servicios <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Mantenimiento preventivo</a>
+                <a href="calefaccion-climatizacion-eficientes.html">ClimatizaciÃ³n eficiente</a>
+                <a href="#">Outsourcing energÃ©tico</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Sostenibilidad <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">EconomÃ­a circular</a>
+                <a href="#">DescarbonizaciÃ³n</a>
+                <a href="#">Flexibilidad de la demanda</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Optimizare <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Sobre Optimizare</a>
+                <a href="#">Casos de Ã©xito</a>
+                <a href="#">Trabaja con nosotros</a>
+                <a href="#">Blog</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="certificado-ahorro-energetico-cae.html" class="btn-nav-cae">CAE</a>
+          <a href="#contacto-inner" class="btn-nav-contact">Contacto</a>
+          <button class="btn-search" id="searchToggle"><i class="fas fa-search"></i></button>
+          <button class="btn-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </div>
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <input type="text" placeholder="Â¿QuÃ© estÃ¡s buscando?" />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="ip-hero">
+    <div class="ip-hero-bg">
+      <img src="img/tipos de consumo.jpg" alt="" class="ip-hero-img" />
+      <div class="ip-hero-overlay"></div>
+    </div>
+    <div class="container ip-hero-content">
+      <nav class="ip-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>GestiÃ³n de la energÃ­a</span>
+        <i class="fas fa-chevron-right"></i>
+        <span class="current">MonitorizaciÃ³n energÃ©tica</span>
+      </nav>
+      <h1 class="ip-hero-title">MonitorizaciÃ³n<br><em>energÃ©tica</em></h1>
+      <p class="ip-hero-sub">Ayudamos a que tu energÃ­a trabaje a tu favor</p>
+      <a href="#contacto-inner" class="btn-primary btn-lg">Solicitar propuesta <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <section class="ip-stats-strip">
+    <div class="container">
+      <div class="ip-stats-grid">
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-wave-square"></i></div>
+          <div class="ip-stat-val"><span class="ip-stat-num" data-target="24">0</span><span class="ip-stat-unit">/7</span></div>
+          <div class="ip-stat-label">datos energÃ©ticos en tiempo real</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-plug"></i></div>
+          <div class="ip-stat-val"><span class="ip-stat-num" data-target="4">0</span><span class="ip-stat-unit"> suministros</span></div>
+          <div class="ip-stat-label">electricidad, gas, agua y climatizaciÃ³n</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-microchip"></i></div>
+          <div class="ip-stat-val"><span class="ip-stat-num" data-target="3">0</span><span class="ip-stat-unit"> capas</span></div>
+          <div class="ip-stat-label">medida, software SaaS y gestiÃ³n activa</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-bullseye"></i></div>
+          <div class="ip-stat-val"><span class="ip-stat-num" data-target="100">0</span><span class="ip-stat-unit">% trazable</span></div>
+          <div class="ip-stat-label">para validar ahorros e iniciativas CAE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mon-intro-section">
+    <div class="container mon-intro-layout">
+      <div class="mon-intro-text reveal-left">
+        <span class="section-tag">VISIÃ“N GENERAL</span>
+        <h2>El primer paso hacia una gestiÃ³n inteligente del consumo</h2>
+        <p>A travÃ©s de sensores, medidores y software especializado, recopilamos en tiempo real datos clave de tus instalaciones para ofrecerte una visiÃ³n clara de cÃ³mo y dÃ³nde estÃ¡s usando la energÃ­a.</p>
+        <p>Trabajamos con sensores, medidores, dataloggers y plataformas cloud para integrar datos de suministros y variables ambientales como temperatura, humedad, CO2 o radiaciÃ³n.</p>
+        <p>Esos datos se convierten en indicadores, alertas e informes accionables para optimizar procesos, detectar ineficiencias y tomar decisiones basadas en evidencia.</p>
+      </div>
+      <div class="mon-intro-media reveal-right delay-2">
+        <img src="img/instalacion 3.jpg" alt="MonitorizaciÃ³n energÃ©tica" />
+        <div class="mon-intro-badge"><i class="fas fa-cloud"></i><span>Datos conectados en la nube</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mon-phases-section">
+    <div class="container">
+      <div class="mon-phases-head reveal-blur">
+        <span class="section-tag">SOLUCIONES FLEXIBLES</span>
+        <h2>Soluciones flexibles y escalables, adaptadas a las necesidades de cada cliente</h2>
+      </div>
+      <div class="mon-flex-layout">
+        <div class="mon-flex-accordion reveal-left">
+          <article class="mon-acc-item" data-mon-acc>
+            <button class="mon-acc-trigger" data-mon-acc-trigger aria-expanded="false">
+              <span>1. InstalaciÃ³n de sistemas de medida</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="mon-acc-panel">
+              <p>DiseÃ±amos e implementamos la arquitectura de medida (sensores, medidores, dataloggers y comunicaciones) adaptada a la tipologÃ­a de tus instalaciones para empezar a captar datos con fiabilidad.</p>
+            </div>
+          </article>
+
+          <article class="mon-acc-item" data-mon-acc>
+            <button class="mon-acc-trigger" data-mon-acc-trigger aria-expanded="false">
+              <span>2. Plataforma SaaS y soporte tÃ©cnico</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="mon-acc-panel">
+              <p>Centralizamos tus consumos en dashboards cloud con alarmas, indicadores y anÃ¡lisis comparativos. Nuestro equipo tÃ©cnico te acompaÃ±a para interpretar desviaciones y priorizar mejoras.</p>
+            </div>
+          </article>
+
+          <article class="mon-acc-item active" data-mon-acc>
+            <button class="mon-acc-trigger" data-mon-acc-trigger aria-expanded="true">
+              <span>3. GestiÃ³n energÃ©tica activa</span>
+              <i class="fas fa-chevron-up"></i>
+            </button>
+            <div class="mon-acc-panel">
+              <p>Nuestro equipo tÃ©cnico gestiona tu informaciÃ³n energÃ©tica y te acompaÃ±a activamente en:</p>
+              <ul>
+                <li>Seguimiento de consumos y desviaciones.</li>
+                <li>VerificaciÃ³n de ahorros derivados de actuaciones de mejora conforme al protocolo IPMVP.</li>
+                <li>ElaboraciÃ³n de informes tÃ©cnicos personalizados con indicadores (KPIs, benchmarking, IPMVP...).</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="mon-flex-image reveal-right delay-2">
+          <img src="img/edificio placa.jpg" alt="Soluciones flexibles de monitorizaciÃ³n energÃ©tica" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mon-scope-section">
+    <div class="container">
+      <div class="mon-scope-head reveal-blur">
+        <span class="section-tag">SOLUCIONES A MEDIDA</span>
+        <h2>Este es el alcance de nuestras implantaciones</h2>
+      </div>
+
+      <article class="mon-scope-row reveal-left delay-1">
+        <div class="mon-scope-img">
+          <img src="img/edificio placa.jpg" alt="Cabeceras de suministro" />
+        </div>
+        <div class="mon-scope-body">
+          <h3>MonitorizaciÃ³n de cabeceras de suministro</h3>
+          <p>Ideal para empresas con mÃºltiples puntos de suministro usando telemedida de contadores fiscales donde no se requiere hardware adicional.</p>
+          <ul>
+            <li>Comparativa de desempeÃ±o entre centros</li>
+            <li>Control anticipado del coste energÃ©tico</li>
+            <li>Dashboards ejecutivos para decisiones Ã¡giles</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="mon-scope-row mon-scope-row-reverse reveal-right delay-2">
+        <div class="mon-scope-img">
+          <img src="img/instalacion.jpg" alt="Submetering" />
+        </div>
+        <div class="mon-scope-body">
+          <h3>Submetering por subsistemas</h3>
+          <p>Desglosamos consumo por Ã¡reas o procesos: climatizaciÃ³n, iluminaciÃ³n, producciÃ³n o cuadros elÃ©ctricos para identificar focos de mayor impacto.</p>
+          <ul>
+            <li>VisiÃ³n granular para priorizar medidas</li>
+            <li>Mejora de eficiencia por Ã¡rea crÃ­tica</li>
+            <li>Mayor retorno de inversiÃ³n de cada actuaciÃ³n</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="mon-value-section">
+    <div class="container mon-value-layout">
+      <div class="mon-value-content reveal-left">
+        <span class="section-tag" style="color:var(--accent);border-color:rgba(18,184,114,.32)">ISO 50001 + CAE</span>
+        <h2>MonitorizaciÃ³n como base para certificar y demostrar ahorros</h2>
+        <p>La mediciÃ³n y verificaciÃ³n es uno de los pilares de la ISO 50001. Con un sistema de monitorizaciÃ³n bien diseÃ±ado puedes seguir el desempeÃ±o energÃ©tico y evaluar objetivos con evidencia real.</p>
+        <p>En el marco CAE, los datos antes y despuÃ©s de la intervenciÃ³n permiten justificar de forma objetiva los ahorros de actuaciones singulares y acelerar su validaciÃ³n.</p>
+      </div>
+      <div class="mon-value-points reveal-right delay-2">
+        <div class="mon-point"><i class="fas fa-check"></i><span>Demostrar ahorros en contratos de servicios energÃ©ticos</span></div>
+        <div class="mon-point"><i class="fas fa-check"></i><span>Facilitar reducciÃ³n de emisiones y mejora de desempeÃ±o</span></div>
+        <div class="mon-point"><i class="fas fa-check"></i><span>Trazabilidad tÃ©cnica para auditorÃ­as y certificaciones</span></div>
+        <div class="mon-point"><i class="fas fa-check"></i><span>SoluciÃ³n escalable para edificios, industria y procesos</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ip-timeline-section">
+    <div class="container">
+      <div class="ip-timeline-header reveal-blur">
+        <span class="section-tag">IMPLEMENTACIÃ“N</span>
+        <h2>CÃ³mo desplegamos la monitorizaciÃ³n energÃ©tica</h2>
+        <p>Desde la toma de requisitos hasta la explotaciÃ³n continua de datos para mejora del rendimiento.</p>
+      </div>
+      <div class="ip-timeline">
+        <div class="ip-tl-item reveal-zoom delay-1">
+          <div class="ip-tl-num">01</div>
+          <div class="ip-tl-icon"><i class="fas fa-drafting-compass"></i></div>
+          <div class="ip-tl-body">
+            <h3>DiagnÃ³stico y diseÃ±o</h3>
+            <p>Definimos arquitectura de medida segÃºn tipo de instalaciÃ³n, consumos crÃ­ticos y objetivos de negocio.</p>
+          </div>
+        </div>
+        <div class="ip-tl-item reveal-zoom delay-2">
+          <div class="ip-tl-num">02</div>
+          <div class="ip-tl-icon"><i class="fas fa-tools"></i></div>
+          <div class="ip-tl-body">
+            <h3>InstalaciÃ³n y conexiÃ³n</h3>
+            <p>Implementamos hardware y comunicaciones para capturar datos con fiabilidad y seguridad.</p>
+          </div>
+        </div>
+        <div class="ip-tl-item reveal-zoom delay-3">
+          <div class="ip-tl-num">03</div>
+          <div class="ip-tl-icon"><i class="fas fa-desktop"></i></div>
+          <div class="ip-tl-body">
+            <h3>ConfiguraciÃ³n de plataforma</h3>
+            <p>Activamos dashboards, indicadores y alertas para control en tiempo real por roles y centros.</p>
+          </div>
+        </div>
+        <div class="ip-tl-item reveal-zoom delay-4">
+          <div class="ip-tl-num">04</div>
+          <div class="ip-tl-icon"><i class="fas fa-chart-pie"></i></div>
+          <div class="ip-tl-body">
+            <h3>GestiÃ³n y optimizaciÃ³n</h3>
+            <p>Analizamos tendencias y proponemos acciones para sostener ahorros medibles y continuos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ip-cta-banner">
+    <img src="img/placa industria.jpg" alt="" class="ip-cta-bg" />
+    <div class="ip-cta-overlay"></div>
+    <div class="container ip-cta-inner">
+      <div class="ip-cta-text reveal-left">
+        <span class="ip-cta-eyebrow">ÃšNETE</span>
+        <h2>Y consigue oportunidades reales de ahorro priorizando la implementaciÃ³n de las nuevas tecnologÃ­as</h2>
+      </div>
+      <a href="#contacto-inner" class="btn-primary btn-lg reveal-right delay-2">Contacta con nosotros <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contacto-inner">
+    <div class="container contact-inner">
+      <div class="contact-text reveal-left">
+        <span class="section-tag">CONTACTO</span>
+        <h2>Activa tu sistema de monitorizaciÃ³n energÃ©tica</h2>
+        <p>CuÃ©ntanos cuÃ¡ntos centros tienes y quÃ© consumos quieres controlar. Te proponemos una soluciÃ³n a medida con despliegue progresivo.</p>
+        <ul class="contact-info-list">
+          <li><i class="fas fa-phone"></i><div><strong>LlÃ¡manos</strong><span>+34 917 992 688</span></div></li>
+          <li><i class="fas fa-envelope"></i><div><strong>AtenciÃ³n comercial</strong><span>comercial@optimizare.es</span></div></li>
+          <li><i class="fas fa-envelope"></i><div><strong>AtenciÃ³n al cliente</strong><span>clientes@optimizare.es</span></div></li>
+          <li><i class="fas fa-map-marker-alt"></i><div><strong>DirecciÃ³n</strong><span>Madrid, EspaÃ±a</span></div></li>
+        </ul>
+      </div>
+      <form class="contact-form reveal-right" id="contactFormMon">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="empresa">Empresa *</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="tu@empresa.com" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">TelÃ©fono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="tipo">Tipo de instalaciÃ³n</label>
+          <select id="tipo" name="tipo">
+            <option value="">Selecciona tipo de instalaciÃ³nâ€¦</option>
+            <option>Edificio terciario</option>
+            <option>InstalaciÃ³n industrial</option>
+            <option>Proceso productivo</option>
+            <option>Alumbrado pÃºblico</option>
+            <option>MÃºltiples sedes</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="IndÃ­canos nÃºmero de centros, tipo de suministros y objetivos (ahorro, ISO 50001, CAE, reporting, etc.)"></textarea>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" id="privacidad" name="privacidad" required />
+          <label for="privacidad">Acepto la <a href="#">polÃ­tica de privacidad</a> y el tratamiento de mis datos.</label>
+        </div>
+        <button type="submit" class="btn-primary btn-block">Enviar solicitud <i class="fas fa-arrow-right"></i></button>
+        <div class="form-success" id="formSuccessMon">Â¡Mensaje enviado! Nuestro equipo se pondrÃ¡ en contacto contigo en menos de 24h.</div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="img/opti.png" alt="Optimizare" class="footer-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <span class="footer-logo-text" style="display:none">Optimizare</span>
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> Madrid, EspaÃ±a</p>
+          <p><i class="fas fa-envelope"></i> comercial@optimizare.es</p>
+          <p><i class="fas fa-envelope"></i> clientes@optimizare.es</p>
+          <p><i class="fas fa-phone"></i> 917 99 26 88</p>
+        </div>
+        <div class="footer-social">
+          <p class="social-title">SÃ­guenos en:</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="certificado-ahorro-energetico-cae.html">CAE â€“ Certificados de Ahorro EnergÃ©tico</a></li>
+          <li><a href="gestion-energetica-iso-50001.html">ISO 50001</a></li>
+          <li><a href="auditoria-energetica.html">AuditorÃ­a energÃ©tica</a></li>
+          <li><a href="certificado-de-eficiencia-energetica-cee.html">Certificado de Eficiencia EnergÃ©tica (CEE)</a></li>
+          <li><a href="monitorizacion-energetica.html">MonitorizaciÃ³n energÃ©tica</a></li>
+          <li><a href="calefaccion-climatizacion-eficientes.html">ClimatizaciÃ³n eficiente</a></li>
+          <li><a href="irve-recarga-electrica.html">IRVE</a></li>
+          <li><a href="autoconsumo-fotovoltaico.html">Fotovoltaica</a></li>
+          <li><a href="compra-de-energia.html">Asesoramiento en compra de energÃ­a</a></li>
+          <li><a href="power-purchase-agreement-ppa.html">Power Purchase Agreement (PPA)</a></li>
+          <li><a href="servicios-a-comercializadoras.html">Servicios a comercializadoras</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sobre nosotros</h4>
+        <ul>
+          <li><a href="#">Sobre Optimizare</a></li>
+          <li><a href="#">Casos de Ã©xito</a></li>
+          <li><a href="#">Trabaja con nosotros</a></li>
+          <li><a href="#">Canal de partners</a></li>
+          <li><a href="#">Normas ISO</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>InformaciÃ³n legal</h4>
+        <ul>
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">PolÃ­tica de privacidad</a></li>
+          <li><a href="#">PolÃ­tica de cookies</a></li>
+          <li><a href="#">PolÃ­tica de calidad, MA y SST</a></li>
+          <li><a href="#">PolÃ­tica energÃ©tica</a></li>
+          <li><a href="#">PolÃ­tica SGSI</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container"><p>Copyright Â© 2026 Optimizare</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+  <script>
+    const monNums = document.querySelectorAll('.ip-stat-num');
+    let monStarted = false;
+    new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !monStarted) {
+        monStarted = true;
+        monNums.forEach(el => {
+          const target = parseInt(el.dataset.target, 10);
+          const step = target / (1800 / 16);
+          let current = 0;
+          const t = setInterval(() => {
+            current += step;
+            if (current >= target) { current = target; clearInterval(t); }
+            el.textContent = Math.floor(current).toLocaleString('es-ES');
+          }, 16);
+        });
+      }
+    }, { threshold: 0.3 }).observe(document.querySelector('.ip-stats-strip'));
+
+    const monForm = document.getElementById('contactFormMon');
+    if (monForm) {
+      monForm.addEventListener('submit', e => {
+        e.preventDefault();
+        document.getElementById('formSuccessMon').style.display = 'block';
+        monForm.reset();
+      });
+    }
+
+    const monAccItems = document.querySelectorAll('[data-mon-acc]');
+    const monAccTriggers = document.querySelectorAll('[data-mon-acc-trigger]');
+
+    monAccTriggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const item = trigger.closest('[data-mon-acc]');
+        const isActive = item.classList.contains('active');
+
+        monAccItems.forEach(acc => {
+          acc.classList.remove('active');
+          const btn = acc.querySelector('[data-mon-acc-trigger]');
+          const icon = btn.querySelector('i');
+          btn.setAttribute('aria-expanded', 'false');
+          if (icon) icon.className = 'fas fa-chevron-down';
+        });
+
+        if (!isActive) {
+          item.classList.add('active');
+          const icon = trigger.querySelector('i');
+          trigger.setAttribute('aria-expanded', 'true');
+          if (icon) icon.className = 'fas fa-chevron-up';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+

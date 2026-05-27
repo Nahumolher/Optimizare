@@ -1,0 +1,481 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Autoconsumo Solar Fotovoltaico â€“ Optimizare</title>
+  <meta name="description" content="Genera tu propia energÃ­a limpia con autoconsumo solar fotovoltaico. DiseÃ±o, instalaciÃ³n, legalizaciÃ³n, subvenciones y mantenimiento integral." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+      <h3>Valoramos tu privacidad</h3>
+      <p>Usamos cookies para mejorar tu experiencia de navegaciÃ³n, mostrarte contenidos personalizados y analizar nuestro trÃ¡fico.</p>
+      <div class="cookie-actions">
+        <button class="btn-cookie outline" onclick="closeCookies()">Rechazar todo</button>
+        <button class="btn-cookie outline" onclick="closeCookies()">Personalizar</button>
+        <button class="btn-cookie primary" onclick="closeCookies()">Aceptar todo</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="header-top">
+      <div class="container header-top-inner">
+        <div class="header-top-left">
+          <a href="index.html" class="logo">
+            <img src="img/1.png" alt="Optimizare" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+            <span class="logo-text" style="display:none">Optimizare</span>
+          </a>
+          <div class="header-social">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="header-top-contacts">
+          <a href="tel:+34917992688" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-phone-alt"></i></span>
+            <span class="hcontact-text"><strong>LlÃ¡manos</strong><span>+34 917 992 688</span></span>
+          </a>
+          <a href="mailto:comercial@optimizare.es" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-envelope-open-text"></i></span>
+            <span class="hcontact-text"><strong>AtenciÃ³n comercial</strong><span>comercial@optimizare.es</span></span>
+          </a>
+          <a href="mailto:clientes@optimizare.es" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-user-circle"></i></span>
+            <span class="hcontact-text"><strong>AtenciÃ³n al cliente</strong><span>clientes@optimizare.es</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header-nav-bar">
+      <div class="container header-nav-inner">
+        <nav class="nav" id="mainNav">
+          <ul class="nav-list">
+            <li class="nav-item has-dropdown">
+                            <a href="#">Gestión de la energía <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="compra-de-energia.html">Asesoramiento en compra de energía</a>
+                <a href="power-purchase-agreement-ppa.html">Power Purchase Agreement (PPA)</a>
+                <a href="servicios-a-comercializadoras.html">Servicios a comercializadoras</a>
+                <a href="certificado-ahorro-energetico-cae.html">Certificado de Ahorro Energético (CAE)</a>
+                <a href="gestion-energetica-iso-50001.html">ISO 50001</a>
+                <a href="auditoria-energetica.html">Auditoría energética</a>
+                <a href="certificado-de-eficiencia-energetica-cee.html">Certificado de Eficiencia Energética (CEE)</a>
+                <a href="monitorizacion-energetica.html">Monitorización energética</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown active-menu">
+              <a href="#">Soluciones energéticas <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="autoconsumo-fotovoltaico.html" class="active-link">Autoconsumo solar fotovoltaico</a>
+                <a href="irve-recarga-electrica.html">Infraestructura de recarga de vehículos eléctricos (IRVE)</a>
+                <a href="calefaccion-climatizacion-eficientes.html">Calefacción y climatización eficiente</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Mantenimiento y servicios <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Mantenimiento preventivo</a>
+                <a href="calefaccion-climatizacion-eficientes.html">ClimatizaciÃ³n eficiente</a>
+                <a href="#">Outsourcing energÃ©tico</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Sostenibilidad <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">EconomÃ­a circular</a>
+                <a href="#">DescarbonizaciÃ³n</a>
+                <a href="#">Flexibilidad de la demanda</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Optimizare <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Sobre Optimizare</a>
+                <a href="#">Casos de Ã©xito</a>
+                <a href="#">Trabaja con nosotros</a>
+                <a href="#">Blog</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="certificado-ahorro-energetico-cae.html" class="btn-nav-cae">CAE</a>
+          <a href="#contacto-inner" class="btn-nav-contact">Contacto</a>
+          <button class="btn-search" id="searchToggle"><i class="fas fa-search"></i></button>
+          <button class="btn-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </div>
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <input type="text" placeholder="Â¿QuÃ© estÃ¡s buscando?" />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="ip-hero">
+    <div class="ip-hero-bg">
+      <img src="img/placa 1.jpg" alt="" class="ip-hero-img" />
+      <div class="ip-hero-overlay"></div>
+    </div>
+    <div class="container ip-hero-content">
+      <nav class="ip-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Soluciones energÃ©ticas</span>
+        <i class="fas fa-chevron-right"></i>
+        <span class="current">Autoconsumo fotovoltaico</span>
+      </nav>
+      <h1 class="ip-hero-title">Autoconsumo Solar<br><em>Fotovoltaico</em></h1>
+      <p class="ip-hero-sub">Genera tu propia energÃ­a limpia con respaldo tÃ©cnico integral</p>
+      <a href="#contacto-inner" class="btn-primary btn-lg">Solicitar estudio <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <section class="ip-stats-strip">
+    <div class="container">
+      <div class="ip-stats-grid">
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-solar-panel"></i></div>
+          <div class="ip-stat-val"><span class="ip-stat-num" data-target="4">0</span><span class="ip-stat-unit"> MW+</span></div>
+          <div class="ip-stat-label">de potencia fotovoltaica instalada</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-bolt"></i></div>
+          <div class="ip-stat-val"><span class="ip-stat-num" data-target="60">0</span><span class="ip-stat-unit">%</span></div>
+          <div class="ip-stat-label">de reducciÃ³n potencial de energÃ­a de red</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-user-check"></i></div>
+          <div class="ip-stat-val"><span class="ip-stat-num" data-target="10">0</span><span class="ip-stat-unit"> aÃ±os</span></div>
+          <div class="ip-stat-label">de experiencia en proyectos energÃ©ticos</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-leaf"></i></div>
+          <div class="ip-stat-val"><span class="ip-stat-num" data-target="100">0</span><span class="ip-stat-unit">% renovable</span></div>
+          <div class="ip-stat-label">energÃ­a limpia generada localmente</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pv-overview-section">
+    <div class="container pv-overview-layout">
+      <div class="pv-overview-text reveal-left">
+        <span class="section-tag">GENERACIÃ“N PROPIA</span>
+        <h2>Una soluciÃ³n real para reducir costes y ganar independencia energÃ©tica</h2>
+        <p>El autoconsumo fotovoltaico permite a empresas, comunidades y viviendas avanzar hacia un modelo energÃ©tico mÃ¡s eficiente, estable y competitivo.</p>
+        <p>En Optimizare analizamos tu perfil de consumo, diseÃ±amos la instalaciÃ³n Ã³ptima y ejecutamos el proyecto completo para que empieces a ahorrar desde la puesta en marcha.</p>
+        <p>AdemÃ¡s de reducir tu factura elÃ©ctrica, impulsas tus objetivos de sostenibilidad y refuerzas tu compromiso ambiental frente a clientes, empleados e inversores.</p>
+      </div>
+      <div class="pv-overview-media reveal-right delay-2">
+        <img src="img/placa industria.jpg" alt="Autoconsumo solar" />
+        <div class="pv-overview-chip"><i class="fas fa-sun"></i><span>EnergÃ­a solar de proximidad</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pv-benefits-section">
+    <div class="container">
+      <div class="pv-benefits-head reveal-blur">
+        <h2>Beneficios adicionales del autoconsumo con Optimizare</h2>
+      </div>
+      <div class="pv-benefits-grid">
+        <article class="pv-benefit-item reveal-left delay-1">
+          <img src="img/casa1.png" alt="Vivienda con paneles solares" />
+          <div class="pv-benefit-overlay"></div>
+          <h4>AHORRO ENERGÃ‰TICO SOSTENIDO</h4>
+        </article>
+        <article class="pv-benefit-item reveal-zoom delay-2">
+          <img src="img/planos.jpg" alt="Estudio previo de ingenierÃ­a" />
+          <div class="pv-benefit-overlay"></div>
+          <h4>DISEÃ‘O TÃ‰CNICO A MEDIDA</h4>
+        </article>
+        <article class="pv-benefit-item reveal-zoom delay-3">
+          <img src="img/placa 4.jpg" alt="CompensaciÃ³n de excedentes fotovoltaicos" />
+          <div class="pv-benefit-overlay"></div>
+          <h4>GESTIÃ“N DE EXCEDENTES</h4>
+        </article>
+        <article class="pv-benefit-item reveal-right delay-4">
+          <img src="img/407366886b2e9ebddc52322700839365.jpg" alt="Responsabilidad social corporativa" />
+          <div class="pv-benefit-overlay"></div>
+          <h4>IMPACTO ESG Y REPUTACIÃ“N</h4>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="pv-components-section">
+    <div class="container">
+      <div class="pv-components-head reveal-blur">
+        <span class="section-tag">COMPONENTES CLAVE</span>
+        <h2>QuÃ© integra una instalaciÃ³n fotovoltaica eficiente</h2>
+      </div>
+      <div class="pv-components-grid">
+        <article class="pv-component-card reveal-left delay-1">
+          <div class="pv-component-icon"><i class="fas fa-solar-panel"></i></div>
+          <h3>Paneles solares</h3>
+          <p>Convierten la radiaciÃ³n solar en corriente continua y marcan el rendimiento base de la instalaciÃ³n.</p>
+        </article>
+        <article class="pv-component-card reveal-zoom delay-2">
+          <div class="pv-component-icon"><i class="fas fa-exchange-alt"></i></div>
+          <h3>Inversor</h3>
+          <p>Transforma la energÃ­a producida en corriente alterna lista para consumo y monitorizaciÃ³n inteligente.</p>
+        </article>
+        <article class="pv-component-card reveal-right delay-3">
+          <div class="pv-component-icon"><i class="fas fa-drafting-compass"></i></div>
+          <h3>Estructura y fijaciÃ³n</h3>
+          <p>Garantiza orientaciÃ³n, inclinaciÃ³n y anclaje adecuados para maximizar producciÃ³n y seguridad.</p>
+        </article>
+        <article class="pv-component-card reveal-left delay-4">
+          <div class="pv-component-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Protecciones y cableado</h3>
+          <p>Aseguran la conducciÃ³n energÃ©tica y protegen la instalaciÃ³n frente a sobrecargas, derivaciones y fallos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="pv-storage-section">
+    <div class="container pv-storage-layout">
+      <div class="pv-storage-img reveal-left">
+        <img src="img/instalacion 2.jpg" alt="BaterÃ­as y backup fotovoltaico" />
+      </div>
+      <div class="pv-storage-text reveal-right delay-2">
+        <span class="section-tag">AUTONOMÃA ENERGÃ‰TICA</span>
+        <h2>Maximiza tu autonomÃ­a con baterÃ­as y respaldo</h2>
+        <ul>
+          <li><strong>BaterÃ­as de litio:</strong> almacenan excedentes solares para consumir energÃ­a propia fuera de horas de radiaciÃ³n.</li>
+          <li><strong>GestiÃ³n inteligente de carga:</strong> optimiza el uso de baterÃ­a segÃºn franjas horarias y hÃ¡bitos de consumo.</li>
+          <li><strong>Sistema de backup:</strong> mantiene cargas crÃ­ticas en funcionamiento ante cortes o inestabilidad de red.</li>
+        </ul>
+        <a href="#contacto-inner" class="btn-primary" style="margin-top:10px">Quiero autonomÃ­a energÃ©tica <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pv-trust-section">
+    <div class="container pv-trust-layout">
+      <div class="pv-trust-text reveal-left">
+        <span class="section-tag">INSTALADORA AUTORIZADA</span>
+        <h2>Experiencia certificada para asegurar el Ã©xito de tu inversiÃ³n solar</h2>
+        <p>En Optimizare somos empresa instaladora autorizada y acumulamos mÃ¡s de una dÃ©cada desarrollando proyectos de autoconsumo para clientes residenciales, terciarios e industriales.</p>
+        <p>Te acompaÃ±amos en todo el ciclo: anÃ¡lisis inicial, ingenierÃ­a, tramitaciÃ³n, instalaciÃ³n, legalizaciÃ³n, monitorizaciÃ³n y mantenimiento continuo.</p>
+        <div class="pv-trust-stats">
+          <div class="pv-trust-stat"><strong>+10</strong><span>AÃ±os de experiencia</span></div>
+          <div class="pv-trust-stat"><strong>4 MW+</strong><span>Potencia instalada</span></div>
+          <div class="pv-trust-stat"><strong>360Â°</strong><span>Servicio integral</span></div>
+        </div>
+      </div>
+      <div class="pv-trust-media reveal-right delay-2">
+        <img src="img/instalacion.jpg" alt="Empresa instaladora fotovoltaica autorizada" />
+      </div>
+    </div>
+  </section>
+
+  <section class="pv-pillars-section">
+    <div class="container">
+      <div class="pv-pillars-head reveal-blur">
+        <h2>Un equipo multidisciplinar para cada fase del proyecto</h2>
+      </div>
+      <div class="pv-pillars-grid">
+        <div class="pv-pillar reveal-zoom delay-1"><i class="fas fa-check"></i><h4>Personal tÃ©cnico cualificado</h4><p>Especialistas en diseÃ±o, ejecuciÃ³n y operaciÃ³n de instalaciones fotovoltaicas con criterios de rendimiento y seguridad.</p></div>
+        <div class="pv-pillar reveal-zoom delay-2"><i class="fas fa-check"></i><h4>IngenierÃ­a tÃ©cnica propia</h4><p>Equipo interno para dimensionar cada soluciÃ³n segÃºn consumo, superficie Ãºtil, retorno esperado y objetivos energÃ©ticos.</p></div>
+        <div class="pv-pillar reveal-zoom delay-3"><i class="fas fa-check"></i><h4>Compra de energÃ­a y contratos</h4><p>Asesoramos en contratos de suministro y compensaciÃ³n para integrar tu fotovoltaica en una estrategia energÃ©tica completa.</p></div>
+        <div class="pv-pillar reveal-zoom delay-4"><i class="fas fa-check"></i><h4>Permitting y legalizaciÃ³n</h4><p>Gestionamos trÃ¡mites, licencias y coordinaciÃ³n con organismos y distribuidoras para acelerar la puesta en servicio.</p></div>
+        <div class="pv-pillar reveal-zoom delay-5"><i class="fas fa-check"></i><h4>Subvenciones e incentivos</h4><p>Te ayudamos a identificar y tramitar ayudas pÃºblicas y bonificaciones fiscales disponibles en tu comunidad autÃ³noma.</p></div>
+        <div class="pv-pillar reveal-zoom delay-6"><i class="fas fa-check"></i><h4>Experiencia y fiabilidad</h4><p>Proyectos ejecutados y resultados medibles que respaldan nuestra metodologÃ­a y compromiso con cada cliente.</p></div>
+        <div class="pv-pillar pv-pillar-wide reveal-zoom delay-6"><i class="fas fa-check"></i><h4>Mantenimiento y mejora continua</h4><p>Planes preventivos, correctivos y seguimiento de rendimiento para asegurar producciÃ³n estable durante toda la vida Ãºtil.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ip-cta-banner">
+    <img src="img/placa 4.jpg" alt="" class="ip-cta-bg" />
+    <div class="ip-cta-overlay"></div>
+    <div class="container ip-cta-inner">
+      <div class="ip-cta-text reveal-left">
+        <span class="ip-cta-eyebrow">ÃšNETE</span>
+        <h2>Y consigue oportunidades reales de ahorro acelerando la implantaciÃ³n de tecnologÃ­as eficientes</h2>
+      </div>
+      <a href="#contacto-inner" class="btn-primary btn-lg reveal-right delay-2">Contacta con nosotros <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contacto-inner">
+    <div class="container contact-inner">
+      <div class="contact-text reveal-left">
+        <span class="section-tag">CONTACTO</span>
+        <h2>Solicita tu estudio de autoconsumo con Optimizare</h2>
+        <p>Comparte tus datos de consumo y necesidades tÃ©cnicas. Te enviaremos una propuesta personalizada con estimaciÃ³n de ahorro, inversiÃ³n y plan de implantaciÃ³n.</p>
+        <ul class="contact-info-list">
+          <li><i class="fas fa-phone"></i><div><strong>LlÃ¡manos</strong><span>+34 917 992 688</span></div></li>
+          <li><i class="fas fa-envelope"></i><div><strong>AtenciÃ³n comercial</strong><span>comercial@optimizare.es</span></div></li>
+          <li><i class="fas fa-envelope"></i><div><strong>AtenciÃ³n al cliente</strong><span>clientes@optimizare.es</span></div></li>
+          <li><i class="fas fa-map-marker-alt"></i><div><strong>DirecciÃ³n</strong><span>Madrid, EspaÃ±a</span></div></li>
+        </ul>
+      </div>
+      <form class="contact-form reveal-right" id="contactFormPV">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="empresa">Empresa *</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="tu@empresa.com" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">TelÃ©fono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="tipo">Tipo de instalaciÃ³n</label>
+          <select id="tipo" name="tipo">
+            <option value="">Selecciona el tipo de proyectoâ€¦</option>
+            <option>Nave industrial</option>
+            <option>Edificio terciario</option>
+            <option>Comunidad de propietarios</option>
+            <option>Residencial</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="IndÃ­canos superficie disponible, consumo anual aproximado y si deseas incluir baterÃ­as, backup o compensaciÃ³n de excedentes."></textarea>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" id="privacidad" name="privacidad" required />
+          <label for="privacidad">Acepto la <a href="#">polÃ­tica de privacidad</a> y el tratamiento de mis datos.</label>
+        </div>
+        <button type="submit" class="btn-primary btn-block">Enviar solicitud <i class="fas fa-arrow-right"></i></button>
+        <div class="form-success" id="formSuccessPV">Â¡Mensaje enviado! Nuestro equipo se pondrÃ¡ en contacto contigo en menos de 24h.</div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="img/opti.png" alt="Optimizare" class="footer-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <span class="footer-logo-text" style="display:none">Optimizare</span>
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> Madrid, EspaÃ±a</p>
+          <p><i class="fas fa-envelope"></i> comercial@optimizare.es</p>
+          <p><i class="fas fa-envelope"></i> clientes@optimizare.es</p>
+          <p><i class="fas fa-phone"></i> 917 99 26 88</p>
+        </div>
+        <div class="footer-social">
+          <p class="social-title">SÃ­guenos en:</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="certificado-ahorro-energetico-cae.html">CAE â€“ Certificados de Ahorro EnergÃ©tico</a></li>
+          <li><a href="gestion-energetica-iso-50001.html">ISO 50001</a></li>
+          <li><a href="auditoria-energetica.html">AuditorÃ­a energÃ©tica</a></li>
+          <li><a href="certificado-de-eficiencia-energetica-cee.html">Certificado de Eficiencia EnergÃ©tica (CEE)</a></li>
+          <li><a href="monitorizacion-energetica.html">MonitorizaciÃ³n energÃ©tica</a></li>
+          <li><a href="calefaccion-climatizacion-eficientes.html">ClimatizaciÃ³n eficiente</a></li>
+          <li><a href="irve-recarga-electrica.html">IRVE</a></li>
+          <li><a href="autoconsumo-fotovoltaico.html">Fotovoltaica</a></li>
+          <li><a href="compra-de-energia.html">Asesoramiento en compra de energÃ­a</a></li>
+          <li><a href="power-purchase-agreement-ppa.html">Power Purchase Agreement (PPA)</a></li>
+          <li><a href="servicios-a-comercializadoras.html">Servicios a comercializadoras</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sobre nosotros</h4>
+        <ul>
+          <li><a href="#">Sobre Optimizare</a></li>
+          <li><a href="#">Casos de Ã©xito</a></li>
+          <li><a href="#">Trabaja con nosotros</a></li>
+          <li><a href="#">Canal de partners</a></li>
+          <li><a href="#">Normas ISO</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>InformaciÃ³n legal</h4>
+        <ul>
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">PolÃ­tica de privacidad</a></li>
+          <li><a href="#">PolÃ­tica de cookies</a></li>
+          <li><a href="#">PolÃ­tica de calidad, MA y SST</a></li>
+          <li><a href="#">PolÃ­tica energÃ©tica</a></li>
+          <li><a href="#">PolÃ­tica SGSI</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container"><p>Copyright Â© 2026 Optimizare</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+  <script>
+    const pvNums = document.querySelectorAll('.ip-stat-num');
+    let pvStarted = false;
+    new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !pvStarted) {
+        pvStarted = true;
+        pvNums.forEach(el => {
+          const target = parseInt(el.dataset.target, 10);
+          const step = target / (1800 / 16);
+          let current = 0;
+          const t = setInterval(() => {
+            current += step;
+            if (current >= target) { current = target; clearInterval(t); }
+            el.textContent = Math.floor(current).toLocaleString('es-ES');
+          }, 16);
+        });
+      }
+    }, { threshold: 0.3 }).observe(document.querySelector('.ip-stats-strip'));
+
+    const pvForm = document.getElementById('contactFormPV');
+    if (pvForm) {
+      pvForm.addEventListener('submit', e => {
+        e.preventDefault();
+        document.getElementById('formSuccessPV').style.display = 'block';
+        pvForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>
+
+
+
+

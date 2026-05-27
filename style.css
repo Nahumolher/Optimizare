@@ -3136,6 +3136,131 @@ img { max-width: 100%; display: block; }
   .cae-ibr-photo { height: 220px; }
 }
 
+  /* ── Climatizacion: etapas visuales ── */
+  .clima-stages-section {
+    padding: 96px 0;
+    background: linear-gradient(180deg, rgba(14, 112, 80, 0.08) 0%, rgba(18, 184, 114, 0.03) 100%);
+  }
+
+  .clima-stages-head {
+    text-align: center;
+    margin-bottom: 42px;
+  }
+
+  .clima-stages-head h2 {
+    font-size: clamp(2rem, 3.2vw, 3.25rem);
+    font-weight: 800;
+    color: var(--green-main);
+    letter-spacing: -0.02em;
+  }
+
+  .clima-stages-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .clima-stage-card {
+    position: relative;
+    border-radius: 22px;
+    overflow: hidden;
+    min-height: 560px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(18, 184, 114, 0.16);
+  }
+
+  .clima-stage-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .clima-stage-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(14, 112, 80, 0.2) 0%, rgba(8, 51, 37, 0.92) 78%);
+  }
+
+  .clima-stage-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 24px;
+    z-index: 2;
+  }
+
+  .clima-stage-content h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #fff;
+    margin-bottom: 14px;
+  }
+
+  .clima-stage-content p {
+    font-size: 1.03rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+  }
+
+  .clima-stages-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .clima-stages-dots span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(14, 112, 80, 0.26);
+  }
+
+  .clima-stages-dots span.active {
+    background: var(--green-main);
+  }
+
+  @media (max-width: 1280px) {
+    .clima-stage-card { min-height: 510px; }
+    .clima-stage-content h3 { font-size: 1.45rem; }
+    .clima-stage-content p { font-size: 0.95rem; }
+  }
+
+  @media (max-width: 960px) {
+    .clima-stages-grid {
+      display: flex;
+      overflow-x: auto;
+      gap: 14px;
+      padding-bottom: 8px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .clima-stage-card {
+      flex: 0 0 82%;
+      min-height: 500px;
+      scroll-snap-align: start;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .clima-stages-section { padding: 74px 0; }
+    .clima-stages-head { margin-bottom: 28px; }
+    .clima-stages-head h2 { font-size: 1.55rem; }
+    .clima-stage-card {
+      flex-basis: 88%;
+      min-height: 460px;
+      border-radius: 18px;
+    }
+    .clima-stage-content { padding: 20px; }
+    .clima-stage-content h3 { font-size: 1.2rem; }
+    .clima-stage-content p { font-size: 0.9rem; }
+  }
+
 /* ── Tabs — Servicios a comercializadoras ── */
 .ip-tabs-section {
   padding: 96px 0;
@@ -3803,4 +3928,1962 @@ img { max-width: 100%; display: block; }
   .ip-modals-grid { grid-template-columns: 1fr; }
   .ip-timeline { grid-template-columns: 1fr; }
   .ip-chart-wrap { padding: 20px 16px; }
+}
+
+/* ────────────────────────────────────────────────
+   SGE – Sistema de Gestión Energética ISO 50001
+──────────────────────────────────────────────── */
+
+/* ── Explainer 2 columnas ── */
+.sge-explainer {
+  padding: 96px 0;
+  background: var(--white);
+}
+.sge-explainer-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+.sge-explainer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.sge-explainer-text h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.25rem);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -.03em;
+  line-height: 1.2;
+}
+.sge-explainer-text p {
+  font-size: .97rem;
+  color: var(--gray-text);
+  line-height: 1.75;
+  margin: 0;
+}
+.sge-explainer-text p strong { color: var(--dark); }
+.sge-explainer-highlight {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px 28px;
+  background: var(--gray-light);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+.sge-highlight-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.sge-highlight-num {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--green-mid);
+  letter-spacing: -.04em;
+  line-height: 1;
+}
+.sge-highlight-label {
+  font-size: .87rem;
+  color: var(--gray-text);
+  line-height: 1.5;
+}
+.sge-explainer-img {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: visible;
+}
+.sge-explainer-img img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  display: block;
+  box-shadow: var(--shadow-lg);
+}
+.sge-explainer-badge {
+  position: absolute;
+  bottom: -20px;
+  left: -28px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: var(--shadow-lg);
+  max-width: 280px;
+}
+.sge-explainer-badge i {
+  font-size: 1.6rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.sge-explainer-badge strong {
+  display: block;
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+.sge-explainer-badge span {
+  font-size: .78rem;
+  color: var(--gray-text);
+}
+
+/* ── Para quién ── */
+.sge-whom-section {
+  padding: 96px 0 80px;
+  background: var(--gray-light);
+}
+.sge-whom-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.sge-whom-header h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -.03em;
+}
+.sge-whom-header p {
+  font-size: .97rem;
+  color: var(--gray-text);
+  line-height: 1.7;
+  max-width: 580px;
+}
+.sge-whom-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+.sge-whom-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.sge-whom-img {
+  position: relative;
+  height: 340px;
+  overflow: hidden;
+}
+.sge-whom-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s ease;
+}
+.sge-whom-card:hover .sge-whom-img img {
+  transform: scale(1.06);
+}
+.sge-whom-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(8,51,37,.92) 0%, rgba(8,51,37,.5) 55%, transparent 100%);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 8px;
+  color: var(--white);
+  transition: background var(--transition);
+}
+.sge-whom-card:hover .sge-whom-overlay {
+  background: linear-gradient(to top, rgba(8,51,37,.97) 0%, rgba(8,51,37,.75) 60%, rgba(8,51,37,.3) 100%);
+}
+.sge-whom-overlay i {
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin-bottom: 2px;
+}
+.sge-whom-overlay h4 {
+  font-size: .95rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--white);
+}
+.sge-whom-overlay p {
+  font-size: .8rem;
+  color: rgba(255,255,255,.75);
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity .3s ease, max-height .3s ease;
+}
+.sge-whom-card:hover .sge-whom-overlay p {
+  opacity: 1;
+  max-height: 80px;
+}
+
+/* ── Beneficios 2×3 con número fantasma ── */
+.sge-benefits-section {
+  padding: 96px 0;
+  background: var(--white);
+}
+.sge-benefits-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.sge-benefits-header h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -.03em;
+}
+.sge-benefits-header p {
+  font-size: .97rem;
+  color: var(--gray-text);
+  line-height: 1.7;
+}
+.sge-benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.sge-benefit-card {
+  position: relative;
+  background: var(--gray-light);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px 36px;
+  overflow: hidden;
+  border-left: 4px solid var(--green-bright);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.sge-benefit-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+.sge-benefit-num {
+  position: absolute;
+  top: -14px;
+  right: 16px;
+  font-size: 6.5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(14,112,80,.07);
+  letter-spacing: -.06em;
+  pointer-events: none;
+  user-select: none;
+}
+.sge-benefit-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--green-bright);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.sge-benefit-icon i {
+  font-size: 1.2rem;
+  color: var(--white);
+}
+.sge-benefit-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+.sge-benefit-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.sge-benefit-card ul li {
+  font-size: .87rem;
+  color: var(--gray-text);
+  line-height: 1.55;
+  padding-left: 18px;
+  position: relative;
+}
+.sge-benefit-card ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* ── Nuestro enfoque ── */
+.sge-enfoque-section {
+  padding: 96px 0;
+  background: var(--green-dark);
+}
+.sge-enfoque-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 72px;
+  align-items: center;
+}
+.sge-enfoque-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.sge-enfoque-text h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -.03em;
+  line-height: 1.22;
+}
+.sge-enfoque-text p {
+  font-size: .97rem;
+  color: rgba(255,255,255,.72);
+  line-height: 1.75;
+}
+.sge-enfoque-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.sge-pillar {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.sge-pillar:first-child {
+  padding-top: 0;
+}
+.sge-pillar:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.sge-pillar-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius);
+  background: rgba(18,184,114,.18);
+  border: 1px solid rgba(18,184,114,.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.sge-pillar-icon i {
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+.sge-pillar h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 6px;
+}
+.sge-pillar p {
+  font-size: .87rem;
+  color: rgba(255,255,255,.68);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Responsive SGE ── */
+@media (max-width: 1100px) {
+  .sge-whom-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 960px) {
+  .sge-explainer-layout { grid-template-columns: 1fr; gap: 48px; }
+  .sge-explainer-img img { height: 320px; }
+  .sge-explainer-badge { left: 16px; bottom: -16px; }
+  .sge-benefits-grid { grid-template-columns: 1fr; }
+  .sge-enfoque-layout { grid-template-columns: 1fr; gap: 48px; }
+  .sge-whom-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 640px) {
+  .sge-whom-grid { grid-template-columns: repeat(2, 1fr); }
+  .sge-whom-img { height: 260px; }
+  .sge-benefit-card { padding: 28px 24px; }
+}
+@media (max-width: 420px) {
+  .sge-whom-grid { grid-template-columns: 1fr; }
+}
+
+/* ────────────────────────────────────────────────
+   Auditoría energética
+──────────────────────────────────────────────── */
+
+.aud-legal-section {
+  padding: 88px 0 28px;
+  background: var(--white);
+}
+.aud-legal-card {
+  background: linear-gradient(135deg, #f4faf7 0%, #ebf7f1 100%);
+  border: 1px solid rgba(16, 150, 96, .16);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 24px;
+  align-items: center;
+}
+.aud-legal-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 16px;
+  background: var(--green-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.6rem;
+  box-shadow: var(--shadow);
+}
+.aud-legal-tag {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--green-main);
+  margin-bottom: 8px;
+}
+.aud-legal-content h2 {
+  font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.24;
+  margin-bottom: 10px;
+}
+.aud-legal-content p {
+  font-size: .93rem;
+  color: var(--gray-text);
+  line-height: 1.68;
+  margin: 0 0 16px;
+}
+.aud-legal-content p strong { color: var(--dark); }
+.aud-legal-checks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 10px 14px;
+}
+.aud-legal-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: .84rem;
+  color: var(--gray-text);
+  line-height: 1.5;
+}
+.aud-legal-check i {
+  color: var(--green-bright);
+  margin-top: 2px;
+}
+.aud-legal-cta { white-space: nowrap; }
+
+.aud-sectors-section {
+  padding: 80px 0 96px;
+  background: var(--gray-light);
+}
+.aud-sectors-header {
+  max-width: 740px;
+  margin: 0 auto 54px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.aud-sectors-header h2 {
+  font-size: clamp(1.6rem, 2.45vw, 2.2rem);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -.03em;
+}
+.aud-sectors-header p {
+  font-size: .97rem;
+  color: var(--gray-text);
+  line-height: 1.7;
+}
+.aud-sectors-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+.aud-sector-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  min-height: 280px;
+}
+.aud-sector-img { position: relative; }
+.aud-sector-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.aud-sector-body {
+  position: relative;
+  padding: 28px 28px 26px;
+}
+.aud-sector-num {
+  position: absolute;
+  right: 18px;
+  top: 8px;
+  font-size: 4.8rem;
+  font-weight: 900;
+  letter-spacing: -.05em;
+  color: rgba(14, 112, 80, .07);
+  line-height: 1;
+  user-select: none;
+}
+.aud-sector-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(16, 150, 96, .12);
+  color: var(--green-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.aud-sector-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+.aud-sector-body p {
+  font-size: .88rem;
+  color: var(--gray-text);
+  line-height: 1.62;
+  margin-bottom: 12px;
+}
+.aud-sector-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.aud-sector-body ul li {
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--green-main);
+  background: rgba(16, 150, 96, .1);
+  border-radius: 18px;
+  padding: 6px 10px;
+}
+
+.aud-objectives-section {
+  padding: 96px 0;
+  background: var(--white);
+}
+.aud-objectives-layout {
+  display: grid;
+  grid-template-columns: .95fr 1.25fr;
+  gap: 56px;
+  align-items: start;
+}
+.aud-obj-text h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -.03em;
+  line-height: 1.22;
+  margin: 12px 0;
+}
+.aud-obj-text p {
+  font-size: .96rem;
+  color: var(--gray-text);
+  line-height: 1.72;
+}
+.aud-obj-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.aud-obj-item {
+  background: var(--gray-light);
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  gap: 12px;
+  min-height: 132px;
+}
+.aud-obj-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--green-mid);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .95rem;
+  flex-shrink: 0;
+}
+.aud-obj-item h4 {
+  font-size: .88rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+.aud-obj-item p {
+  font-size: .8rem;
+  color: var(--gray-text);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.aud-guarantees-section {
+  padding: 96px 0;
+  background: radial-gradient(circle at 0% 0%, rgba(16, 150, 96, .24) 0%, transparent 42%), var(--green-dark);
+}
+.aud-guarantees-header {
+  max-width: 760px;
+  margin: 0 auto 54px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.aud-guarantees-header h2 {
+  font-size: clamp(1.6rem, 2.45vw, 2.2rem);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -.03em;
+}
+.aud-guarantees-header p {
+  font-size: .97rem;
+  color: rgba(255, 255, 255, .72);
+  line-height: 1.7;
+}
+.aud-guarantees-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.aud-guarantee-item {
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  gap: 14px;
+  backdrop-filter: blur(2px);
+}
+.aud-g-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(18, 184, 114, .16);
+  border: 1px solid rgba(18, 184, 114, .4);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.aud-guarantee-item h4 {
+  color: var(--white);
+  font-size: .92rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.aud-guarantee-item p {
+  color: rgba(255, 255, 255, .72);
+  font-size: .82rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 1080px) {
+  .aud-legal-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .aud-legal-cta {
+    width: fit-content;
+  }
+}
+@media (max-width: 960px) {
+  .aud-sector-card {
+    grid-template-columns: 1fr;
+  }
+  .aud-sector-img img { height: 230px; }
+  .aud-objectives-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .aud-guarantees-grid,
+  .aud-obj-grid {
+    grid-template-columns: 1fr;
+  }
+  .aud-legal-checks {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .aud-legal-card {
+    padding: 24px 18px;
+  }
+  .aud-sector-body {
+    padding: 22px 18px 18px;
+  }
+}
+
+/* ────────────────────────────────────────────────
+   Certificado de Eficiencia Energética (CEE)
+──────────────────────────────────────────────── */
+
+.cee-overview-section {
+  padding: 96px 0;
+  background: var(--white);
+}
+.cee-overview-layout {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 44px;
+  align-items: start;
+}
+.cee-overview-text h2 {
+  font-size: clamp(1.55rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -.03em;
+  line-height: 1.22;
+  margin: 12px 0 14px;
+}
+.cee-overview-text p {
+  font-size: .96rem;
+  color: var(--gray-text);
+  line-height: 1.76;
+  margin: 0 0 12px;
+}
+.cee-overview-text p strong { color: var(--dark); }
+
+.cee-overview-card {
+  background: linear-gradient(145deg, #f5faf7 0%, #eaf7f1 100%);
+  border: 1px solid rgba(16, 150, 96, .16);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 110px;
+}
+.cee-overview-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+.cee-overview-card p {
+  margin: 14px 0 16px;
+  font-size: .84rem;
+  line-height: 1.55;
+  color: var(--gray-text);
+}
+.cee-label-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.cee-label-row {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  align-items: center;
+  border-radius: 8px;
+  padding: 6px 10px;
+  color: #0c1511;
+  font-weight: 700;
+}
+.cee-label-row span {
+  font-size: .95rem;
+  line-height: 1;
+}
+.cee-label-row small {
+  font-size: .73rem;
+  opacity: .85;
+  font-weight: 600;
+}
+.cee-a { background: #1fa75f; }
+.cee-b { background: #4cbf5d; }
+.cee-c { background: #84c95b; }
+.cee-d { background: #d7d754; }
+.cee-e { background: #e3a245; }
+.cee-f { background: #dc7445; }
+.cee-g { background: #d35050; }
+
+.cee-profiles-section {
+  padding: 96px 0;
+  background: var(--gray-light);
+}
+.cee-profiles-header {
+  max-width: 760px;
+  margin: 0 auto 56px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.cee-profiles-header h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -.03em;
+}
+.cee-profiles-header p {
+  font-size: .97rem;
+  color: var(--gray-text);
+  line-height: 1.7;
+}
+.cee-profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.cee-profile-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+.cee-profile-card img {
+  width: 100%;
+  height: 215px;
+  object-fit: cover;
+  display: block;
+}
+.cee-profile-body {
+  padding: 20px 20px 22px;
+}
+.cee-profile-body h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.cee-profile-body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cee-profile-body ul li {
+  font-size: .85rem;
+  color: var(--gray-text);
+  line-height: 1.56;
+  padding-left: 16px;
+  position: relative;
+}
+.cee-profile-body ul li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+.cee-reasons-section {
+  padding: 96px 0;
+  background: linear-gradient(180deg, #f3f7f5 0%, #eef5f1 100%);
+}
+.cee-reasons-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.cee-reasons-header h2 {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 800;
+  color: var(--green-main);
+  letter-spacing: -.03em;
+}
+.cee-reasons-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  max-width: 1020px;
+  margin: 0 auto 24px;
+}
+.cee-reason-tab {
+  appearance: none;
+  border: 1px solid var(--gray-mid);
+  background: var(--white);
+  color: var(--green-main);
+  font-size: .95rem;
+  font-weight: 700;
+  border-radius: 12px;
+  padding: 13px 14px;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+.cee-reason-tab:hover {
+  transform: translateY(-1px);
+}
+.cee-reason-tab.active {
+  background: var(--green-mid);
+  border-color: var(--green-mid);
+  color: var(--white);
+}
+.cee-reasons-panels {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+.cee-reason-panel {
+  display: none;
+}
+.cee-reason-panel.active {
+  display: block;
+}
+.cee-reason-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+  align-items: start;
+}
+.cee-reason-photo img {
+  width: 100%;
+  height: 470px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+.cee-reason-text h3 {
+  font-size: clamp(1.45rem, 2.3vw, 2.1rem);
+  color: var(--green-main);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.cee-reason-bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.cee-reason-bullet i {
+  color: var(--accent);
+  font-size: 1.8rem;
+  line-height: 1;
+  margin-top: 2px;
+}
+.cee-reason-bullet h4 {
+  font-size: 2rem;
+  color: var(--green-main);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.cee-reason-bullet p {
+  font-size: 1.2rem;
+  color: var(--gray-text);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.cee-commitment-section {
+  padding: 96px 0;
+  background: var(--green-dark);
+}
+.cee-commitment-layout {
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  gap: 46px;
+  align-items: center;
+}
+.cee-commitment-photo img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+.cee-commitment-content h2 {
+  font-size: clamp(1.55rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.24;
+  color: var(--white);
+  letter-spacing: -.03em;
+  margin: 12px 0 18px;
+}
+.cee-commitment-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.cee-commitment-item {
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 11px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, .86);
+  font-size: .86rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.cee-commitment-item i {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(18, 184, 114, .2);
+  border: 1px solid rgba(18, 184, 114, .34);
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .82rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1080px) {
+  .cee-overview-layout {
+    grid-template-columns: 1fr;
+  }
+  .cee-overview-card {
+    position: static;
+  }
+}
+@media (max-width: 960px) {
+  .cee-profiles-grid,
+  .cee-commitment-layout {
+    grid-template-columns: 1fr;
+  }
+  .cee-reasons-tabs {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cee-reason-layout {
+    grid-template-columns: 1fr;
+  }
+  .cee-reason-photo img {
+    height: 320px;
+  }
+  .cee-reason-bullet h4 {
+    font-size: 1.35rem;
+  }
+  .cee-reason-bullet p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 560px) {
+  .cee-overview-card,
+  .cee-profile-body {
+    padding: 20px 16px;
+  }
+  .cee-profile-card img {
+    height: 195px;
+  }
+  .cee-commitment-photo img {
+    height: 280px;
+  }
+  .cee-reasons-tabs {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .cee-reason-tab {
+    font-size: .9rem;
+  }
+}
+
+/* ────────────────────────────────────────────────
+   Monitorización energética
+──────────────────────────────────────────────── */
+
+.mon-intro-section {
+  padding: 96px 0;
+  background: var(--white);
+}
+.mon-intro-layout {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 54px;
+  align-items: center;
+}
+.mon-intro-text h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -.03em;
+  line-height: 1.2;
+  margin: 12px 0 14px;
+}
+.mon-intro-text p {
+  font-size: .96rem;
+  color: var(--gray-text);
+  line-height: 1.72;
+  margin: 0 0 12px;
+}
+.mon-intro-media {
+  position: relative;
+}
+.mon-intro-media img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+.mon-intro-badge {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  background: rgba(8, 51, 37, .85);
+  color: var(--white);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: .8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.mon-intro-badge i { color: var(--accent); }
+
+.mon-phases-section {
+  padding: 96px 0;
+  background:
+    linear-gradient(0deg, rgba(245,247,246,.94), rgba(245,247,246,.94)),
+    radial-gradient(circle at 6% 18%, rgba(14,112,80,.08) 0%, transparent 48%);
+}
+.mon-phases-head {
+  max-width: 860px;
+  margin: 0 0 34px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.mon-phases-head h2 {
+  font-size: clamp(1.9rem, 3.2vw, 3.35rem);
+  font-weight: 800;
+  color: var(--green-main);
+  letter-spacing: -.03em;
+  line-height: 1.08;
+}
+.mon-flex-layout {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 28px;
+  align-items: stretch;
+}
+.mon-flex-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.mon-acc-item {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(8,51,37,.12);
+  background: rgba(186, 215, 230, .38);
+}
+.mon-acc-trigger {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: #111;
+  font-size: 1.04rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.mon-acc-trigger i {
+  color: var(--green-main);
+  font-size: 1.1rem;
+}
+.mon-acc-item.active .mon-acc-trigger {
+  background: var(--white);
+}
+.mon-acc-panel {
+  display: none;
+  padding: 6px 20px 20px;
+  background: var(--white);
+}
+.mon-acc-item.active .mon-acc-panel {
+  display: block;
+}
+.mon-acc-panel p {
+  font-size: .95rem;
+  color: var(--gray-text);
+  line-height: 1.7;
+  margin: 0;
+}
+.mon-acc-panel ul {
+  margin: 8px 0 0 0;
+  padding-left: 18px;
+}
+.mon-acc-panel ul li {
+  font-size: .95rem;
+  color: var(--gray-text);
+  line-height: 1.62;
+  margin-bottom: 6px;
+}
+.mon-flex-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 540px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+}
+
+.mon-scope-section {
+  padding: 96px 0;
+  background: var(--white);
+}
+.mon-scope-head {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.mon-scope-head h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -.03em;
+}
+.mon-scope-row {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 26px;
+  align-items: stretch;
+  margin-bottom: 24px;
+}
+.mon-scope-row-reverse {
+  grid-template-columns: 1fr 340px;
+}
+.mon-scope-row-reverse .mon-scope-img { order: 2; }
+.mon-scope-row-reverse .mon-scope-body { order: 1; }
+.mon-scope-img img {
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+.mon-scope-body {
+  background: var(--gray-light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+.mon-scope-body h3 {
+  font-size: 1.06rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+.mon-scope-body p {
+  font-size: .87rem;
+  color: var(--gray-text);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.mon-scope-body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.mon-scope-body ul li {
+  font-size: .84rem;
+  color: var(--green-main);
+  line-height: 1.45;
+  padding-left: 16px;
+  position: relative;
+}
+.mon-scope-body ul li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+.mon-value-section {
+  padding: 96px 0;
+  background: var(--green-dark);
+}
+.mon-value-layout {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 40px;
+  align-items: start;
+}
+.mon-value-content h2 {
+  font-size: clamp(1.58rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.2;
+  letter-spacing: -.03em;
+  margin: 12px 0 14px;
+}
+.mon-value-content p {
+  font-size: .95rem;
+  color: rgba(255, 255, 255, .72);
+  line-height: 1.7;
+  margin: 0 0 10px;
+}
+.mon-value-points {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mon-point {
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: rgba(255, 255, 255, .88);
+  font-size: .86rem;
+  line-height: 1.45;
+}
+.mon-point i {
+  color: var(--accent);
+  margin-top: 2px;
+}
+
+@media (max-width: 1024px) {
+  .mon-flex-layout {
+    grid-template-columns: 1fr;
+  }
+  .mon-flex-image img {
+    min-height: 340px;
+  }
+  .mon-scope-row,
+  .mon-scope-row-reverse {
+    grid-template-columns: 1fr;
+  }
+  .mon-scope-row-reverse .mon-scope-img,
+  .mon-scope-row-reverse .mon-scope-body {
+    order: unset;
+  }
+}
+@media (max-width: 960px) {
+  .mon-intro-layout,
+  .mon-value-layout {
+    grid-template-columns: 1fr;
+  }
+  .mon-phases-head h2 {
+    font-size: clamp(1.55rem, 6vw, 2.35rem);
+  }
+  .mon-acc-trigger {
+    font-size: .94rem;
+    padding: 14px 14px;
+  }
+  .mon-acc-panel {
+    padding: 4px 14px 14px;
+  }
+  .mon-acc-panel p,
+  .mon-acc-panel ul li {
+    font-size: .9rem;
+  }
+  .mon-intro-media img { height: 300px; }
+}
+@media (max-width: 560px) {
+  .mon-intro-badge {
+    left: 12px;
+    bottom: 12px;
+    font-size: .74rem;
+  }
+}
+
+/* ────────────────────────────────────────────────
+   Autoconsumo fotovoltaico
+──────────────────────────────────────────────── */
+
+.pv-overview-section {
+  padding: 96px 0;
+  background: var(--white);
+}
+.pv-overview-layout {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 54px;
+  align-items: center;
+}
+.pv-overview-text h2 {
+  font-size: clamp(1.62rem, 2.5vw, 2.3rem);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -.03em;
+  line-height: 1.2;
+  margin: 12px 0 14px;
+}
+.pv-overview-text p {
+  font-size: .96rem;
+  color: var(--gray-text);
+  line-height: 1.72;
+  margin: 0 0 12px;
+}
+.pv-overview-media {
+  position: relative;
+}
+.pv-overview-media img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+.pv-overview-chip {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  background: rgba(8, 51, 37, .85);
+  color: var(--white);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: .8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.pv-overview-chip i { color: var(--accent); }
+
+.irve-clients {
+  border-top: 0;
+  background: linear-gradient(180deg, rgba(16, 150, 96, .06) 0%, var(--white) 100%);
+}
+.irve-clients .clients-label {
+  color: var(--green-main);
+  opacity: .72;
+}
+.irve-clients .client-tile {
+  border-color: rgba(16, 150, 96, .22);
+}
+.irve-clients .client-tile:hover {
+  border-color: var(--green-light);
+  box-shadow: 0 4px 14px rgba(16, 150, 96, .16);
+}
+.irve-clients .client-tile span {
+  color: var(--green-mid);
+}
+
+.irve-steps-section {
+  padding: 92px 0;
+  background: linear-gradient(180deg, rgba(16, 150, 96, .08) 0%, var(--gray-light) 100%);
+}
+.irve-steps-head {
+  text-align: center;
+  margin: 0 auto 34px;
+  max-width: 900px;
+}
+.irve-steps-head h2 {
+  font-size: clamp(1.7rem, 2.9vw, 3rem);
+  font-weight: 800;
+  color: var(--green-main);
+  letter-spacing: -.03em;
+  line-height: 1.12;
+}
+.irve-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.irve-acc-item {
+  border-radius: 0;
+  overflow: hidden;
+  border: 1px solid rgba(16, 150, 96, .14);
+}
+.irve-acc-trigger {
+  width: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: 18px 32px;
+  background: rgba(16, 150, 96, .18);
+  color: var(--dark);
+  cursor: pointer;
+  gap: 12px;
+  font-family: var(--font);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.irve-acc-trigger i {
+  color: var(--green-main);
+  font-size: .95rem;
+  flex-shrink: 0;
+}
+.irve-acc-item.open .irve-acc-trigger {
+  background: rgba(11, 82, 54, .14);
+}
+.irve-acc-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .36s cubic-bezier(.16,1,.3,1), padding .28s ease;
+  background: rgba(255, 255, 255, .76);
+  padding: 0 32px;
+}
+.irve-acc-item.open .irve-acc-body {
+  max-height: 560px;
+  padding: 26px 32px 28px;
+}
+.irve-acc-body p {
+  font-size: clamp(.98rem, 1.25vw, 2.05rem);
+  color: var(--gray-text);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+.irve-acc-body p:last-child {
+  margin-bottom: 0;
+}
+.irve-acc-body strong {
+  color: var(--green-main);
+}
+
+.pv-components-section {
+  padding: 96px 0;
+  background: var(--gray-light);
+}
+.pv-benefits-section {
+  padding: 88px 0;
+  background: var(--gray-light);
+}
+.pv-benefits-head {
+  max-width: 980px;
+  margin: 0 auto 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.pv-benefits-head h2 {
+  font-size: clamp(1.7rem, 3vw, 3.05rem);
+  font-weight: 800;
+  color: var(--green-main);
+  letter-spacing: -.03em;
+  line-height: 1.14;
+}
+.pv-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.pv-benefit-item {
+  position: relative;
+  min-height: 570px;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+.pv-benefit-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .55s ease;
+}
+.pv-benefit-item:hover img {
+  transform: scale(1.04);
+}
+.pv-benefit-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 82, 54, .28) 10%, rgba(8, 51, 37, .76) 100%);
+}
+.pv-benefit-item h4 {
+  position: absolute;
+  left: 22px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1;
+  font-size: clamp(.95rem, 1.15vw, 1.35rem);
+  color: var(--white);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.12;
+  text-transform: uppercase;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, .45);
+}
+.pv-components-head {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.pv-components-head h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -.03em;
+}
+.pv-components-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.pv-component-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px 18px;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--green-bright);
+}
+.pv-component-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(16, 150, 96, .12);
+  color: var(--green-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.pv-component-card h3 {
+  font-size: .98rem;
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.32;
+  margin-bottom: 8px;
+}
+.pv-component-card p {
+  font-size: .84rem;
+  color: var(--gray-text);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.pv-storage-section {
+  padding: 96px 0;
+  background: var(--white);
+}
+.pv-storage-layout {
+  display: grid;
+  grid-template-columns: .92fr 1.08fr;
+  gap: 42px;
+  align-items: center;
+}
+.pv-storage-img img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+.pv-storage-text h2 {
+  font-size: clamp(1.55rem, 2.5vw, 2.15rem);
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.2;
+  letter-spacing: -.03em;
+  margin: 12px 0 14px;
+}
+.pv-storage-text ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pv-storage-text ul li {
+  font-size: .9rem;
+  color: var(--gray-text);
+  line-height: 1.6;
+  padding-left: 16px;
+  position: relative;
+}
+.pv-storage-text ul li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+.pv-modes-section {
+  padding: 92px 0;
+  background: var(--gray-light);
+}
+.pv-modes-head {
+  max-width: 720px;
+  margin: 0 auto 36px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.pv-modes-head h2 {
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -.03em;
+}
+.pv-modes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.pv-mode-card {
+  position: relative;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 24px 18px 18px;
+  box-shadow: var(--shadow-sm);
+}
+.pv-mode-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: rgba(14, 112, 80, .1);
+}
+.pv-mode-card h3 {
+  font-size: 1rem;
+  color: var(--dark);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.pv-mode-card p {
+  font-size: .85rem;
+  color: var(--gray-text);
+  line-height: 1.58;
+  margin: 0;
+}
+
+.pv-trust-section {
+  padding: 92px 0;
+  background: var(--white);
+}
+.pv-trust-layout {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  gap: 36px;
+  align-items: center;
+}
+.pv-trust-text h2 {
+  font-size: clamp(1.55rem, 2.5vw, 2.15rem);
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.2;
+  letter-spacing: -.03em;
+  margin: 12px 0 14px;
+}
+.pv-trust-text p {
+  font-size: .92rem;
+  color: var(--gray-text);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+.pv-trust-stats {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.pv-trust-stat {
+  border: 1px solid rgba(14, 112, 80, .2);
+  background: rgba(16, 150, 96, .06);
+  border-radius: 10px;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.pv-trust-stat strong {
+  font-size: 1rem;
+  color: var(--green-main);
+  font-weight: 800;
+  line-height: 1;
+}
+.pv-trust-stat span {
+  font-size: .78rem;
+  color: var(--gray-text);
+  font-weight: 600;
+}
+.pv-trust-media img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.pv-pillars-section {
+  padding: 96px 0;
+  background: var(--green-dark);
+}
+.pv-pillars-head {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.pv-pillars-head h2 {
+  font-size: clamp(1.55rem, 2.6vw, 2.35rem);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -.03em;
+}
+.pv-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 46px 38px;
+}
+.pv-pillar {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}
+.pv-pillar i {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--green-bright);
+  border: 0;
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  font-size: 1.22rem;
+}
+.pv-pillar h4 {
+  font-size: clamp(1.05rem, 1.25vw, 1.4rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.13;
+  margin-bottom: 14px;
+}
+.pv-pillar p {
+  font-size: clamp(.88rem, 1vw, 1rem);
+  color: rgba(255, 255, 255, .9);
+  line-height: 1.5;
+  margin: 0;
+}
+.pv-pillar-wide {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 1100px) {
+  .pv-benefits-grid,
+  .pv-components-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pv-modes-grid,
+  .pv-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pv-pillar-wide {
+    grid-column: auto;
+  }
+}
+@media (max-width: 960px) {
+  .pv-overview-layout,
+  .pv-trust-layout,
+  .pv-storage-layout {
+    grid-template-columns: 1fr;
+  }
+  .pv-overview-media img,
+  .pv-trust-media img,
+  .pv-storage-img img {
+    height: 300px;
+  }
+  .irve-acc-trigger {
+    padding: 16px 18px;
+    font-size: .95rem;
+  }
+  .irve-acc-item.open .irve-acc-body,
+  .irve-acc-body {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .irve-steps-head h2 {
+    font-size: clamp(1.45rem, 6vw, 2rem);
+  }
+}
+@media (max-width: 560px) {
+  .pv-benefits-grid,
+  .pv-modes-grid,
+  .pv-components-grid,
+  .pv-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .pv-benefit-item {
+    min-height: 440px;
+    border-radius: 18px;
+  }
+  .pv-benefit-item h4 {
+    font-size: 1.25rem;
+    left: 16px;
+    right: 16px;
+    bottom: 14px;
+  }
+  .pv-trust-stats {
+    grid-template-columns: 1fr;
+  }
+  .pv-pillar h4 {
+    font-size: 1.1rem;
+  }
+  .pv-pillar p {
+    font-size: .9rem;
+  }
 }

@@ -1,0 +1,462 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infraestructura de Recarga de Vehiculos Electricos (IRVE) | Optimizare</title>
+  <meta name="description" content="Disenamos e instalamos infraestructura de recarga de vehiculos electricos (IRVE): analisis, ingenieria, permitting, legalizacion, puesta en marcha y gestion energetica." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+      <h3>Valoramos tu privacidad</h3>
+      <p>Usamos cookies para mejorar tu experiencia de navegacion, mostrarte contenidos personalizados y analizar nuestro trafico.</p>
+      <div class="cookie-actions">
+        <button class="btn-cookie outline" onclick="closeCookies()">Rechazar todo</button>
+        <button class="btn-cookie outline" onclick="closeCookies()">Personalizar</button>
+        <button class="btn-cookie primary" onclick="closeCookies()">Aceptar todo</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="header-top">
+      <div class="container header-top-inner">
+        <div class="header-top-left">
+          <a href="index.html" class="logo">
+            <img src="img/1.png" alt="Optimizare" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+            <span class="logo-text" style="display:none">Optimizare</span>
+          </a>
+          <div class="header-social">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="header-top-contacts">
+          <a href="tel:+34917992688" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-phone-alt"></i></span>
+            <span class="hcontact-text"><strong>Llamanos</strong><span>+34 917 992 688</span></span>
+          </a>
+          <a href="mailto:comercial@optimizare.es" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-envelope-open-text"></i></span>
+            <span class="hcontact-text"><strong>Atencion comercial</strong><span>comercial@optimizare.es</span></span>
+          </a>
+          <a href="mailto:clientes@optimizare.es" class="hcontact-item">
+            <span class="hcontact-icon"><i class="fas fa-user-circle"></i></span>
+            <span class="hcontact-text"><strong>Atencion al cliente</strong><span>clientes@optimizare.es</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header-nav-bar">
+      <div class="container header-nav-inner">
+        <nav class="nav" id="mainNav">
+          <ul class="nav-list">
+            <li class="nav-item has-dropdown">
+                            <a href="#">Gestión de la energía <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="compra-de-energia.html">Asesoramiento en compra de energía</a>
+                <a href="power-purchase-agreement-ppa.html">Power Purchase Agreement (PPA)</a>
+                <a href="servicios-a-comercializadoras.html">Servicios a comercializadoras</a>
+                <a href="certificado-ahorro-energetico-cae.html">Certificado de Ahorro Energético (CAE)</a>
+                <a href="gestion-energetica-iso-50001.html">ISO 50001</a>
+                <a href="auditoria-energetica.html">Auditoría energética</a>
+                <a href="certificado-de-eficiencia-energetica-cee.html">Certificado de Eficiencia Energética (CEE)</a>
+                <a href="monitorizacion-energetica.html">Monitorización energética</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown active-menu">
+              <a href="#">Soluciones energéticas <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="autoconsumo-fotovoltaico.html">Autoconsumo solar fotovoltaico</a>
+                <a href="irve-recarga-electrica.html" class="active-link">Infraestructura de recarga de vehículos eléctricos (IRVE)</a>
+                <a href="calefaccion-climatizacion-eficientes.html">Calefacción y climatización eficiente</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Mantenimiento y servicios <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Mantenimiento preventivo</a>
+                <a href="calefaccion-climatizacion-eficientes.html">Climatizacion eficiente</a>
+                <a href="#">Outsourcing energetico</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Sostenibilidad <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Economia circular</a>
+                <a href="#">Descarbonizacion</a>
+                <a href="#">Flexibilidad de la demanda</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Optimizare <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown">
+                <a href="#">Sobre Optimizare</a>
+                <a href="#">Casos de exito</a>
+                <a href="#">Trabaja con nosotros</a>
+                <a href="#">Blog</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="certificado-ahorro-energetico-cae.html" class="btn-nav-cae">CAE</a>
+          <a href="#contacto-inner" class="btn-nav-contact">Contacto</a>
+          <button class="btn-search" id="searchToggle"><i class="fas fa-search"></i></button>
+          <button class="btn-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </div>
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <input type="text" placeholder="Que estas buscando?" />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="ip-hero">
+    <div class="ip-hero-bg">
+      <img src="img/placa 3.jpg" alt="" class="ip-hero-img" />
+      <div class="ip-hero-overlay"></div>
+    </div>
+    <div class="container ip-hero-content">
+      <nav class="ip-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Soluciones energeticas</span>
+        <i class="fas fa-chevron-right"></i>
+        <span class="current">IRVE - Recarga electrica</span>
+      </nav>
+      <h1 class="ip-hero-title">Infraestructura de Recarga<br><em>de Vehiculos Electricos (IRVE)</em></h1>
+      <p class="ip-hero-sub">Tu socio integral en movilidad sostenible</p>
+      <a href="#contacto-inner" class="btn-primary btn-lg">Solicitar proyecto <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <section class="ip-stats-strip">
+    <div class="container">
+      <div class="ip-stats-grid">
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-charging-station"></i></div>
+          <div class="ip-stat-val"><span class="ip-stat-num" data-target="150">0</span><span class="ip-stat-unit">+</span></div>
+          <div class="ip-stat-label">puntos de recarga planificados</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-building"></i></div>
+          <div class="ip-stat-val"><span class="ip-stat-num" data-target="40">0</span><span class="ip-stat-unit">+</span></div>
+          <div class="ip-stat-label">clientes asesorados en movilidad</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-bolt"></i></div>
+          <div class="ip-stat-val"><span class="ip-stat-num" data-target="22">0</span><span class="ip-stat-unit"> kW</span></div>
+          <div class="ip-stat-label">potencias AC y DC configurables</div>
+        </div>
+        <div class="ip-stat">
+          <div class="ip-stat-icon"><i class="fas fa-shield-alt"></i></div>
+          <div class="ip-stat-val"><span class="ip-stat-num" data-target="24">0</span><span class="ip-stat-unit">/7</span></div>
+          <div class="ip-stat-label">monitorizacion y soporte operativo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="clients-section irve-clients">
+    <div class="container">
+      <p class="clients-label reveal">Clientes y sectores que ya impulsan movilidad electrica con nosotros</p>
+    </div>
+    <div class="clients-track-wrapper">
+      <div class="clients-track">
+        <div class="client-tile"><span>Vitaldent</span></div>
+        <div class="client-tile"><span>Iberdrola</span></div>
+        <div class="client-tile"><span>Retail</span></div>
+        <div class="client-tile"><span>Logistica</span></div>
+        <div class="client-tile"><span>Hoteles</span></div>
+        <div class="client-tile"><span>Industrial</span></div>
+        <div class="client-tile"><span>Municipal</span></div>
+        <div class="client-tile"><span>Residencial</span></div>
+        <div class="client-tile"><span>Vitaldent</span></div>
+        <div class="client-tile"><span>Iberdrola</span></div>
+        <div class="client-tile"><span>Retail</span></div>
+        <div class="client-tile"><span>Logistica</span></div>
+        <div class="client-tile"><span>Hoteles</span></div>
+        <div class="client-tile"><span>Industrial</span></div>
+        <div class="client-tile"><span>Municipal</span></div>
+        <div class="client-tile"><span>Residencial</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pv-overview-section">
+    <div class="container pv-overview-layout">
+      <div class="pv-overview-text reveal-left">
+        <span class="section-tag">SOLUCION IRVE</span>
+        <h2>Instalacion profesional de puntos de recarga para una movilidad ordenada y eficiente</h2>
+        <p>La infraestructura de recarga de vehiculos electricos (IRVE) es el conjunto de soluciones tecnicas necesarias para suministrar energia de forma segura, eficiente y escalable a coches, furgonetas y flotas electrificadas.</p>
+        <p>Su despliegue ya no es opcional para muchos activos: la evolucion regulatoria, las ZBE, la renovacion de flotas y la demanda de usuarios esta acelerando la necesidad de puntos de recarga en empresas, parkings, centros logistico-industriales y comunidades de propietarios.</p>
+        <p>En Optimizare abordamos cada proyecto desde la realidad operativa del cliente. Analizamos habitos de uso, perfiles de potencia, infraestructura electrica existente y previsiones de crecimiento para dimensionar una solucion viable desde el primer dia y preparada para futuras ampliaciones.</p>
+        <p>Ademas, diseniamos bandejados, canalizaciones y preinstalaciones ordenadas para evitar un despliegue caotico de lineas individuales, reducir costes de obra y simplificar mantenimientos posteriores.</p>
+      </div>
+      <div class="pv-overview-media reveal-right delay-2">
+        <img src="img/instalacion 3.jpg" alt="Infraestructura de recarga electrica" />
+        <div class="pv-overview-chip"><i class="fas fa-plug"></i><span>Proyecto IRVE llave en mano</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="irve-steps-section">
+    <div class="container">
+      <div class="irve-steps-head reveal-blur">
+        <h2>Este proceso abarca diversas etapas</h2>
+      </div>
+      <div class="irve-accordion reveal-up">
+        <div class="irve-acc-item open">
+          <button class="irve-acc-trigger" type="button" aria-expanded="true">
+            <span>Analisis de necesidades y diseno de la solucion optima</span>
+            <i class="fas fa-chevron-up"></i>
+          </button>
+          <div class="irve-acc-body">
+            <p><strong>Evaluamos en detalle</strong> el tipo de vehiculo a cargar, los requerimientos de carga (potencia, numero de puntos y ubicacion), la infraestructura electrica existente y la normativa aplicable.</p>
+            <p>A partir de ese analisis, <strong>nuestro departamento de ingenieria tecnica diseÃ±a una solucion personalizada</strong>, seleccionando los cargadores mas adecuados (domesticos, semirrapidos, rapidos o ultrarapidos), planificando la instalacion en funcion de las potencias admisibles y definiendo la integracion con plataforma de gestion.</p>
+            <p>Tambien valoramos complementos para mejorar eficiencia y costes, como gestion dinamica de carga o integracion con instalaciones de autoconsumo basadas en energia renovable.</p>
+          </div>
+        </div>
+
+        <div class="irve-acc-item">
+          <button class="irve-acc-trigger" type="button" aria-expanded="false">
+            <span>Permitting y tramites legales</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="irve-acc-body">
+            <p>Nos ocupamos de permisos, licencias y legalizacion reglamentaria para garantizar cumplimiento normativo y evitar retrasos durante la ejecucion del proyecto.</p>
+          </div>
+        </div>
+
+        <div class="irve-acc-item">
+          <button class="irve-acc-trigger" type="button" aria-expanded="false">
+            <span>Instalacion profesional y segura</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="irve-acc-body">
+            <p>Ejecutamos la infraestructura con personal habilitado, aplicando criterios de seguridad electrica, calidad de montaje y trazabilidad tecnica en todas las fases.</p>
+          </div>
+        </div>
+
+        <div class="irve-acc-item">
+          <button class="irve-acc-trigger" type="button" aria-expanded="false">
+            <span>Puesta en marcha, pruebas e implementacion de plataforma de gestion (opcional)</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="irve-acc-body">
+            <p>Completamos pruebas funcionales, activamos cargadores y, cuando aplica, configuramos la plataforma de gestion para monitorizar sesiones, usuarios, consumo y costes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pv-pillars-section">
+    <div class="container">
+      <div class="pv-pillars-head reveal-blur">
+        <h2>Capacidades clave para proyectos IRVE de principio a fin</h2>
+      </div>
+      <div class="pv-pillars-grid">
+        <div class="pv-pillar reveal-zoom delay-1"><i class="fas fa-check"></i><h4>Personal tecnico altamente cualificado</h4><p>Nuestro equipo integra perfiles de ingenieria, instalacion y puesta en marcha con experiencia especifica en IRVE para asegurar ejecuciones seguras y de alto rendimiento.</p></div>
+        <div class="pv-pillar reveal-zoom delay-2"><i class="fas fa-check"></i><h4>Plataforma de gestion y flotas</h4><p>Implantamos herramientas para monitorizar disponibilidad, consumo por usuario, sesion de carga y coste operativo, facilitando la gestion de flotas y la toma de decisiones.</p></div>
+        <div class="pv-pillar reveal-zoom delay-3"><i class="fas fa-check"></i><h4>Empresa instaladora autorizada</h4><p>Trabajamos con instaladores habilitados y procedimientos de calidad para garantizar cumplimiento reglamentario y trazabilidad tecnica en cada actuacion.</p></div>
+        <div class="pv-pillar reveal-zoom delay-4"><i class="fas fa-check"></i><h4>Tramitacion de CAEs</h4><p>Cuando el proyecto es elegible, te acompanamos en la estrategia y tramitacion de Certificados de Ahorro Energetico para mejorar el retorno de la inversion.</p></div>
+        <div class="pv-pillar reveal-zoom delay-5"><i class="fas fa-check"></i><h4>Mas de 10 anos de experiencia</h4><p>Nuestra trayectoria en el sector energetico nos permite integrar la recarga electrica dentro de una estrategia global de eficiencia y control de costes.</p></div>
+        <div class="pv-pillar reveal-zoom delay-6"><i class="fas fa-check"></i><h4>Permitting y subvenciones</h4><p>Gestionamos permisos, licencias y subvenciones disponibles, incluyendo lineas tipo Plan MOVES y programas locales, para acelerar plazos y optimizar inversion.</p></div>
+        <div class="pv-pillar reveal-zoom delay-7"><i class="fas fa-check"></i><h4>Oficina de ingenieria propia</h4><p>Disenamos soluciones tecnicas a medida optimizando potencia, ubicacion, rutas de cableado y escalabilidad futura, siempre bajo criterios REBT.</p></div>
+        <div class="pv-pillar reveal-zoom delay-8"><i class="fas fa-check"></i><h4>Gestion de la energia</h4><p>Te asesoramos en compra de energia, estructura tarifaria y estrategia de recarga para minimizar costes operativos sin comprometer disponibilidad.</p></div>
+        <div class="pv-pillar pv-pillar-wide reveal-zoom delay-8"><i class="fas fa-check"></i><h4>Compromiso con calidad e innovacion</h4><p>Seleccionamos equipos de fabricantes de referencia y aplicamos criterios de mejora continua para entregar una infraestructura robusta, segura y preparada para el crecimiento de la movilidad electrica.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ip-cta-banner">
+    <img src="img/placa 2.jpg" alt="" class="ip-cta-bg" />
+    <div class="ip-cta-overlay"></div>
+    <div class="container ip-cta-inner">
+      <div class="ip-cta-text reveal-left">
+        <span class="ip-cta-eyebrow">UNETE</span>
+        <h2>Y consigue oportunidades reales de ahorro, priorizando una implantacion inteligente de movilidad electrica y nuevas tecnologias energeticas</h2>
+      </div>
+      <a href="#contacto-inner" class="btn-primary btn-lg reveal-right delay-2">Contacta con nosotros <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contacto-inner">
+    <div class="container contact-inner">
+      <div class="contact-text reveal-left">
+        <span class="section-tag">CONTACTO</span>
+        <h2>Solicita tu estudio de infraestructura de recarga</h2>
+        <p>Cuentanos tu necesidad y te enviaremos una propuesta personalizada con alcance tecnico, fases de implantacion, estimacion economica y hoja de ruta para escalar la red de carga.</p>
+        <ul class="contact-info-list">
+          <li><i class="fas fa-phone"></i><div><strong>Llamanos</strong><span>+34 917 992 688</span></div></li>
+          <li><i class="fas fa-envelope"></i><div><strong>Atencion comercial</strong><span>comercial@optimizare.es</span></div></li>
+          <li><i class="fas fa-envelope"></i><div><strong>Atencion al cliente</strong><span>clientes@optimizare.es</span></div></li>
+          <li><i class="fas fa-map-marker-alt"></i><div><strong>Direccion</strong><span>Madrid, Espana</span></div></li>
+        </ul>
+      </div>
+      <form class="contact-form reveal-right" id="contactFormIRVE">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="empresa">Empresa *</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="tu@empresa.com" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Telefono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Indicanos ubicacion, numero estimado de cargadores, potencia disponible, tipo de uso (flota, empleados, publico, residentes) y plazo objetivo de implantacion."></textarea>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" id="privacidad" name="privacidad" required />
+          <label for="privacidad">Acepto la <a href="#">politica de privacidad</a> y el tratamiento de mis datos.</label>
+        </div>
+        <button type="submit" class="btn-primary btn-block">Enviar solicitud <i class="fas fa-arrow-right"></i></button>
+        <div class="form-success" id="formSuccessIRVE">Mensaje enviado. Te contactaremos en menos de 24h.</div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="img/opti.png" alt="Optimizare" class="footer-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <span class="footer-logo-text" style="display:none">Optimizare</span>
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> Madrid, Espana</p>
+          <p><i class="fas fa-envelope"></i> comercial@optimizare.es</p>
+          <p><i class="fas fa-envelope"></i> clientes@optimizare.es</p>
+          <p><i class="fas fa-phone"></i> 917 99 26 88</p>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="certificado-ahorro-energetico-cae.html">CAE - Certificados de Ahorro Energetico</a></li>
+          <li><a href="gestion-energetica-iso-50001.html">ISO 50001</a></li>
+          <li><a href="auditoria-energetica.html">Auditoria energetica</a></li>
+          <li><a href="certificado-de-eficiencia-energetica-cee.html">Certificado de Eficiencia Energetica (CEE)</a></li>
+          <li><a href="monitorizacion-energetica.html">Monitorizacion energetica</a></li>
+          <li><a href="calefaccion-climatizacion-eficientes.html">Climatizacion eficiente</a></li>
+          <li><a href="irve-recarga-electrica.html">IRVE</a></li>
+          <li><a href="autoconsumo-fotovoltaico.html">Fotovoltaica</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sobre nosotros</h4>
+        <ul>
+          <li><a href="#">Sobre Optimizare</a></li>
+          <li><a href="#">Casos de exito</a></li>
+          <li><a href="#">Trabaja con nosotros</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Informacion legal</h4>
+        <ul>
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Politica de privacidad</a></li>
+          <li><a href="#">Politica de cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container"><p>Copyright Â© 2026 Optimizare</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+  <script>
+    const irveNums = document.querySelectorAll('.ip-stat-num');
+    let irveStarted = false;
+    new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !irveStarted) {
+        irveStarted = true;
+        irveNums.forEach(el => {
+          const target = parseInt(el.dataset.target, 10);
+          const step = target / (1800 / 16);
+          let current = 0;
+          const t = setInterval(() => {
+            current += step;
+            if (current >= target) { current = target; clearInterval(t); }
+            el.textContent = Math.floor(current).toLocaleString('es-ES');
+          }, 16);
+        });
+      }
+    }, { threshold: 0.3 }).observe(document.querySelector('.ip-stats-strip'));
+
+    const irveForm = document.getElementById('contactFormIRVE');
+    if (irveForm) {
+      irveForm.addEventListener('submit', e => {
+        e.preventDefault();
+        document.getElementById('formSuccessIRVE').style.display = 'block';
+        irveForm.reset();
+      });
+    }
+
+    document.querySelectorAll('.irve-acc-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const item = trigger.closest('.irve-acc-item');
+        const isOpen = item.classList.contains('open');
+
+        document.querySelectorAll('.irve-acc-item').forEach(i => {
+          i.classList.remove('open');
+          const icon = i.querySelector('.irve-acc-trigger i');
+          if (icon) {
+            icon.classList.remove('fa-chevron-up');
+            icon.classList.add('fa-chevron-down');
+          }
+          const btn = i.querySelector('.irve-acc-trigger');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        });
+
+        if (!isOpen) {
+          item.classList.add('open');
+          const icon = item.querySelector('.irve-acc-trigger i');
+          if (icon) {
+            icon.classList.remove('fa-chevron-down');
+            icon.classList.add('fa-chevron-up');
+          }
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
